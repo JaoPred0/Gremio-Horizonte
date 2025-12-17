@@ -13,7 +13,7 @@ export default function SplashScreen() {
   const navigate = useNavigate();
 
   const [progress, setProgress] = useState(0);
-  const [authUser, setAuthUser] = useState<User | null | undefined>(undefined);
+  const [authUser, setAuthUser] = useState<User | null>(undefined);
   const [timeReady, setTimeReady] = useState(false);
   const [fadeOut, setFadeOut] = useState(false);
 
@@ -70,18 +70,18 @@ export default function SplashScreen() {
         initial={{ opacity: 1 }}
         animate={fadeOut ? { opacity: 0 } : { opacity: 1 }}
         transition={{ duration: 0.8, ease: "easeInOut" }}
+        data-theme="light" // Aplicando tema light do DaisyUI
         className="
           fixed inset-0 z-50
           flex flex-col items-center justify-center
           px-4 sm:px-6
-          bg-gradient-to-br from-blue-400 via-blue-600 to-blue-800
           overflow-hidden
         "
       >
-        {/* Glow */}
+        {/* Glow ajustado para tema light */}
         <div
           className="
-            absolute rounded-full bg-blue-300/20 blur-3xl animate-pulse
+            absolute rounded-full bg-blue-200/30 blur-3xl animate-pulse
             w-[220px] h-[220px]
             sm:w-[320px] sm:h-[320px]
             md:w-[420px] md:h-[420px]
@@ -94,14 +94,14 @@ export default function SplashScreen() {
           transition={{ delay: 0.2, duration: 0.6, ease: "easeOut" }}
           className="relative z-10 mb-4"
         >
-          <ArrowPathIcon className="w-12 h-12 sm:w-16 sm:h-16 text-white animate-spin" />
+          <ArrowPathIcon className="w-12 h-12 sm:w-16 sm:h-16 text-primary animate-spin" />
         </motion.div>
 
-        {/* Título */}
+        {/* Título ajustado para tema light */}
         <motion.h1
           className="
             relative z-10
-            text-center font-black tracking-widest text-white
+            text-center font-black tracking-widest text-base-content
             text-[1.6rem] sm:text-3xl md:text-5xl lg:text-6xl
             flex flex-wrap justify-center leading-tight
           "
@@ -124,7 +124,7 @@ export default function SplashScreen() {
           ))}
         </motion.h1>
 
-        {/* Subtítulo */}
+        {/* Subtítulo ajustado para tema light */}
         <motion.p
           initial={{ opacity: 0, y: 8 }}
           animate={{ opacity: 1, y: 0 }}
@@ -133,13 +133,13 @@ export default function SplashScreen() {
             relative z-10 mt-3 sm:mt-4
             text-[10px] sm:text-xs md:text-sm
             uppercase tracking-[0.25em]
-            text-white/70 text-center
+            text-base-content/60 text-center
           "
         >
           carregando experiência
         </motion.p>
 
-        {/* Progresso */}
+        {/* Progresso ajustado para tema light */}
         <motion.div
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
@@ -149,16 +149,16 @@ export default function SplashScreen() {
             w-full max-w-[180px] sm:max-w-xs md:max-w-sm
           "
         >
-          <div className="relative h-1 sm:h-[5px] w-full overflow-hidden rounded-full bg-white/30">
+          <div className="relative h-1 sm:h-[5px] w-full overflow-hidden rounded-full bg-base-content/30">
             <motion.div
-              className="absolute left-0 top-0 h-full rounded-full bg-white"
+              className="absolute left-0 top-0 h-full rounded-full bg-primary"
               initial={{ width: 0 }}
               animate={{ width: `${progress}%` }}
               transition={{ duration: 0.1, ease: "linear" }}
             />
           </div>
 
-          <span className="mt-2 block text-center text-[10px] sm:text-xs text-white/70">
+          <span className="mt-2 block text-center text-[10px] sm:text-xs text-base-content/60">
             {Math.round(progress)}%
           </span>
         </motion.div>

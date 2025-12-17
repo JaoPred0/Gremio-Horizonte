@@ -29,7 +29,7 @@ export default function ForgotPassword() {
     return (
         <div className="min-h-screen w-full bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100">
             {/* Mobile Layout */}
-            <div className="block md:hidden min-h-screen px-5 py-8">
+            <div className="block md:hidden min-h-screen px-5 py-8" data-theme="dark">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
@@ -37,7 +37,7 @@ export default function ForgotPassword() {
                     className="flex flex-col min-h-[calc(100vh-4rem)]"
                 >
                     {/* Back Button */}
-                    <a href="/login" className="flex items-center gap-2 text-slate-500 mb-8 w-fit">
+                    <a href="/login" className="flex items-center gap-2 text-base-content/70 mb-8 w-fit">
                         <ArrowLeftIcon className="w-4 h-4" />
                         <span className="text-sm font-medium">Voltar</span>
                     </a>
@@ -48,18 +48,18 @@ export default function ForgotPassword() {
                             initial={{ scale: 0 }}
                             animate={{ scale: 1 }}
                             transition={{ delay: 0.2, type: "spring", stiffness: 200 }}
-                            className="w-20 h-20 rounded-3xl bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center shadow-xl shadow-blue-500/30"
+                            className="w-20 h-20 rounded-3xl bg-gradient-to-br from-primary to-primary-focus flex items-center justify-center shadow-xl shadow-primary/30"
                         >
-                            <KeyIcon className="w-10 h-10 text-white" />
+                            <KeyIcon className="w-10 h-10 text-primary-content" />
                         </motion.div>
                     </div>
 
                     {/* Content */}
                     <div className="text-center mb-8">
-                        <h1 className="text-2xl font-bold text-slate-800 mb-2">
+                        <h1 className="text-2xl font-bold text-base-content mb-2">
                             Esqueceu a senha?
                         </h1>
-                        <p className="text-slate-500 text-sm leading-relaxed">
+                        <p className="text-base-content/70 text-sm leading-relaxed">
                             Sem problemas! Digite seu email e enviaremos um link para você criar uma nova senha.
                         </p>
                     </div>
@@ -67,7 +67,7 @@ export default function ForgotPassword() {
                     {/* Form */}
                     <form onSubmit={handleSubmit} className="space-y-4 flex-1">
                         <div className="relative">
-                            <div className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400">
+                            <div className="absolute left-4 top-1/2 -translate-y-1/2 text-base-content/50">
                                 <EnvelopeIcon className="w-5 h-5" />
                             </div>
                             <input
@@ -76,7 +76,7 @@ export default function ForgotPassword() {
                                 required
                                 value={email}
                                 onChange={(e) => setEmail(e.target.value)}
-                                className="w-full h-14 pl-12 pr-4 bg-white border-2 border-slate-200 rounded-2xl text-slate-700 placeholder:text-slate-400 focus:border-blue-500 focus:ring-4 focus:ring-blue-500/10 outline-none transition-all"
+                                className="w-full h-14 pl-12 pr-4 bg-base-100 border-2 border-base-200 rounded-2xl text-base-content placeholder:text-base-content/50 focus:border-primary focus:ring-4 focus:ring-primary/10 outline-none transition-all"
                             />
                         </div>
 
@@ -84,9 +84,9 @@ export default function ForgotPassword() {
                             <motion.div
                                 initial={{ opacity: 0, scale: 0.95 }}
                                 animate={{ opacity: 1, scale: 1 }}
-                                className="p-4 bg-emerald-50 border border-emerald-200 rounded-2xl"
+                                className="p-4 bg-success/10 border border-success/20 rounded-2xl"
                             >
-                                <p className="text-emerald-700 text-sm text-center">{success}</p>
+                                <p className="text-success text-sm text-center">{success}</p>
                             </motion.div>
                         )}
 
@@ -94,20 +94,20 @@ export default function ForgotPassword() {
                             <motion.div
                                 initial={{ opacity: 0, scale: 0.95 }}
                                 animate={{ opacity: 1, scale: 1 }}
-                                className="p-4 bg-red-50 border border-red-200 rounded-2xl"
+                                className="p-4 bg-error/10 border border-error/20 rounded-2xl"
                             >
-                                <p className="text-red-600 text-sm text-center">{error}</p>
+                                <p className="text-error text-sm text-center">{error}</p>
                             </motion.div>
                         )}
 
                         <button
                             type="submit"
                             disabled={loading}
-                            className="w-full h-14 bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-semibold rounded-2xl shadow-lg shadow-blue-500/30 hover:shadow-xl hover:shadow-blue-500/40 active:scale-[0.98] transition-all disabled:opacity-70 disabled:cursor-not-allowed"
+                            className="w-full h-14 bg-gradient-to-r from-primary to-primary-focus text-secundary-content font-semibold rounded-2xl shadow-lg shadow-primary/30 hover:shadow-xl hover:shadow-primary/40 active:scale-[0.98] transition-all disabled:opacity-70 disabled:cursor-not-allowed"
                         >
                             {loading ? (
                                 <span className="flex items-center justify-center gap-2">
-                                    <span className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin" />
+                                    <span className="w-5 h-5 border-2 border-primary-content/10 border-t-primary-content rounded-full animate-spin" />
                                     Enviando...
                                 </span>
                             ) : (
@@ -118,7 +118,7 @@ export default function ForgotPassword() {
 
                     {/* Footer */}
                     <div className="mt-8 text-center">
-                        <p className="text-xs text-slate-400">
+                        <p className="text-xs text-base-content/50">
                             Horizonte © 2024
                         </p>
                     </div>
@@ -126,49 +126,49 @@ export default function ForgotPassword() {
             </div>
 
             {/* Tablet Layout */}
-            <div className="hidden md:flex lg:hidden min-h-screen items-center justify-center p-8">
+            <div className="hidden md:flex lg:hidden min-h-screen items-center justify-center p-8" data-theme="dark">
                 <motion.div
                     initial={{ opacity: 0, y: 30 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6 }}
                     className="w-full max-w-lg"
                 >
-                    <div className="bg-white rounded-[2rem] shadow-2xl shadow-slate-200/50 overflow-hidden">
+                    <div className="bg-base-100 rounded-[2rem] shadow-2xl shadow-base-200/50 overflow-hidden">
                         {/* Header with gradient */}
-                        <div className="bg-gradient-to-br from-blue-600 via-indigo-600 to-purple-600 p-8 text-center relative overflow-hidden">
+                        <div className="bg-gradient-to-br from-primary via-primary-focus to-secondary p-8 text-center relative overflow-hidden">
                             {/* Decorative elements */}
-                            <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -translate-y-1/2 translate-x-1/2" />
-                            <div className="absolute bottom-0 left-0 w-24 h-24 bg-white/10 rounded-full translate-y-1/2 -translate-x-1/2" />
+                            <div className="absolute top-0 right-0 w-32 h-32 bg-base-100/10 rounded-full -translate-y-1/2 translate-x-1/2" />
+                            <div className="absolute bottom-0 left-0 w-24 h-24 bg-base-100/10 rounded-full translate-y-1/2 -translate-x-1/2" />
 
                             <motion.div
                                 initial={{ scale: 0, rotate: -180 }}
                                 animate={{ scale: 1, rotate: 0 }}
                                 transition={{ delay: 0.3, type: "spring", stiffness: 200 }}
-                                className="w-16 h-16 mx-auto mb-4 bg-white/20 backdrop-blur-sm rounded-2xl flex items-center justify-center"
+                                className="w-16 h-16 mx-auto mb-4 bg-base-100/20 backdrop-blur-sm rounded-2xl flex items-center justify-center"
                             >
-                                <KeyIcon className="w-8 h-8 text-white" />
+                                <KeyIcon className="w-8 h-8 text-primary-content" />
                             </motion.div>
-                            <h1 className="text-2xl font-bold text-white mb-1">
+                            <h1 className="text-2xl font-bold text-primary-content mb-1">
                                 Recuperar Senha
                             </h1>
-                            <p className="text-blue-100 text-sm">
+                            <p className="text-primary-focus text-sm">
                                 Horizonte
                             </p>
                         </div>
 
                         {/* Form Content */}
                         <div className="p-8">
-                            <p className="text-center text-slate-500 mb-8 leading-relaxed">
+                            <p className="text-center text-base-content/70 mb-8 leading-relaxed">
                                 Digite o email associado à sua conta e enviaremos instruções para redefinir sua senha.
                             </p>
 
                             <form onSubmit={handleSubmit} className="space-y-5">
                                 <div>
-                                    <label className="block text-sm font-medium text-slate-700 mb-2">
+                                    <label className="block text-sm font-medium text-base-content mb-2">
                                         Endereço de Email
                                     </label>
                                     <div className="relative">
-                                        <div className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400">
+                                        <div className="absolute left-4 top-1/2 -translate-y-1/2 text-base-content/50">
                                             <EnvelopeIcon className="w-5 h-5" />
                                         </div>
                                         <input
@@ -177,7 +177,7 @@ export default function ForgotPassword() {
                                             required
                                             value={email}
                                             onChange={(e) => setEmail(e.target.value)}
-                                            className="w-full h-14 pl-12 pr-4 bg-slate-50 border-2 border-slate-200 rounded-xl text-slate-700 placeholder:text-slate-400 focus:bg-white focus:border-blue-500 focus:ring-4 focus:ring-blue-500/10 outline-none transition-all"
+                                            className="w-full h-14 pl-12 pr-4 bg-base-200 border-2 border-base-300 rounded-xl text-base-content placeholder:text-base-content/50 focus:bg-base-100 focus:border-primary focus:ring-4 focus:ring-primary/10 outline-none transition-all"
                                         />
                                     </div>
                                 </div>
@@ -186,12 +186,12 @@ export default function ForgotPassword() {
                                     <motion.div
                                         initial={{ opacity: 0, y: -10 }}
                                         animate={{ opacity: 1, y: 0 }}
-                                        className="flex items-center gap-3 p-4 bg-emerald-50 border border-emerald-200 rounded-xl"
+                                        className="flex items-center gap-3 p-4 bg-success/10 border border-success/20 rounded-xl"
                                     >
-                                        <div className="w-10 h-10 bg-emerald-100 rounded-full flex items-center justify-center flex-shrink-0">
-                                            <SparklesIcon className="w-5 h-5 text-emerald-600" />
+                                        <div className="w-10 h-10 bg-success/20 rounded-full flex items-center justify-center flex-shrink-0">
+                                            <SparklesIcon className="w-5 h-5 text-success" />
                                         </div>
-                                        <p className="text-emerald-700 text-sm">{success}</p>
+                                        <p className="text-success text-sm">{success}</p>
                                     </motion.div>
                                 )}
 
@@ -199,20 +199,20 @@ export default function ForgotPassword() {
                                     <motion.div
                                         initial={{ opacity: 0, y: -10 }}
                                         animate={{ opacity: 1, y: 0 }}
-                                        className="p-4 bg-red-50 border border-red-200 rounded-xl"
+                                        className="p-4 bg-error/10 border border-error/20 rounded-xl"
                                     >
-                                        <p className="text-red-600 text-sm text-center">{error}</p>
+                                        <p className="text-error text-sm text-center">{error}</p>
                                     </motion.div>
                                 )}
 
                                 <button
                                     type="submit"
                                     disabled={loading}
-                                    className="w-full h-14 bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-semibold rounded-xl shadow-lg shadow-blue-500/25 hover:shadow-xl hover:shadow-blue-500/30 hover:-translate-y-0.5 active:translate-y-0 transition-all disabled:opacity-70 disabled:cursor-not-allowed disabled:hover:translate-y-0"
+                                    className="w-full h-14 bg-gradient-to-r from-primary to-primary-focus text-primary-content font-semibold rounded-xl shadow-lg shadow-primary/25 hover:shadow-xl hover:shadow-primary/30 hover:-translate-y-0.5 active:translate-y-0 transition-all disabled:opacity-70 disabled:cursor-not-allowed disabled:hover:translate-y-0"
                                 >
                                     {loading ? (
                                         <span className="flex items-center justify-center gap-2">
-                                            <span className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin" />
+                                            <span className="w-5 h-5 border-2 border-primary-content/30 border-t-primary-content rounded-full animate-spin" />
                                             Enviando...
                                         </span>
                                     ) : (
@@ -221,10 +221,10 @@ export default function ForgotPassword() {
                                 </button>
                             </form>
 
-                            <div className="mt-8 pt-6 border-t border-slate-100">
+                            <div className="mt-8 pt-6 border-t border-base-300">
                                 <a
                                     href="/login"
-                                    className="flex items-center justify-center gap-2 text-slate-600 hover:text-blue-600 transition-colors group"
+                                    className="flex items-center justify-center gap-2 text-base-content hover:text-primary transition-colors group"
                                 >
                                     <ArrowLeftIcon className="w-4 h-4 group-hover:-translate-x-1 transition-transform" />
                                     <span className="font-medium">Voltar para o login</span>
@@ -236,13 +236,13 @@ export default function ForgotPassword() {
             </div>
 
             {/* Desktop Layout */}
-            <div className="hidden lg:flex min-h-screen">
+            <div className="hidden lg:flex min-h-screen" data-theme="dark">
                 {/* Left Panel - Decorative */}
                 <motion.div
                     initial={{ opacity: 0, x: -50 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.8 }}
-                    className="w-1/2 bg-gradient-to-br from-blue-600 via-indigo-600 to-purple-700 relative overflow-hidden flex items-center justify-center p-12"
+                    className="w-1/2 bg-gradient-to-br from-primary via-primary-focus to-secondary relative overflow-hidden flex items-center justify-center p-12"
                 >
                     {/* Animated background shapes */}
                     <div className="absolute inset-0">
@@ -252,7 +252,7 @@ export default function ForgotPassword() {
                                 rotate: [0, 90, 0]
                             }}
                             transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-                            className="absolute top-20 left-20 w-64 h-64 bg-white/10 rounded-full blur-3xl"
+                            className="absolute top-20 left-20 w-64 h-64 bg-base-100/10 rounded-full blur-3xl"
                         />
                         <motion.div
                             animate={{
@@ -260,14 +260,14 @@ export default function ForgotPassword() {
                                 rotate: [90, 0, 90]
                             }}
                             transition={{ duration: 15, repeat: Infinity, ease: "linear" }}
-                            className="absolute bottom-20 right-20 w-80 h-80 bg-purple-500/20 rounded-full blur-3xl"
+                            className="absolute bottom-20 right-20 w-80 h-80 bg-secondary/20 rounded-full blur-3xl"
                         />
                         <motion.div
                             animate={{
                                 y: [0, -30, 0]
                             }}
                             transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
-                            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-indigo-400/10 rounded-full blur-3xl"
+                            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-primary-focus/10 rounded-full blur-3xl"
                         />
                     </div>
 
@@ -277,16 +277,16 @@ export default function ForgotPassword() {
                             initial={{ scale: 0 }}
                             animate={{ scale: 1 }}
                             transition={{ delay: 0.4, type: "spring", stiffness: 150 }}
-                            className="w-24 h-24 mx-auto mb-8 bg-white/20 backdrop-blur-xl rounded-3xl flex items-center justify-center shadow-2xl"
+                            className="w-24 h-24 mx-auto mb-8 bg-base-100/20 backdrop-blur-xl rounded-3xl flex items-center justify-center shadow-2xl"
                         >
-                            <ShieldCheckIcon className="w-12 h-12 text-white" />
+                            <ShieldCheckIcon className="w-12 h-12 text-primary-content" />
                         </motion.div>
 
                         <motion.h2
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ delay: 0.5 }}
-                            className="text-4xl font-bold text-white mb-4"
+                            className="text-4xl font-bold text-primary-content mb-4"
                         >
                             Horizonte
                         </motion.h2>
@@ -295,7 +295,7 @@ export default function ForgotPassword() {
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ delay: 0.6 }}
-                            className="text-blue-100 text-lg leading-relaxed mb-8"
+                            className="text-primary-focus text-lg leading-relaxed mb-8"
                         >
                             Sua segurança é nossa prioridade. Redefina sua senha de forma rápida e segura.
                         </motion.p>
@@ -310,7 +310,7 @@ export default function ForgotPassword() {
                             {["Link seguro", "Expira em 1h", "Criptografado"].map((text, i) => (
                                 <span
                                     key={i}
-                                    className="px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full text-sm text-white/90 border border-white/20"
+                                    className="px-4 py-2 bg-base-100/10 backdrop-blur-sm rounded-full text-sm text-primary-content/90 border border-base-100/20"
                                 >
                                     {text}
                                 </span>
@@ -322,16 +322,16 @@ export default function ForgotPassword() {
                     <motion.div
                         animate={{ y: [0, -15, 0] }}
                         transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-                        className="absolute top-32 right-24 w-12 h-12 bg-white/10 backdrop-blur-sm rounded-2xl flex items-center justify-center"
+                        className="absolute top-32 right-24 w-12 h-12 bg-base-100/10 backdrop-blur-sm rounded-2xl flex items-center justify-center"
                     >
-                        <EnvelopeIcon className="w-6 h-6 text-white/80" />
+                        <EnvelopeIcon className="w-6 h-6 text-primary-content/80" />
                     </motion.div>
                     <motion.div
                         animate={{ y: [0, 15, 0] }}
                         transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
-                        className="absolute bottom-32 left-24 w-14 h-14 bg-white/10 backdrop-blur-sm rounded-2xl flex items-center justify-center"
+                        className="absolute bottom-32 left-24 w-14 h-14 bg-base-100/10 backdrop-blur-sm rounded-2xl flex items-center justify-center"
                     >
-                        <KeyIcon className="w-7 h-7 text-white/80" />
+                        <KeyIcon className="w-7 h-7 text-primary-content/80" />
                     </motion.div>
                 </motion.div>
 
@@ -340,34 +340,34 @@ export default function ForgotPassword() {
                     initial={{ opacity: 0, x: 50 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.8 }}
-                    className="w-1/2 flex items-center justify-center p-12 bg-white"
+                    className="w-1/2 flex items-center justify-center p-12 bg-base-100"
                 >
                     <div className="w-full max-w-md">
                         {/* Back link */}
                         <a
                             href="/login"
-                            className="inline-flex items-center gap-2 text-slate-500 hover:text-blue-600 transition-colors group mb-12"
+                            className="inline-flex items-center gap-2 text-base-content/70 hover:text-primary transition-colors group mb-12"
                         >
                             <ArrowLeftIcon className="w-4 h-4 group-hover:-translate-x-1 transition-transform" />
                             <span className="font-medium">Voltar para login</span>
                         </a>
 
                         <div className="mb-10">
-                            <h1 className="text-3xl font-bold text-slate-800 mb-3">
+                            <h1 className="text-3xl font-bold text-base-content mb-3">
                                 Esqueceu sua senha?
                             </h1>
-                            <p className="text-slate-500 text-lg leading-relaxed">
+                            <p className="text-base-content/70 text-lg leading-relaxed">
                                 Não se preocupe! Acontece com todos. Digite seu email e enviaremos um link para redefinir sua senha.
                             </p>
                         </div>
 
                         <form onSubmit={handleSubmit} className="space-y-6">
                             <div>
-                                <label className="block text-sm font-semibold text-slate-700 mb-3">
+                                <label className="block text-sm font-semibold text-base-content mb-3">
                                     Endereço de Email
                                 </label>
                                 <div className="relative group">
-                                    <div className="absolute left-5 top-1/2 -translate-y-1/2 text-slate-400 group-focus-within:text-blue-500 transition-colors">
+                                    <div className="absolute left-5 top-1/2 -translate-y-1/2 text-base-content/50 group-focus-within:text-primary transition-colors">
                                         <EnvelopeIcon className="w-5 h-5" />
                                     </div>
                                     <input
@@ -376,7 +376,7 @@ export default function ForgotPassword() {
                                         required
                                         value={email}
                                         onChange={(e) => setEmail(e.target.value)}
-                                        className="w-full h-16 pl-14 pr-5 bg-slate-50 border-2 border-slate-200 rounded-2xl text-slate-700 text-lg placeholder:text-slate-400 focus:bg-white focus:border-blue-500 focus:ring-4 focus:ring-blue-500/10 outline-none transition-all"
+                                        className="w-full h-16 pl-14 pr-5 bg-base-200 border-2 border-base-300 rounded-2xl text-base-content text-lg placeholder:text-base-content/50 focus:bg-base-100 focus:border-primary focus:ring-4 focus:ring-primary/10 outline-none transition-all"
                                     />
                                 </div>
                             </div>
@@ -385,14 +385,14 @@ export default function ForgotPassword() {
                                 <motion.div
                                     initial={{ opacity: 0, y: -10, scale: 0.95 }}
                                     animate={{ opacity: 1, y: 0, scale: 1 }}
-                                    className="flex items-start gap-4 p-5 bg-emerald-50 border border-emerald-200 rounded-2xl"
+                                    className="flex items-start gap-4 p-5 bg-success/10 border border-success/20 rounded-2xl"
                                 >
-                                    <div className="w-12 h-12 bg-emerald-100 rounded-xl flex items-center justify-center flex-shrink-0">
-                                        <SparklesIcon className="w-6 h-6 text-emerald-600" />
+                                    <div className="w-12 h-12 bg-success/20 rounded-xl flex items-center justify-center flex-shrink-0">
+                                        <SparklesIcon className="w-6 h-6 text-success" />
                                     </div>
                                     <div>
-                                        <p className="font-semibold text-emerald-800 mb-1">Email enviado!</p>
-                                        <p className="text-emerald-700 text-sm">{success}</p>
+                                        <p className="font-semibold text-success mb-1">Email enviado!</p>
+                                        <p className="text-success text-sm">{success}</p>
                                     </div>
                                 </motion.div>
                             )}
@@ -401,20 +401,20 @@ export default function ForgotPassword() {
                                 <motion.div
                                     initial={{ opacity: 0, y: -10, scale: 0.95 }}
                                     animate={{ opacity: 1, y: 0, scale: 1 }}
-                                    className="p-5 bg-red-50 border border-red-200 rounded-2xl"
+                                    className="p-5 bg-error/10 border border-error/20 rounded-2xl"
                                 >
-                                    <p className="text-red-600 text-center">{error}</p>
+                                    <p className="text-error text-center">{error}</p>
                                 </motion.div>
                             )}
 
                             <button
                                 type="submit"
                                 disabled={loading}
-                                className="w-full h-16 bg-gradient-to-r from-blue-600 to-indigo-600 text-white text-lg font-semibold rounded-2xl shadow-xl shadow-blue-500/25 hover:shadow-2xl hover:shadow-blue-500/30 hover:-translate-y-1 active:translate-y-0 transition-all disabled:opacity-70 disabled:cursor-not-allowed disabled:hover:translate-y-0"
+                                className="w-full h-16 bg-gradient-to-r from-primary to-primary-focus text-primary-content text-lg font-semibold rounded-2xl shadow-xl shadow-primary/25 hover:shadow-2xl hover:shadow-primary/30 hover:-translate-y-1 active:translate-y-0 transition-all disabled:opacity-70 disabled:cursor-not-allowed disabled:hover:translate-y-0"
                             >
                                 {loading ? (
                                     <span className="flex items-center justify-center gap-3">
-                                        <span className="w-6 h-6 border-2 border-white/30 border-t-white rounded-full animate-spin" />
+                                        <span className="w-6 h-6 border-2 border-primary-content/30 border-t-primary-content rounded-full animate-spin" />
                                         Enviando...
                                     </span>
                                 ) : (
@@ -424,10 +424,10 @@ export default function ForgotPassword() {
                         </form>
 
                         {/* Footer info */}
-                        <div className="mt-12 pt-8 border-t border-slate-100">
-                            <p className="text-center text-sm text-slate-400">
+                        <div className="mt-12 pt-8 border-t border-base-300">
+                            <p className="text-center text-sm text-base-content/50">
                                 Lembrou sua senha?{" "}
-                                <a href="/login" className="text-blue-600 font-semibold hover:underline">
+                                <a href="/login" className="text-primary font-semibold hover:underline">
                                     Fazer login
                                 </a>
                             </p>
