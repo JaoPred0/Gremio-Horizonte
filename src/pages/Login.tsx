@@ -354,7 +354,7 @@ export const Login = () => {
             transition={{ delay: 1.3 }}
             className="relative z-10 px-12 xl:px-20 pb-8"
           >
-            <p className="text-base-content/40 text-sm">
+            <p className="text-white/70 text-sm">
               © 2026 Horizonte. Todos os direitos reservados.
             </p>
           </motion.div>
