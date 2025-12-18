@@ -2,6 +2,8 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import SplashScreen from "@/components/SplashScreen";
 import ProtectedRoute from "@/routes/ProtectedRoute";
 
+import AppLayout from "@/layout/AppLayout";
+
 import { Login } from "@/pages/Login";
 import { Register } from "@/pages/Register";
 import VerifyEmail from "@/pages/VerifyEmail";
@@ -23,7 +25,14 @@ export default function App() {
 
         {/* Protegidas */}
         <Route element={<ProtectedRoute />}>
-          <Route path="/home" element={<Home />} />
+          <Route
+            path="/home"
+            element={
+              <AppLayout>
+                <Home />
+              </AppLayout>
+            }
+          />
         </Route>
       </Routes>
     </BrowserRouter>

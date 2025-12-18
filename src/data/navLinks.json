@@ -1,0 +1,7 @@
+{
+  "links": [
+    { "path": "/home", "label": "Home", "icon": "HomeIcon" },
+    { "path": "/perfil", "label": "Perfil", "icon": "UserIcon" },
+    { "path": "/config", "label": "Config", "icon": "SettingsIcon" }
+  ]
+}
