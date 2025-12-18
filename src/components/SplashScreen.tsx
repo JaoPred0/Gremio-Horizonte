@@ -70,7 +70,6 @@ export default function SplashScreen() {
         initial={{ opacity: 1 }}
         animate={fadeOut ? { opacity: 0 } : { opacity: 1 }}
         transition={{ duration: 0.8, ease: "easeInOut" }}
-        data-theme="light" // Aplicando tema light do DaisyUI
         className="
           fixed inset-0 z-50
           flex flex-col items-center justify-center

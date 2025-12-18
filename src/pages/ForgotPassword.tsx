@@ -343,7 +343,6 @@ export default function ForgotPassword() {
                     className="w-1/2 flex items-center justify-center p-12 bg-base-100"
                 >
                     <div className="w-full max-w-md">
-                        {/* Back link */}
                         <a
                             href="/login"
                             className="inline-flex items-center gap-2 text-base-content/70 hover:text-primary transition-colors group mb-12"

@@ -1,0 +1,57 @@
+{
+  "sections": [
+    {
+      "id": "account",
+      "title": "Conta",
+      "items": [
+        {
+          "id": "profile",
+          "label": "Perfil",
+          "description": "Gerencie suas informações pessoais",
+          "icon": "UserIcon",
+          "path": "/config/perfil"
+        }
+      ]
+    },
+    {
+      "id": "preferences",
+      "title": "Preferências",
+      "items": [
+        {
+          "id": "appearance",
+          "label": "Aparência",
+          "description": "Tema e personalização",
+          "icon": "PaintBrushIcon",
+          "path": "/config/aparencia"
+        }
+      ]
+    },
+    {
+      "id": "support",
+      "title": "Suporte",
+      "items": [
+        {
+          "id": "help",
+          "label": "Central de Ajuda",
+          "description": "Perguntas frequentes e tutoriais",
+          "icon": "QuestionMarkCircleIcon",
+          "path": "/config/help"
+        },
+        {
+          "id": "feedback",
+          "label": "Enviar Feedback",
+          "description": "Compartilhe suas sugestões",
+          "icon": "ChatBubbleLeftRightIcon",
+          "path": "/config/feedback"
+        },
+        {
+          "id": "about",
+          "label": "Sobre",
+          "description": "Versão e informações do app",
+          "icon": "InformationCircleIcon",
+          "path": "/config/about"
+        }
+      ]
+    }
+  ]
+}

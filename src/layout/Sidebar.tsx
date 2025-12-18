@@ -7,13 +7,13 @@ import { signOut } from "firebase/auth";
 import { getUserRole, roles } from "@/data/roles";
 import { roleIcons } from "@/utils/roleIcons";
 import { useNavigate } from "react-router-dom";
+import navData from "@/data/navLinks.json";
 import {
   HomeIcon,
-  UserIcon,
   ChevronRightIcon,
+  Cog6ToothIcon,
 } from "@heroicons/react/24/solid";
 import { LogOut, User } from "lucide-react";
-import navData from "@/data/navLinks.json";
 
 interface SidebarProps {
   expanded: boolean;
@@ -22,9 +22,8 @@ interface SidebarProps {
 
 const iconsMap = {
   HomeIcon: HomeIcon,
-  UserIcon: UserIcon,
-  TestIcon: UserIcon,
-};
+  ConfigIcon: Cog6ToothIcon
+}
 const listVariants = {
   hidden: { opacity: 0 },
   show: { opacity: 1, transition: { staggerChildren: 0.05 } },

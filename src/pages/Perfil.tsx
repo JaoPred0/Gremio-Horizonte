@@ -198,21 +198,6 @@ export const Perfil = () => {
                   <p className="text-xs text-base-content/50 uppercase font-bold tracking-wider">Membro desde</p>
                   <p className="font-bold text-lg mt-1">{formatDate(user)}</p>
                 </div>
-                <div className="flex -space-x-2">
-                  {[...Array(3)].map((_, i) => (
-                    <motion.div
-                      key={i}
-                      initial={{ scale: 0 }}
-                      animate={{ scale: 1 }}
-                      transition={{ delay: 0.7 + i * 0.1 }}
-                      className={`w-10 h-10 rounded-full border-2 border-base-100 ${
-                        ['bg-primary', 'bg-secondary', 'bg-accent'][i]
-                      } flex items-center justify-center`}
-                    >
-                      <SparklesIcon className="w-4 h-4 text-white" />
-                    </motion.div>
-                  ))}
-                </div>
               </div>
             </motion.div>
           </div>

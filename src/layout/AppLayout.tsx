@@ -1,10 +1,11 @@
-import { ReactNode, useState } from "react";
+import React, { useEffect, useState, ReactNode } from "react";
 import { useLocation } from "react-router-dom";
 import { motion } from "framer-motion";
+import { useMediaQuery } from "react-responsive";
+
 import Navbar from "./Navbar";
 import Sidebar from "./Sidebar";
 import MobileDock from "./Dock";
-import { useMediaQuery } from "react-responsive";
 
 interface AppLayoutProps {
   children: ReactNode;
@@ -13,6 +14,7 @@ interface AppLayoutProps {
 export default function AppLayout({ children }: AppLayoutProps) {
   const location = useLocation();
   const [sidebarExpanded, setSidebarExpanded] = useState(true);
+  const [mounted, setMounted] = useState(false);
   const isDesktop = useMediaQuery({ minWidth: 1024 });
 
   const hideNav = [
@@ -23,15 +25,27 @@ export default function AppLayout({ children }: AppLayoutProps) {
     "/",
   ].includes(location.pathname);
 
+  // Carregar tema apenas quando houver Navbar/Sidebar
+  useEffect(() => {
+    if (!hideNav) {
+      setMounted(true);
+      const savedTheme = localStorage.getItem("selectedTheme");
+      if (savedTheme) {
+        document.documentElement.setAttribute("data-theme", savedTheme);
+      }
+    }
+  }, [hideNav]);
+
   if (hideNav) return <>{children}</>;
 
+  if (!mounted) return null;
+
   return (
-    <div className="min-h-screen bg-base-100">
+    <div className="min-h-screen bg-base-100 text-base-content transition-colors duration-300">
       {/* NAVBAR */}
       <Navbar />
 
       <div className="pt-16 flex">
-        {/* SIDEBAR — SOMENTE DESKTOP */}
         <div className="hidden lg:block">
           <Sidebar
             expanded={sidebarExpanded}
@@ -42,22 +56,10 @@ export default function AppLayout({ children }: AppLayoutProps) {
         {/* CONTEÚDO */}
         <motion.main
           animate={{
-            marginLeft: isDesktop
-              ? sidebarExpanded
-                ? 280
-                : 80
-              : 0,
+            marginLeft: isDesktop ? (sidebarExpanded ? 280 : 80) : 0,
           }}
-          transition={{
-            type: "spring",
-            stiffness: 260,
-            damping: 28,
-          }}
-          className="
-    flex-1
-    min-h-[calc(100vh-4rem)]
-    p-4 sm:p-6
-  "
+          transition={{ type: "spring", stiffness: 260, damping: 28 }}
+          className="flex-1 min-h-[calc(100vh-4rem)] pb-30 sm:p-6"
         >
           {children}
         </motion.main>

@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Navigate, Outlet } from "react-router-dom";
 import { auth } from "@/lib/firebase";
+import SplashScreen from "@/components/SplashScreen";
 
 export default function ProtectedRoute() {
   const [loading, setLoading] = useState(true);
@@ -15,7 +16,7 @@ export default function ProtectedRoute() {
     return () => unsubscribe();
   }, []);
 
-  if (loading) return <div className="flex justify-center items-center h-screen">Carregando...</div>;
+  if (loading) return <div className="flex justify-center items-center h-screen"><SplashScreen/></div>;
 
   if (!user || !user.emailVerified) return <Navigate to="/login" replace />;
 

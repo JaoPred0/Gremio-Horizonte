@@ -9,7 +9,10 @@ import { Register } from "@/pages/Register";
 import VerifyEmail from "@/pages/VerifyEmail";
 import { Home } from "@/pages/Home";
 import ForgotPassword from "@/pages/ForgotPassword";
-import { Perfil } from "./pages/Perfil";
+import { Perfil } from "@/pages/Perfil";
+import { Config } from "@/pages/Config";
+import Aparencia  from "./pages/Aparencia";
+import { Help } from "./pages/Help";
 
 export default function App() {
   return (
@@ -27,7 +30,11 @@ export default function App() {
         {/* Protegidas */}
         <Route element={<ProtectedRoute />}>
           <Route path="/home" element={<AppLayout> <Home /> </AppLayout>} />
-          <Route path="/perfil" element={<AppLayout> <Perfil /> </AppLayout>} />
+          {/* ===== Area da config ===== */}
+          <Route path="/config" element={<AppLayout> <Config /> </AppLayout>} />
+          <Route path="/config/perfil" element={<AppLayout> <Perfil /> </AppLayout>} />
+          <Route path="/config/aparencia" element={<AppLayout> <Aparencia /> </AppLayout>} />
+          <Route path="/config/help" element={<AppLayout> <Help /> </AppLayout>} />
         </Route>
       </Routes>
     </BrowserRouter>
