@@ -9,6 +9,8 @@ import { Register } from "@/pages/Register";
 import VerifyEmail from "@/pages/VerifyEmail";
 import { Home } from "@/pages/Home";
 import ForgotPassword from "@/pages/ForgotPassword";
+import { Test } from "@/pages/Test";
+import { Perfil } from "./pages/Perfil";
 
 export default function App() {
   return (
@@ -25,14 +27,9 @@ export default function App() {
 
         {/* Protegidas */}
         <Route element={<ProtectedRoute />}>
-          <Route
-            path="/home"
-            element={
-              <AppLayout>
-                <Home />
-              </AppLayout>
-            }
-          />
+          <Route path="/home" element={<AppLayout> <Home /> </AppLayout>} />
+          <Route path="/perfil" element={<AppLayout> <Perfil /> </AppLayout>} />
+          <Route path="/test" element={<AppLayout> <Test /> </AppLayout>} />
         </Route>
       </Routes>
     </BrowserRouter>

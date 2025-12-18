@@ -1,12 +1,14 @@
 import { NavLink } from "react-router-dom";
 import { motion } from "framer-motion";
 import navData from "@/data/navLinks.json";
-import { HomeIcon, UserIcon, SettingsIcon } from "lucide-react";
+import {
+  HomeIcon,
+  CubeTransparentIcon,
+} from "@heroicons/react/24/solid"
 
 const iconsMap: Record<string, JSX.Element> = {
-  HomeIcon: <HomeIcon />,
-  UserIcon: <UserIcon />,
-  SettingsIcon: <SettingsIcon />
+  HomeIcon: <HomeIcon className="w-6 h-6" />,
+  TestIcon: <CubeTransparentIcon className="w-6 h-6" />,
 };
 
 export default function Dock() {
