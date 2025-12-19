@@ -35,7 +35,7 @@
           "label": "Central de Ajuda",
           "description": "Perguntas frequentes e tutoriais",
           "icon": "QuestionMarkCircleIcon",
-          "path": "/config/help"
+          "path": "/build"
         },
         {
           "id": "feedback",

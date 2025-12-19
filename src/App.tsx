@@ -11,8 +11,9 @@ import { Home } from "@/pages/Home";
 import ForgotPassword from "@/pages/ForgotPassword";
 import { Perfil } from "@/pages/Perfil";
 import { Config } from "@/pages/Config";
-import Aparencia  from "./pages/Aparencia";
-import { Help } from "./pages/Help";
+import Aparencia from "@/pages/Aparencia";
+import  NotPage  from "@/pages/NotPage";
+import  Build  from "@/pages/Build";
 
 export default function App() {
   return (
@@ -34,7 +35,8 @@ export default function App() {
           <Route path="/config" element={<AppLayout> <Config /> </AppLayout>} />
           <Route path="/config/perfil" element={<AppLayout> <Perfil /> </AppLayout>} />
           <Route path="/config/aparencia" element={<AppLayout> <Aparencia /> </AppLayout>} />
-          <Route path="/config/help" element={<AppLayout> <Help /> </AppLayout>} />
+          <Route path="/build" element={<AppLayout> <Build /> </AppLayout>} />
+          <Route path="*" element={<AppLayout> <NotPage /> </AppLayout>} />
         </Route>
       </Routes>
     </BrowserRouter>

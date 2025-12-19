@@ -274,7 +274,7 @@ export default function Sidebar({ expanded, onToggle }: SidebarProps) {
 
       <div className="relative border-t border-base-300 p-4">
         <motion.div
-          onClick={() => navigate("/perfil")}
+          onClick={() => navigate("/config/perfil")}
           whileHover={{ scale: 1.02 }}
           whileTap={{ scale: 0.98 }}
           className={`
@@ -328,7 +328,7 @@ export default function Sidebar({ expanded, onToggle }: SidebarProps) {
           {expanded && (
             <motion.button
               onClick={(e) => {
-                e.stopPropagation(); // 🔴 impede ir para /perfil
+                e.stopPropagation();
                 signOut(auth);
               }}
               whileHover={{ scale: 1.1 }}
