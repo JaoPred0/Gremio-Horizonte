@@ -203,50 +203,6 @@ export const Config = () => {
               </motion.div>
             ))}
           </div>
-
-          {/* Quick Stats */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.6 }}
-            className="mt-12 grid grid-cols-3 gap-6"
-          >
-            <div className="bg-primary/5 border border-primary/20 rounded-2xl p-6">
-              <div className="flex items-center gap-3">
-                <div className="w-12 h-12 bg-primary/20 rounded-xl flex items-center justify-center">
-                  <ShieldCheck className="w-6 h-6 text-primary" />
-                </div>
-                <div>
-                  <p className="text-2xl font-bold text-base-content">100%</p>
-                  <p className="text-xs text-base-content/60">Seguro</p>
-                </div>
-              </div>
-            </div>
-
-            <div className="bg-secondary/5 border border-secondary/20 rounded-2xl p-6">
-              <div className="flex items-center gap-3">
-                <div className="w-12 h-12 bg-secondary/20 rounded-xl flex items-center justify-center">
-                  <Bell className="w-6 h-6 text-secondary" />
-                </div>
-                <div>
-                  <p className="text-2xl font-bold text-base-content">5</p>
-                  <p className="text-xs text-base-content/60">Notificações</p>
-                </div>
-              </div>
-            </div>
-
-            <div className="bg-accent/5 border border-accent/20 rounded-2xl p-6">
-              <div className="flex items-center gap-3">
-                <div className="w-12 h-12 bg-accent/20 rounded-xl flex items-center justify-center">
-                  <User className="w-6 h-6 text-accent" />
-                </div>
-                <div>
-                  <p className="text-2xl font-bold text-base-content">Ativo</p>
-                  <p className="text-xs text-base-content/60">Status</p>
-                </div>
-              </div>
-            </div>
-          </motion.div>
         </motion.div>
       </div>
     </div>
