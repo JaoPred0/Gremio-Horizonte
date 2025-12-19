@@ -10,6 +10,13 @@
           "description": "Gerencie suas informações pessoais",
           "icon": "UserIcon",
           "path": "/config/perfil"
+        },
+        {
+          "id": "change-password",
+          "label": "Mudar senha",
+          "description": "Altere sua senha de acesso",
+          "icon": "KeyIcon",
+          "path": "/config/mudar-senha"
         }
       ]
     },

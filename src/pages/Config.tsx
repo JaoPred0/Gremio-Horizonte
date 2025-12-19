@@ -12,7 +12,8 @@ import {
   MessageSquare,
   Info,
   ChevronRight,
-  Settings
+  Settings,
+  KeyIcon
 } from 'lucide-react';
 import configData from '@/data/configLinks.json';
 import AnimatedPage from '@/components/AnimatedPage';
@@ -26,7 +27,8 @@ const iconsMap = {
   LockClosedIcon: Lock,
   QuestionMarkCircleIcon: HelpCircle,
   ChatBubbleLeftRightIcon: MessageSquare,
-  InformationCircleIcon: Info
+  InformationCircleIcon: Info,
+  KeyIcon:KeyIcon,
 };
 
 export const Config = () => {
@@ -203,6 +205,7 @@ export const Config = () => {
               </motion.div>
             ))}
           </div>
+
         </motion.div>
       </div>
     </div>

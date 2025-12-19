@@ -12,6 +12,7 @@ import {
   ShieldCheckIcon,
   SparklesIcon,
 } from "@heroicons/react/24/outline";
+import AnimatedPage from "@/components/AnimatedPage";
 
 function getFirstName(user) {
   if (!user?.email) return "Usuário";
@@ -46,12 +47,12 @@ export const Perfil = () => {
     <div className="hidden lg:flex min-h-screen">
       <div className="w-2/5 relative flex flex-col items-center justify-center">
         <div className="absolute inset-0 overflow-hidden">
-          <motion.div 
+          <motion.div
             className="absolute top-20 left-10 w-72 h-72 bg-primary/5 rounded-full blur-3xl"
             animate={{ scale: [1, 1.2, 1], opacity: [0.3, 0.5, 0.3] }}
             transition={{ duration: 8, repeat: Infinity }}
           />
-          <motion.div 
+          <motion.div
             className="absolute bottom-20 right-10 w-96 h-96 bg-secondary/5 rounded-full blur-3xl"
             animate={{ scale: [1.2, 1, 1.2], opacity: [0.5, 0.3, 0.5] }}
             transition={{ duration: 10, repeat: Infinity }}
@@ -208,7 +209,7 @@ export const Perfil = () => {
 
   const MobileLayout = () => (
     <div className="lg:hidden relative flex flex-col items-center pt-32 pb-20 px-6 min-h-screen">
-      
+
       <div className="absolute top-28 left-1/2 -translate-x-1/2 w-full max-w-2xl h-32 overflow-hidden">
         <svg
           viewBox="0 0 1200 120"
@@ -224,7 +225,7 @@ export const Perfil = () => {
               <stop offset="100%" stopColor="currentColor" stopOpacity="0" />
             </linearGradient>
           </defs>
-          
+
           <motion.path
             d="M0,60 Q150,20 300,60 T600,60 T900,60 T1200,60"
             fill="none"
@@ -232,7 +233,7 @@ export const Perfil = () => {
             strokeWidth="3"
             className="text-primary"
             initial={{ pathLength: 0, pathOffset: 0 }}
-            animate={{ 
+            animate={{
               pathLength: 1,
               pathOffset: [0, -2]
             }}
@@ -241,7 +242,7 @@ export const Perfil = () => {
               pathOffset: { duration: 3, repeat: Infinity, ease: "linear" }
             }}
           />
-          
+
           <motion.path
             d="M0,60 Q150,100 300,60 T600,60 T900,60 T1200,60"
             fill="none"
@@ -249,7 +250,7 @@ export const Perfil = () => {
             strokeWidth="2.5"
             className="text-secondary"
             initial={{ pathLength: 0, pathOffset: 0 }}
-            animate={{ 
+            animate={{
               pathLength: 1,
               pathOffset: [0, 2]
             }}
@@ -282,7 +283,7 @@ export const Perfil = () => {
             animate={{ rotate: 360 }}
             transition={{ duration: 8, repeat: Infinity, ease: "linear" }}
           />
-          
+
           {RoleIcon ? (
             <RoleIcon className="w-12 h-12 text-white relative z-10" />
           ) : (
@@ -371,8 +372,10 @@ export const Perfil = () => {
 
   return (
     <>
-      <DesktopLayout />
-      <MobileLayout />
+      <AnimatedPage>
+        <DesktopLayout />
+        <MobileLayout />
+      </AnimatedPage>
     </>
   );
 };

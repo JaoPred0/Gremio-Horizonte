@@ -14,6 +14,7 @@ import { Config } from "@/pages/Config";
 import Aparencia from "@/pages/Aparencia";
 import  NotPage  from "@/pages/NotPage";
 import  Build  from "@/pages/Build";
+import  ChangePassword  from "@/pages/ChangePassword";
 
 export default function App() {
   return (
@@ -35,6 +36,7 @@ export default function App() {
           <Route path="/config" element={<AppLayout> <Config /> </AppLayout>} />
           <Route path="/config/perfil" element={<AppLayout> <Perfil /> </AppLayout>} />
           <Route path="/config/aparencia" element={<AppLayout> <Aparencia /> </AppLayout>} />
+          <Route path="/config/mudar-senha" element={<AppLayout> <ChangePassword /> </AppLayout>} />
           <Route path="/build" element={<AppLayout> <Build /> </AppLayout>} />
           <Route path="*" element={<AppLayout> <NotPage /> </AppLayout>} />
         </Route>
