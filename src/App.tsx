@@ -15,7 +15,7 @@ import Aparencia from "@/pages/Aparencia";
 import  NotPage  from "@/pages/NotPage";
 import  Build  from "@/pages/Build";
 import  ChangePassword  from "@/pages/ChangePassword";
-import { Apps } from "@/pages/Apps";
+import  Apps  from "@/pages/Apps";
 
 export default function App() {
   return (

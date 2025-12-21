@@ -3,7 +3,8 @@ import { motion } from "framer-motion";
 import navData from "@/data/navLinks.json";
 import {
   HomeIcon,
-  Cog6ToothIcon
+  Cog6ToothIcon,
+  Squares2X2Icon
 } from "@heroicons/react/24/solid";
 import {
   HomeIcon as HomeOutline,
@@ -12,6 +13,7 @@ import {
 
 const iconsMap = {
   HomeIcon: { solid: HomeIcon, outline: HomeOutline },
+  AppIcon: { solid: Squares2X2Icon, outline: Squares2X2Icon },
   ConfigIcon: { solid: Cog6ToothIcon, outline: CogOutline }
 };
 

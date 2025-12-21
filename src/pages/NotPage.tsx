@@ -51,7 +51,7 @@ export default function NotPage() {
 
   return (
     <AnimatedPage>
-      <div className="fixed inset-0 overflow-hidden bg-gradient-to-br from-base-200 via-base-100 to-base-200 flex items-center justify-center px-4">
+      <div className="fixed inset-0 overflow-hidden flex items-center justify-center px-4">
         {/* Background animation */}
         <div className="absolute inset-0 pointer-events-none overflow-hidden">
           {fallingIcons.map((props, index) => (
