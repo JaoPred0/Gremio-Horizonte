@@ -1,6 +1,7 @@
 {
   "links": [
     { "path": "/home", "label": "Home", "icon": "HomeIcon" },
+    { "path": "/apps", "label": "Aplicativos", "icon": "AppIcon" },
     { "path": "/config", "label": "Configuração", "icon": "ConfigIcon" }
   ]
 }

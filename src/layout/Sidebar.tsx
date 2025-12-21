@@ -12,6 +12,7 @@ import {
   HomeIcon,
   ChevronRightIcon,
   Cog6ToothIcon,
+  Squares2X2Icon,
 } from "@heroicons/react/24/solid";
 import { LogOut, User } from "lucide-react";
 
@@ -22,7 +23,8 @@ interface SidebarProps {
 
 const iconsMap = {
   HomeIcon: HomeIcon,
-  ConfigIcon: Cog6ToothIcon
+  ConfigIcon: Cog6ToothIcon,
+  AppIcon: Squares2X2Icon
 }
 const listVariants = {
   hidden: { opacity: 0 },

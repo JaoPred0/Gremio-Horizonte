@@ -13,7 +13,7 @@ interface AppLayoutProps {
 
 export default function AppLayout({ children }: AppLayoutProps) {
   const location = useLocation();
-  const [sidebarExpanded, setSidebarExpanded] = useState(true);
+  const [sidebarExpanded, setSidebarExpanded] = useState(false);
   const [mounted, setMounted] = useState(false);
   const isDesktop = useMediaQuery({ minWidth: 1024 });
 
@@ -55,7 +55,7 @@ export default function AppLayout({ children }: AppLayoutProps) {
 
         {/* CONTEÚDO */}
         <motion.main
-          animate={{
+          style={{
             marginLeft: isDesktop ? (sidebarExpanded ? 280 : 80) : 0,
           }}
           transition={{ type: "spring", stiffness: 260, damping: 28 }}
