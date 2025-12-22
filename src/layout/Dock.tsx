@@ -10,11 +10,13 @@ import {
   HomeIcon as HomeOutline,
   Cog6ToothIcon as CogOutline
 } from "@heroicons/react/24/solid";
+import { BookOpenIcon } from "lucide-react";
 
 const iconsMap = {
   HomeIcon: { solid: HomeIcon, outline: HomeOutline },
   AppIcon: { solid: Squares2X2Icon, outline: Squares2X2Icon },
-  ConfigIcon: { solid: Cog6ToothIcon, outline: CogOutline }
+  ConfigIcon: { solid: Cog6ToothIcon, outline: CogOutline },
+  Vest: {solid: BookOpenIcon, outline: BookOpenIcon}
 };
 
 export default function Dock() {

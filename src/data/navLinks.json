@@ -2,6 +2,7 @@
   "links": [
     { "path": "/home", "label": "Home", "icon": "HomeIcon" },
     { "path": "/apps", "label": "Aplicativos", "icon": "AppIcon" },
+    { "path": "/pre-vestibular", "label": "Pré Vestibular", "icon": "Vest" },
     { "path": "/config", "label": "Configuração", "icon": "ConfigIcon" }
   ]
 }

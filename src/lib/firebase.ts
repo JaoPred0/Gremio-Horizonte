@@ -1,5 +1,7 @@
 import { initializeApp, getApps, getApp } from "firebase/app";
-import { getAuth,  } from "firebase/auth";
+import { getAuth } from "firebase/auth";
+import { getFirestore } from "firebase/firestore";
+
 /**
  * Configuração Firebase (Vite .env)
  */
@@ -21,3 +23,8 @@ const app = getApps().length ? getApp() : initializeApp(firebaseConfig);
  * Firebase Auth
  */
 export const auth = getAuth(app);
+
+/**
+ * Firestore Database
+ */
+export const db = getFirestore(app);

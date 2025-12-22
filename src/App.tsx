@@ -12,10 +12,13 @@ import ForgotPassword from "@/pages/ForgotPassword";
 import { Perfil } from "@/pages/Perfil";
 import { Config } from "@/pages/Config";
 import Aparencia from "@/pages/Aparencia";
-import  NotPage  from "@/pages/NotPage";
-import  Build  from "@/pages/Build";
-import  ChangePassword  from "@/pages/ChangePassword";
-import  Apps  from "@/pages/Apps";
+import NotPage from "@/pages/NotPage";
+import Build from "@/pages/Build";
+import ChangePassword from "@/pages/ChangePassword";
+import Apps from "@/pages/Apps";
+import {XHorizonte} from "@/apps/XHorizonte";
+import { Jogos } from "@/apps/Jogos";
+import { Vestibular } from "@/pages/Vestibular";
 
 export default function App() {
   return (
@@ -41,6 +44,14 @@ export default function App() {
 
           {/* ===== Área de Aplicativos */}
           <Route path="/apps" element={<AppLayout> <Apps /> </AppLayout>} />
+          <Route path="/apps/xhorizonte" element={<AppLayout> <XHorizonte /> </AppLayout>} />
+          <Route path="/apps/jogos" element={<AppLayout> <Jogos /> </AppLayout>} />
+
+
+          {/* Vestibular */}
+          <Route path="/pre-vestibular" element={<AppLayout> <Vestibular /> </AppLayout>} />
+
+
           <Route path="/build" element={<AppLayout> <Build /> </AppLayout>} />
           <Route path="*" element={<AppLayout> <NotPage /> </AppLayout>} />
         </Route>
