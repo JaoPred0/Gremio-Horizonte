@@ -1,5 +1,8 @@
+
 import { useState } from "react";
 import { signInWithEmailAndPassword, sendEmailVerification } from "firebase/auth";
+import { collection, addDoc, serverTimestamp } from 'firebase/firestore';
+import { db } from '@/lib/firebase';
 import { auth } from "@/lib/firebase";
 import { useNavigate, Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
@@ -13,6 +16,112 @@ import {
   ShieldCheckIcon,
 } from "@heroicons/react/24/solid";
 import { SparklesIcon as SparklesSolid } from "@heroicons/react/24/solid";
+const getDeviceInfo = () => {
+  const ua = navigator.userAgent;
+
+  const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(ua);
+  const isTablet = /iPad|Android(?!.*Mobile)/i.test(ua);
+
+  let deviceType = 'Desktop';
+  let deviceIcon = '💻';
+  if (isTablet) {
+    deviceType = 'Tablet';
+    deviceIcon = '📱';
+  } else if (isMobile) {
+    deviceType = 'Mobile';
+    deviceIcon = '📱';
+  }
+
+  let browser = 'Desconhecido';
+  if (ua.includes('Chrome') && !ua.includes('Edg') && !ua.includes('OPR')) {
+    browser = 'Chrome';
+  } else if (ua.includes('Safari') && !ua.includes('Chrome')) {
+    browser = 'Safari';
+  } else if (ua.includes('Firefox')) {
+    browser = 'Firefox';
+  } else if (ua.includes('Edg')) {
+    browser = 'Edge';
+  } else if (ua.includes('OPR') || ua.includes('Opera')) {
+    browser = 'Opera';
+  }
+
+  let os = 'Desconhecido';
+  if (ua.includes('Windows NT 10.0')) os = 'Windows 10/11';
+  else if (ua.includes('Windows')) os = 'Windows';
+  else if (ua.includes('Mac OS X')) os = 'macOS';
+  else if (ua.includes('Linux')) os = 'Linux';
+  else if (ua.includes('Android')) os = 'Android';
+  else if (ua.includes('iOS') || ua.includes('iPhone') || ua.includes('iPad')) os = 'iOS';
+
+  return { deviceType, browser, os, deviceIcon };
+};
+
+// Função opcional: salvar histórico de logins
+const saveLoginHistory = async (userId: string, userEmail: string) => {
+  try {
+    const { deviceType, browser, os } = getDeviceInfo();
+
+    await addDoc(collection(db, 'login_history'), {
+      userId,
+      userEmail,
+      deviceType,
+      browser,
+      os,
+      timestamp: serverTimestamp(),
+      userAgent: navigator.userAgent
+    });
+
+    console.log('✅ Histórico de login salvo');
+  } catch (error) {
+    console.error('❌ Erro ao salvar histórico:', error);
+  }
+};
+
+
+// Função para criar notificação de login
+const createLoginNotification = async (userId: string) => {
+  try {
+    const now = new Date();
+    const timeStr = now.toLocaleTimeString('pt-BR', {
+      hour: '2-digit',
+      minute: '2-digit',
+    } as Intl.DateTimeFormatOptions);
+
+    const dateStr = now.toLocaleDateString('pt-BR', {
+      day: '2-digit',
+      month: 'short',
+    } as Intl.DateTimeFormatOptions);
+
+
+    const { deviceType, browser, os } = getDeviceInfo();
+
+    // Mensagem personalizada baseada no dispositivo
+    let deviceEmoji = '💻';
+    if (deviceType === 'celular') deviceEmoji = '📱';
+    else if (deviceType === 'tablet') deviceEmoji = '📱';
+
+    const message = `Acesso às ${timeStr} em ${dateStr} • ${browser} no ${os}`;
+
+    await addDoc(collection(db, 'notifications'), {
+      uid: userId,
+      title: `${deviceEmoji} Novo login na sua conta`,
+      message: message,
+      type: 'system',
+      read: false,
+      createdAt: Date.now(),
+      metadata: {
+        deviceType,
+        browser,
+        os,
+        timestamp: now.toISOString()
+      }
+    });
+
+    console.log('✅ Notificação de login criada com sucesso');
+  } catch (error) {
+    console.error('❌ Erro ao criar notificação de login:', error);
+  }
+};
 
 export const Login = () => {
   const navigate = useNavigate();
@@ -40,13 +149,27 @@ export const Login = () => {
         return;
       }
 
+      // Criar notificação de login (não bloqueia o login se falhar)
+      createLoginNotification(user.uid).catch(err => {
+        console.error('Notificação falhou (não crítico):', err);
+      });
+
+      // Opcional: Salvar histórico de login
+      saveLoginHistory(user.uid, user.email || '').catch(err => {
+        console.error('Histórico falhou (não crítico):', err);
+      });
+
       navigate("/home", { replace: true });
-    } catch {
+    } catch (error) {
       setError("Email ou senha inválidos");
+      console.error('Erro no login:', error);
     } finally {
       setLoading(false);
     }
   }
+
+
+
 
   return (
     <div className="min-h-screen w-full">

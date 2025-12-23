@@ -13,8 +13,9 @@ import {
   ChevronRightIcon,
   Cog6ToothIcon,
   Squares2X2Icon,
+  BookOpenIcon,
 } from "@heroicons/react/24/solid";
-import { BookOpenIcon, LogOut, User } from "lucide-react";
+import { LogOut, User } from "lucide-react";
 
 interface SidebarProps {
   expanded: boolean;
@@ -25,7 +26,7 @@ const iconsMap = {
   HomeIcon: HomeIcon,
   ConfigIcon: Cog6ToothIcon,
   AppIcon: Squares2X2Icon,
-  Vest: BookOpenIcon
+  Estudos: BookOpenIcon
 }
 const listVariants = {
   hidden: { opacity: 0 },

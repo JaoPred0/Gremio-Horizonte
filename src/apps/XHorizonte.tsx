@@ -29,6 +29,7 @@ import { onAuthStateChanged } from 'firebase/auth';
 interface User {
   name: string;
   email: string;
+  uid: string;
   role: {
     key: string;
     label: string;
@@ -67,6 +68,58 @@ export const XHorizonte: React.FC = () => {
   const [fullNameConfirmation, setFullNameConfirmation] = useState('');
   const [expandedComments, setExpandedComments] = useState<Record<string, boolean>>({});
 
+  const createCommentNotification = async (
+    postAuthorUid: string,
+    postAuthorEmail: string,
+    commenterName: string,
+    commentText: string,
+    postId: string
+  ) => {
+    // Não notificar se o autor comentou no próprio post
+    if (postAuthorUid === currentUser?.uid) return;
+
+    try {
+      await addDoc(collection(db, 'notifications'), {
+        uid: postAuthorUid,
+        title: `💬 ${commenterName} comentou em seu post`,
+        message: `${commenterName} respondeu seu post no XHorizonte`,
+        commentText: commentText,
+        authorName: commenterName,
+        type: 'comment',
+        postId: postId,
+        read: false,
+        createdAt: Date.now()
+      });
+    } catch (error) {
+      console.error('Erro ao criar notificação:', error);
+    }
+  };
+
+  const createLikeNotification = async (
+    postAuthorUid: string,
+    postAuthorEmail: string,
+    likerName: string,
+    postId: string
+  ) => {
+    // Não notificar se curtiu o próprio post
+    if (postAuthorUid === currentUser?.uid) return;
+
+    try {
+      await addDoc(collection(db, 'notifications'), {
+        uid: postAuthorUid,
+        title: `❤️ ${likerName} curtiu seu post`,
+        message: `${likerName} curtiu seu post no XHorizonte`,
+        authorName: likerName,
+        type: 'like',
+        postId: postId,
+        read: false,
+        createdAt: Date.now()
+      });
+    } catch (error) {
+      console.error('Erro ao criar notificação de curtida:', error);
+    }
+  };
+
   useEffect(() => {
     const accepted = localStorage.getItem('xhorizonte_terms_accepted');
     if (accepted === 'true') {
@@ -86,13 +139,14 @@ export const XHorizonte: React.FC = () => {
     });
   };
 
+
   const handleConfirmTerms = async () => {
     if (allTermsAccepted && fullNameConfirmation.trim() && currentUser) {
       try {
-        // Salvar confirmação no Firebase
         await addDoc(collection(db, 'terms_confirmations'), {
           userEmail: currentUser.email,
           userName: currentUser.name,
+          userUid: currentUser.uid,
           fullNameTyped: fullNameConfirmation.trim(),
           acceptedAt: serverTimestamp(),
           termsVersion: '1.0',
@@ -116,6 +170,7 @@ export const XHorizonte: React.FC = () => {
         setCurrentUser({
           name: formatUserName(firebaseUser.email),
           email: firebaseUser.email,
+          uid: firebaseUser.uid,
           role: userRole
         });
       }
@@ -132,16 +187,21 @@ export const XHorizonte: React.FC = () => {
       const postsData = snapshot.docs.map(doc => {
         const data = doc.data();
 
-        // Garantir que o user tenha role
         const user = data.user || {};
         if (!user.role) {
           user.role = getUserRole(user.email);
         }
+        // Garantir que o user tenha uid
+        if (!user.uid && user.email) {
+          user.uid = user.email; // fallback temporário
+        }
 
-        // Garantir que os comentários tenham role
         const comments = (data.comments || []).map((comment: any) => {
           if (!comment.user.role) {
             comment.user.role = getUserRole(comment.user.email);
+          }
+          if (!comment.user.uid && comment.user.email) {
+            comment.user.uid = comment.user.email; // fallback temporário
           }
           return comment;
         });
@@ -194,6 +254,16 @@ export const XHorizonte: React.FC = () => {
       await updateDoc(postRef, {
         likes: hasLiked ? arrayRemove(currentUser.email) : arrayUnion(currentUser.email)
       });
+
+      // Criar notificação apenas quando curtir (não quando descurtir)
+      if (!hasLiked) {
+        await createLikeNotification(
+          post.user.uid,
+          post.user.email,
+          currentUser.name,
+          postId
+        );
+      }
     } catch (error) {
       console.error('Erro ao curtir post:', error);
     }
@@ -214,6 +284,9 @@ export const XHorizonte: React.FC = () => {
     const commentText = commentInputs[postId];
     if (!commentText?.trim()) return;
 
+    const post = posts.find(p => p.id === postId);
+    if (!post) return;
+
     const newComment: Comment = {
       user: currentUser,
       content: commentText,
@@ -226,6 +299,16 @@ export const XHorizonte: React.FC = () => {
       await updateDoc(postRef, {
         comments: arrayUnion(newComment)
       });
+
+      // Criar notificação para o autor do post
+      await createCommentNotification(
+        post.user.uid,
+        post.user.email,
+        currentUser.name,
+        commentText,
+        postId
+      );
+
       setCommentInputs({ ...commentInputs, [postId]: '' });
     } catch (error) {
       console.error('Erro ao comentar:', error);
@@ -603,7 +686,7 @@ export const XHorizonte: React.FC = () => {
                           </span>
                           <span className="text-sm opacity-60">· {formatTime(post.timestamp)}</span>
                         </div>
-                        {post.user.email === currentUser.email && (
+                        {post.user.uid === currentUser.email && (
                           <div className="dropdown dropdown-end">
                             <motion.button
                               whileHover={{ scale: 1.1, rotate: 90 }}

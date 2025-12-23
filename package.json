@@ -14,6 +14,7 @@
     "@heroicons/react": "^2.2.0",
     "@tailwindcss/vite": "^4.1.18",
     "@tanstack/react-query": "^5.90.12",
+    "canvas-confetti": "^1.9.4",
     "daisyui": "^5.5.14",
     "date-fns": "^4.1.0",
     "firebase": "^12.7.0",

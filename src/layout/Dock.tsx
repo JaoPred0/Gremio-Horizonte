@@ -4,19 +4,19 @@ import navData from "@/data/navLinks.json";
 import {
   HomeIcon,
   Cog6ToothIcon,
-  Squares2X2Icon
+  Squares2X2Icon,
+  BookOpenIcon
 } from "@heroicons/react/24/solid";
 import {
   HomeIcon as HomeOutline,
   Cog6ToothIcon as CogOutline
 } from "@heroicons/react/24/solid";
-import { BookOpenIcon } from "lucide-react";
 
 const iconsMap = {
   HomeIcon: { solid: HomeIcon, outline: HomeOutline },
   AppIcon: { solid: Squares2X2Icon, outline: Squares2X2Icon },
   ConfigIcon: { solid: Cog6ToothIcon, outline: CogOutline },
-  Vest: {solid: BookOpenIcon, outline: BookOpenIcon}
+  Estudos: {solid: BookOpenIcon, outline: BookOpenIcon}
 };
 
 export default function Dock() {

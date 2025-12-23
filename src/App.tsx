@@ -18,7 +18,9 @@ import ChangePassword from "@/pages/ChangePassword";
 import Apps from "@/pages/Apps";
 import {XHorizonte} from "@/apps/XHorizonte";
 import { Jogos } from "@/apps/Jogos";
-import { Vestibular } from "@/pages/Vestibular";
+import { Estudos } from "@/pages/Estudos";
+import { Notificacao } from "@/pages/Notificacao";
+import { Streak } from "@/components/estudos/Streak";
 
 export default function App() {
   return (
@@ -48,8 +50,12 @@ export default function App() {
           <Route path="/apps/jogos" element={<AppLayout> <Jogos /> </AppLayout>} />
 
 
-          {/* Vestibular */}
-          <Route path="/pre-vestibular" element={<AppLayout> <Vestibular /> </AppLayout>} />
+          {/* ===== Vestibular ===== */}
+          <Route path="/estudos" element={<AppLayout> <Estudos /> </AppLayout>} />
+          <Route path="/estudos/streak" element={<AppLayout> <Streak /> </AppLayout>} />
+
+          {/* ===== Notificação ===== */}
+          <Route path="/notifications" element={<AppLayout> <Notificacao /> </AppLayout>} />
 
 
           <Route path="/build" element={<AppLayout> <Build /> </AppLayout>} />
