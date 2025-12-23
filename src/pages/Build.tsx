@@ -79,7 +79,7 @@ export default function Build() {
 
     return (
         <AnimatedPage>
-            <div className="fixed inset-0 overflow-hidden bg-gradient-to-br from-base-200 via-base-100 to-base-200">
+            <div className="fixed inset-0 overflow-hidden">
                 {/* Ícones de fundo */}
                 <div className="absolute inset-0 pointer-events-none overflow-hidden">
                     {fallingIcons.map((props, index) => (

@@ -8,6 +8,7 @@ import { onAuthStateChanged } from "firebase/auth";
 import { useNavigate } from "react-router-dom";
 import exercises from "./data/exercises";
 import { type Exercise } from "@/components/estudos/type/exercise";
+import AnimatedPage from "../AnimatedPage";
 
 interface UserStreak {
   currentStreak: number;
@@ -48,7 +49,7 @@ export const Streak = () => {
   const [alreadyCompletedToday, setAlreadyCompletedToday] = useState(false);
   const [streakIncreased, setStreakIncreased] = useState(false);
   const [xpGained, setXpGained] = useState(0);
-  
+
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -256,7 +257,7 @@ export const Streak = () => {
     }
 
     const totalXpGained = 50; // 5 exercícios * 10 XP
-    
+
     setStreakIncreased(increased);
     setXpGained(totalXpGained);
     setShowCompletion(true);
@@ -278,7 +279,7 @@ export const Streak = () => {
 
       setStreakData(updatedData);
       setAlreadyCompletedToday(true);
-      
+
       showToast(`🔥 Streak de ${newStreak} dias! +${totalXpGained} XP`, 'success');
     } catch (error) {
       console.error('Erro ao salvar streak:', error);
@@ -384,177 +385,179 @@ export const Streak = () => {
   const progress = (completedExercises.length / 5) * 100;
 
   return (
-    <div className="min-h-screen p-4 md:p-8">
-      <div className="max-w-3xl mx-auto">
-        <motion.div
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          className="flex items-center justify-between mb-8"
-        >
-          <div>
-            <h1 className="text-3xl font-bold flex items-center gap-3">
-              <Flame className="w-8 h-8 text-orange-500" />
-              Foguinho Diário
-            </h1>
-            <p className="text-sm opacity-60 mt-1">
-              Complete 5 exercícios para manter seu Foguinho
-            </p>
-            <p className="text-xs opacity-40 mt-1 flex items-center gap-1">
-              <Mail className="w-3 h-3" />
-              {userEmail}
-            </p>
-          </div>
-        </motion.div>
-
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          className="mb-8"
-        >
-          <div className="flex items-center justify-between mb-2">
-            <span className="text-sm font-bold">Progresso</span>
-            <span className="text-sm opacity-60">{completedExercises.length}/5</span>
-          </div>
-          <div className="w-full bg-base-300 rounded-full h-3 overflow-hidden">
-            <motion.div
-              initial={{ width: 0 }}
-              animate={{ width: `${progress}%` }}
-              className="h-full bg-gradient-to-r from-orange-500 to-red-500"
-              transition={{ duration: 0.5 }}
-            />
-          </div>
-          <div className="flex gap-2 mt-3">
-            {[0, 1, 2, 3, 4].map((i) => (
-              <motion.div
-                key={i}
-                initial={{ scale: 0 }}
-                animate={{ scale: 1 }}
-                transition={{ delay: i * 0.1 }}
-                className={`flex-1 h-2 rounded-full ${completedExercises.includes(i)
-                  ? 'bg-gradient-to-r from-green-500 to-emerald-500'
-                  : 'bg-base-300'
-                  }`}
-              />
-            ))}
-          </div>
-        </motion.div>
-
-        <AnimatePresence mode="wait">
+    <AnimatedPage>
+      <div className="min-h-screen p-4 md:p-8">
+        <div className="max-w-3xl mx-auto">
           <motion.div
-            key={currentExercise}
-            initial={{ opacity: 0, x: 50 }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: -50 }}
-            className="bg-base-100 rounded-3xl shadow-xl overflow-hidden"
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="flex items-center justify-between mb-8"
           >
-            <div className={`bg-gradient-to-r ${exercise.color} p-6 text-white`}>
-              <div className="flex items-center gap-3 mb-2">
-                <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center backdrop-blur-sm">
-                  <exercise.icon className="w-6 h-6" />
-                </div>
-                <div>
-                  <h2 className="text-2xl font-bold">{exercise.subject}</h2>
-                  <p className="text-sm opacity-90">Questão {currentExercise + 1} de 5</p>
-                </div>
-              </div>
-            </div>
-
-            <div className="p-6">
-              <h3 className="text-xl font-bold mb-6">{exercise.question}</h3>
-
-              <div className="space-y-3">
-                {exercise.options.map((option, index) => (
-                  <motion.button
-                    key={index}
-                    whileHover={{ scale: 1.02 }}
-                    whileTap={{ scale: 0.98 }}
-                    onClick={() => handleAnswerSelect(index)}
-                    disabled={showResult}
-                    className={`w-full p-4 rounded-2xl border-2 text-left transition-all ${selectedAnswer === index
-                      ? showResult
-                        ? isCorrect
-                          ? 'border-green-500 bg-green-500/10'
-                          : 'border-red-500 bg-red-500/10'
-                        : 'border-primary bg-primary/10'
-                      : showResult && index === exercise.correctAnswer
-                        ? 'border-green-500 bg-green-500/10'
-                        : 'border-base-300 hover:border-base-content/30'
-                      }`}
-                  >
-                    <div className="flex items-center justify-between">
-                      <span className="font-medium">{option}</span>
-                      {showResult && (
-                        <div>
-                          {index === exercise.correctAnswer ? (
-                            <Check className="w-5 h-5 text-green-500" />
-                          ) : selectedAnswer === index ? (
-                            <X className="w-5 h-5 text-red-500" />
-                          ) : null}
-                        </div>
-                      )}
-                    </div>
-                  </motion.button>
-                ))}
-              </div>
-
-              <AnimatePresence>
-                {showResult && (
-                  <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, y: -20 }}
-                    className={`mt-6 p-4 rounded-2xl ${isCorrect ? 'bg-green-500/10' : 'bg-red-500/10'
-                      }`}
-                  >
-                    <div className="flex items-center gap-3">
-                      {isCorrect ? (
-                        <>
-                          <Check className="w-6 h-6 text-green-500" />
-                          <div>
-                            <p className="font-bold text-green-500">Correto! 🎉</p>
-                            <p className="text-sm opacity-70">Avançando para próxima questão...</p>
-                          </div>
-                        </>
-                      ) : (
-                        <>
-                          <X className="w-6 h-6 text-red-500" />
-                          <div>
-                            <p className="font-bold text-red-500">Incorreto</p>
-                            <p className="text-sm opacity-70">Tente novamente!</p>
-                          </div>
-                        </>
-                      )}
-                    </div>
-                  </motion.div>
-                )}
-              </AnimatePresence>
-
-              <div className="mt-6 flex gap-3">
-                {!showResult ? (
-                  <motion.button
-                    whileHover={{ scale: 1.02 }}
-                    whileTap={{ scale: 0.98 }}
-                    onClick={handleSubmit}
-                    disabled={selectedAnswer === null}
-                    className="flex-1 btn btn-primary btn-lg"
-                  >
-                    Confirmar
-                  </motion.button>
-                ) : !isCorrect ? (
-                  <motion.button
-                    whileHover={{ scale: 1.02 }}
-                    whileTap={{ scale: 0.98 }}
-                    onClick={retryExercise}
-                    className="flex-1 btn btn-primary btn-lg"
-                  >
-                    Tentar Novamente
-                  </motion.button>
-                ) : null}
-              </div>
+            <div>
+              <h1 className="text-3xl font-bold flex items-center gap-3">
+                <Flame className="w-8 h-8 text-orange-500" />
+                Foguinho Diário
+              </h1>
+              <p className="text-sm opacity-60 mt-1">
+                Complete 5 exercícios para manter seu Foguinho
+              </p>
+              <p className="text-xs opacity-40 mt-1 flex items-center gap-1">
+                <Mail className="w-3 h-3" />
+                {userEmail}
+              </p>
             </div>
           </motion.div>
-        </AnimatePresence>
+
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            className="mb-8"
+          >
+            <div className="flex items-center justify-between mb-2">
+              <span className="text-sm font-bold">Progresso</span>
+              <span className="text-sm opacity-60">{completedExercises.length}/5</span>
+            </div>
+            <div className="w-full bg-base-300 rounded-full h-3 overflow-hidden">
+              <motion.div
+                initial={{ width: 0 }}
+                animate={{ width: `${progress}%` }}
+                className="h-full bg-gradient-to-r from-orange-500 to-red-500"
+                transition={{ duration: 0.5 }}
+              />
+            </div>
+            <div className="flex gap-2 mt-3">
+              {[0, 1, 2, 3, 4].map((i) => (
+                <motion.div
+                  key={i}
+                  initial={{ scale: 0 }}
+                  animate={{ scale: 1 }}
+                  transition={{ delay: i * 0.1 }}
+                  className={`flex-1 h-2 rounded-full ${completedExercises.includes(i)
+                    ? 'bg-gradient-to-r from-green-500 to-emerald-500'
+                    : 'bg-base-300'
+                    }`}
+                />
+              ))}
+            </div>
+          </motion.div>
+
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={currentExercise}
+              initial={{ opacity: 0, x: 50 }}
+              animate={{ opacity: 1, x: 0 }}
+              exit={{ opacity: 0, x: -50 }}
+              className="bg-base-100 rounded-3xl shadow-xl overflow-hidden"
+            >
+              <div className={`bg-gradient-to-r ${exercise.color} p-6 text-white`}>
+                <div className="flex items-center gap-3 mb-2">
+                  <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center backdrop-blur-sm">
+                    <exercise.icon className="w-6 h-6" />
+                  </div>
+                  <div>
+                    <h2 className="text-2xl font-bold">{exercise.subject}</h2>
+                    <p className="text-sm opacity-90">Questão {currentExercise + 1} de 5</p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="p-6">
+                <h3 className="text-xl font-bold mb-6">{exercise.question}</h3>
+
+                <div className="space-y-3">
+                  {exercise.options.map((option, index) => (
+                    <motion.button
+                      key={index}
+                      whileHover={{ scale: 1.02 }}
+                      whileTap={{ scale: 0.98 }}
+                      onClick={() => handleAnswerSelect(index)}
+                      disabled={showResult}
+                      className={`w-full p-4 rounded-2xl border-2 text-left transition-all ${selectedAnswer === index
+                        ? showResult
+                          ? isCorrect
+                            ? 'border-green-500 bg-green-500/10'
+                            : 'border-red-500 bg-red-500/10'
+                          : 'border-primary bg-primary/10'
+                        : showResult && index === exercise.correctAnswer
+                          ? 'border-green-500 bg-green-500/10'
+                          : 'border-base-300 hover:border-base-content/30'
+                        }`}
+                    >
+                      <div className="flex items-center justify-between">
+                        <span className="font-medium">{option}</span>
+                        {showResult && (
+                          <div>
+                            {index === exercise.correctAnswer ? (
+                              <Check className="w-5 h-5 text-green-500" />
+                            ) : selectedAnswer === index ? (
+                              <X className="w-5 h-5 text-red-500" />
+                            ) : null}
+                          </div>
+                        )}
+                      </div>
+                    </motion.button>
+                  ))}
+                </div>
+
+                <AnimatePresence>
+                  {showResult && (
+                    <motion.div
+                      initial={{ opacity: 0, y: 20 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      exit={{ opacity: 0, y: -20 }}
+                      className={`mt-6 p-4 rounded-2xl ${isCorrect ? 'bg-green-500/10' : 'bg-red-500/10'
+                        }`}
+                    >
+                      <div className="flex items-center gap-3">
+                        {isCorrect ? (
+                          <>
+                            <Check className="w-6 h-6 text-green-500" />
+                            <div>
+                              <p className="font-bold text-green-500">Correto! 🎉</p>
+                              <p className="text-sm opacity-70">Avançando para próxima questão...</p>
+                            </div>
+                          </>
+                        ) : (
+                          <>
+                            <X className="w-6 h-6 text-red-500" />
+                            <div>
+                              <p className="font-bold text-red-500">Incorreto</p>
+                              <p className="text-sm opacity-70">Tente novamente!</p>
+                            </div>
+                          </>
+                        )}
+                      </div>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+
+                <div className="mt-6 flex gap-3">
+                  {!showResult ? (
+                    <motion.button
+                      whileHover={{ scale: 1.02 }}
+                      whileTap={{ scale: 0.98 }}
+                      onClick={handleSubmit}
+                      disabled={selectedAnswer === null}
+                      className="flex-1 btn btn-primary btn-lg"
+                    >
+                      Confirmar
+                    </motion.button>
+                  ) : !isCorrect ? (
+                    <motion.button
+                      whileHover={{ scale: 1.02 }}
+                      whileTap={{ scale: 0.98 }}
+                      onClick={retryExercise}
+                      className="flex-1 btn btn-primary btn-lg"
+                    >
+                      Tentar Novamente
+                    </motion.button>
+                  ) : null}
+                </div>
+              </div>
+            </motion.div>
+          </AnimatePresence>
+        </div>
       </div>
-    </div>
+    </AnimatedPage>
   );
 };

@@ -4,6 +4,7 @@ import { db, auth } from "@/lib/firebase";
 import { doc, getDoc } from "firebase/firestore";
 import { onAuthStateChanged } from "firebase/auth";
 import { LEVEL_XP } from "./data/levelXp";
+import AnimatedPage from '../AnimatedPage';
 
 interface UserXP {
     uid: string;
@@ -148,67 +149,57 @@ export const Nivel = () => {
     const xpForNext = getXpForNextLevel(userXP.level);
 
     return (
-        <div className="card bg-base-200 shadow-xl">
-            <div className="card-body">
+        <AnimatedPage>
+            <div className="card bg-base-200 shadow-xl">
+                <div className="card-body">
 
-                {/* TOPO */}
-                <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+                    {/* TOPO */}
+                    <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
 
-                    {/* TÍTULO */}
-                    <div>
-                        <h1 className="text-3xl font-bold">📚 Estudos</h1>
-                        <p className="opacity-70">Seu progresso geral</p>
-                    </div>
+                        {/* TÍTULO */}
+                        <div>
+                            <h1 className="text-3xl font-bold">📚 Estudos</h1>
+                            <p className="opacity-70">Seu progresso geral</p>
+                        </div>
 
-                    {/* PERFIL */}
-                    <div className="flex items-center gap-4">
-                        <div className="text-right">
-                            <div className="badge badge-primary badge-lg gap-2">
-                                <Trophy size={16} />
-                                Nível {level}
+                        {/* PERFIL */}
+                        <div className="flex items-center gap-4">
+                            <div className="text-right">
+                                <div className="badge badge-primary badge-lg gap-2">
+                                    <Trophy size={16} />
+                                    Nível {level}
+                                </div>
+
+                                <p className="text-xs opacity-60 mt-1">
+                                    XP total: {userXP.xp.toLocaleString('pt-BR')}
+                                </p>
                             </div>
-
-                            <p className="text-xs opacity-60 mt-1">
-                                XP total: {userXP.xp.toLocaleString('pt-BR')}
-                            </p>
                         </div>
                     </div>
-                </div>
 
-                {/* XP PROGRESS */}
-                <div className="mt-4">
-                    <div className="flex justify-between text-sm mb-1">
-                        <span className="flex items-center gap-1">
-                            <Zap size={14} className="text-primary" />
-                            Progresso de XP
-                        </span>
-                        <span className="font-bold">
-                            {xpInCurrentLevel} / {xpForNextLevel} XP
-                        </span>
+                    {/* XP PROGRESS */}
+                    <div className="mt-4">
+                        <div className="flex justify-between text-sm mb-1">
+                            <span className="flex items-center gap-1">
+                                <Zap size={14} className="text-primary" />
+                                Progresso de XP
+                            </span>
+                            <span className="font-bold">
+                                {xpInCurrentLevel} / {xpForNextLevel} XP
+                            </span>
 
+                        </div>
+                        <progress
+                            className="progress progress-primary w-full"
+                            value={progress}
+                            max={100}
+                        />
+                        <p className="text-xs opacity-60 mt-1 text-right">
+                            {Math.round(progress)}% para o nível {level + 1}
+                        </p>
                     </div>
-                    <progress
-                        className="progress progress-primary w-full"
-                        value={progress}
-                        max={100}
-                    />
-                    <p className="text-xs opacity-60 mt-1 text-right">
-                        {Math.round(progress)}% para o nível {level + 1}
-                    </p>
                 </div>
-
-
-                {/* PRÓXIMO MARCO */}
-                {userXP.level < 10 && (
-                    <div className="alert alert-info mt-4">
-                        <Zap size={16} />
-                        <span className="text-sm">
-                            Faltam <strong>{xpForNext - currentLevelXP} XP</strong> para o nível {userXP.level + 1}!
-                        </span>
-                    </div>
-                )}
-
             </div>
-        </div>
+        </AnimatedPage>
     );
 };

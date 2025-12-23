@@ -21,6 +21,7 @@ import { Jogos } from "@/apps/Jogos";
 import { Estudos } from "@/pages/Estudos";
 import { Notificacao } from "@/pages/Notificacao";
 import { Streak } from "@/components/estudos/Streak";
+import  Conquistas  from "@/components/estudos/Conquistas";
 
 export default function App() {
   return (
@@ -53,6 +54,7 @@ export default function App() {
           {/* ===== Vestibular ===== */}
           <Route path="/estudos" element={<AppLayout> <Estudos /> </AppLayout>} />
           <Route path="/estudos/streak" element={<AppLayout> <Streak /> </AppLayout>} />
+          <Route path="/estudos/conquistas" element={<AppLayout> <Conquistas /> </AppLayout>} />
 
           {/* ===== Notificação ===== */}
           <Route path="/notifications" element={<AppLayout> <Notificacao /> </AppLayout>} />
