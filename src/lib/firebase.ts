@@ -28,21 +28,3 @@ export const auth = getAuth(app);
  * Firestore Database
  */
 export const db = getFirestore(app);
-
-export const addNotification = async (notification) => {
-  const docRef = await addDoc(collection(db, 'notifications'), {
-    ...notification,
-    createdAt: serverTimestamp()
-  });
-  return docRef.id;
-};
-
-export const getNotifications = async () => {
-  const q = query(collection(db, 'notifications'), orderBy('createdAt', 'desc'));
-  const snapshot = await getDocs(q);
-  return snapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
-};
-
-export const deleteNotification = async (id) => {
-  await deleteDoc(doc(db, 'notifications', id));
-};

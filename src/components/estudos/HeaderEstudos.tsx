@@ -1,8 +1,5 @@
 import React from "react"
 import {
-    Flame,
-    Trophy,
-    Clock,
     Star,
     Target,
     TrendingUp,
@@ -10,58 +7,14 @@ import {
 } from "lucide-react"
 import { Link } from "react-router-dom"
 import StreakCardContent  from "./StreakCardContent"
+import { Nivel } from "./Nivel"
 export const HeaderEstudos = () => {
     return (
         <div className="w-full space-y-6">
 
             {/* CARD PRINCIPAL */}
-            <div className="card bg-base-200 shadow-xl">
-                <div className="card-body">
+            <Nivel />
 
-                    {/* TOPO */}
-                    <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
-
-                        {/* TÍTULO */}
-                        <div>
-                            <h1 className="text-3xl font-bold">📚 Estudos</h1>
-                            <p className="opacity-70">Seu progresso geral</p>
-                        </div>
-
-                        {/* PERFIL */}
-                        <div className="flex items-center gap-4">
-                            <div className="avatar">
-                                <div className="w-12 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
-                                    <img src="https://i.pravatar.cc/100" />
-                                </div>
-                            </div>
-
-                            <div>
-                                <div className="badge badge-primary badge-lg gap-2">
-                                    <Trophy size={16} />
-                                    Nível 8
-                                </div>
-                                <p className="text-xs opacity-60 mt-1">XP atual: 3.420</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    {/* XP */}
-                    <div className="mt-4">
-                        <div className="flex justify-between text-sm mb-1">
-                            <span>Progresso de XP</span>
-                            <span>68%</span>
-                        </div>
-                        <progress
-                            className="progress progress-primary w-full"
-                            value={68}
-                            max={100}
-                        />
-                    </div>
-
-                </div>
-            </div>
-
-            {/* STATS */}
             {/* METAS E RANKING */}
 
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
