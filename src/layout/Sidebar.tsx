@@ -16,6 +16,7 @@ import {
   BookOpenIcon,
 } from "@heroicons/react/24/solid";
 import { LogOut, User } from "lucide-react";
+import { formatUserNameWithCustom } from "@/utils/formatUserName";
 
 interface SidebarProps {
   expanded: boolean;
@@ -124,17 +125,9 @@ export default function Sidebar({ expanded, onToggle }: SidebarProps) {
   const userRole = getUserRole(user?.email);
   const RoleIcon = roleIcons[userRole.key] || User;
   const navigate = useNavigate();
-  function getFirstName(user: any) {
-    if (user?.displayName) {
-      return user.displayName.split(" ")[0];
-    }
+  const getUserName = (user: any) =>
+    formatUserNameWithCustom(user?.email);
 
-    if (user?.email) {
-      return user.email.split("@")[0].split(".")[0];
-    }
-
-    return "Usuário";
-  }
 
   function getPhotoURL(user: any) {
     return user?.photoURL || null;
@@ -209,11 +202,7 @@ export default function Sidebar({ expanded, onToggle }: SidebarProps) {
 
 
                 <h1 className="font-semibold text-base-content capitalize">
-                  {user?.displayName
-                    ? user.displayName.split(" ")[0]
-                    : user?.email
-                      ? user.email.split("@")[0].split(".")[0]
-                      : "Usuário"}
+                  {getUserName(user)}
                 </h1>
               </motion.div>
             )}
@@ -318,8 +307,7 @@ export default function Sidebar({ expanded, onToggle }: SidebarProps) {
                 className="flex-1 min-w-0"
               >
                 <p className="text-sm font-semibold text-base-content truncate">
-                  {getFirstName(user).charAt(0).toUpperCase() +
-                    getFirstName(user).slice(1)}
+                  {getUserName(user)}
                 </p>
                 <p className="text-xs text-base-content/60 truncate">
                   {user.email}

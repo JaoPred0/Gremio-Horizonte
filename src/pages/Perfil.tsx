@@ -13,12 +13,11 @@ import {
   SparklesIcon,
 } from "@heroicons/react/24/outline";
 import AnimatedPage from "@/components/AnimatedPage";
+import { formatUserNameWithCustom } from "@/utils/formatUserName";
 
-function getFirstName(user) {
-  if (!user?.email) return "Usuário";
-  const name = user.email.split("@")[0].split(".")[0];
-  return name.charAt(0).toUpperCase() + name.slice(1);
-}
+const getUserName = (user) =>
+  formatUserNameWithCustom(user?.email);
+
 
 function getAccountAge(user) {
   if (!user?.metadata?.creationTime) return "-";
@@ -81,7 +80,7 @@ export const Perfil = () => {
               <RoleIcon className="w-20 h-20 text-white relative z-10" />
             ) : (
               <span className="text-6xl font-bold text-white relative z-10">
-                {getFirstName(user).charAt(0)}
+                {getUserName(user).charAt(0)}
               </span>
             )}
           </div>
@@ -93,7 +92,7 @@ export const Perfil = () => {
           transition={{ delay: 0.3 }}
           className="mt-8 text-center relative z-10"
         >
-          <h1 className="text-4xl font-black tracking-tight">{getFirstName(user)}</h1>
+          <h1 className="text-4xl font-black tracking-tight">{getUserName(user)}</h1>
           <motion.div
             initial={{ width: 0 }}
             animate={{ width: "100%" }}
@@ -170,7 +169,7 @@ export const Perfil = () => {
                 <UserIcon className="w-6 h-6 text-secondary" />
               </div>
               <p className="text-xs text-base-content/50 uppercase font-bold tracking-wider">Nome</p>
-              <p className="font-bold text-xl mt-1">{getFirstName(user)}</p>
+              <p className="font-bold text-xl mt-1">{getUserName(user)}</p>
             </motion.div>
 
             <motion.div
@@ -288,7 +287,7 @@ export const Perfil = () => {
             <RoleIcon className="w-12 h-12 text-white relative z-10" />
           ) : (
             <span className="text-4xl font-bold text-white relative z-10">
-              {getFirstName(user).charAt(0)}
+              {getUserName(user).charAt(0)}
             </span>
           )}
         </div>
@@ -319,7 +318,7 @@ export const Perfil = () => {
             </div>
             <div>
               <p className="text-xs text-base-content/60 uppercase font-semibold">Nome</p>
-              <p className="font-bold text-lg">{getFirstName(user)}</p>
+              <p className="font-bold text-lg">{getUserName(user)}</p>
             </div>
           </div>
         </motion.div>

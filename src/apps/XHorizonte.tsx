@@ -19,7 +19,7 @@ import {
   arrayRemove,
   Timestamp
 } from 'firebase/firestore';
-import { formatUserName } from '@/utils/formatUserName';
+import { formatUserNameWithCustom } from '@/utils/formatUserName';
 import { getUserRole } from '@/data/roles';
 import { roleIcons } from '@/utils/roleIcons';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -168,11 +168,12 @@ export const XHorizonte: React.FC = () => {
       if (firebaseUser && firebaseUser.email) {
         const userRole = getUserRole(firebaseUser.email);
         setCurrentUser({
-          name: formatUserName(firebaseUser.email),
+          name: formatUserNameWithCustom(firebaseUser.email),
           email: firebaseUser.email,
           uid: firebaseUser.uid,
           role: userRole
         });
+
       }
     });
 
