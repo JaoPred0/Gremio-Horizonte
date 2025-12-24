@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { Trophy, Zap, Flame, Award, Target, Crown, Medal, TrendingUp, User } from 'lucide-react';
 import { db, auth } from "@/lib/firebase";
 import { collection, getDocs } from "firebase/firestore";
