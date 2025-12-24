@@ -3,8 +3,8 @@ import React, { useState, useEffect } from 'react';
 import { db, auth } from "@/lib/firebase";
 import { doc, getDoc } from "firebase/firestore";
 import { onAuthStateChanged } from "firebase/auth";
-import { LEVEL_XP } from "./data/levelXp";
-import AnimatedPage from '../AnimatedPage';
+import { LEVEL_XP } from "./../data/levelXp";
+import AnimatedPage from '../../AnimatedPage';
 
 interface UserXP {
     uid: string;

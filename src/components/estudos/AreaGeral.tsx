@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { BookOpen, Award, Gamepad, ShoppingCart, TrendingUp, Users, Star, ArrowRight, Download } from 'lucide-react'
+import { Link } from 'react-router-dom'
 
 export const AreaGeral = () => {
     const [activeTab, setActiveTab] = useState('IF')
@@ -12,7 +13,12 @@ export const AreaGeral = () => {
     ]
 
     const ifCards = [
-        { title: 'Cursos Técnicos', desc: 'Explore nossa grade completa de cursos técnicos integrados', link: '#', color: 'bg-primary' },
+        {
+            title: 'Horários das Turmas',
+            desc: 'Consulte os horários completos das turmas dos cursos técnicos integrados',
+            link: '/estudos/if/horarios-da-turma',
+            color: 'bg-primary',
+        },
         { title: 'Calendário Acadêmico', desc: 'Acompanhe datas importantes e eventos do semestre', link: '#', color: 'bg-secondary' },
         { title: 'Biblioteca Digital', desc: 'Acesso a mais de 10.000 títulos digitais', link: '#', color: 'bg-accent' },
         { title: 'Projetos de Pesquisa', desc: 'Conheça os projetos em desenvolvimento', link: '#', color: 'bg-info' }
@@ -59,9 +65,16 @@ export const AreaGeral = () => {
                             <h3 className="card-title text-sm md:text-lg">{card.title}</h3> {/* Responsive text size */}
                             <p className="text-xs md:text-sm opacity-70">{card.desc}</p>
                             <div className="card-actions justify-end mt-3">
-                                <a href={card.link} className="btn btn-primary btn-xs md:btn-sm flex items-center gap-1">
-                                    {card.action || 'Ver mais'} {card.action === 'Baixar' ? <Download size={14} /> : <ArrowRight size={14} />}
-                                </a>
+                                <Link
+                                    to={card.link}
+                                    className="btn btn-primary btn-xs md:btn-sm flex items-center gap-1"
+                                >
+                                    {card.action || 'Ver mais'}
+                                    {card.action === 'Baixar'
+                                        ? <Download size={14} />
+                                        : <ArrowRight size={14} />
+                                    }
+                                </Link>
                             </div>
                         </div>
                     </div>
@@ -77,17 +90,17 @@ export const AreaGeral = () => {
                 {/* Tabs - Improved for mobile with horizontal scroll if needed */}
                 <div
                     className="
-    tabs tabs-boxed
-    bg-base-200
-    p-2
-    mb-6 md:mb-8
-    shadow-lg
-    rounded-2xl
-    overflow-x-auto
-    flex-nowrap
-    gap-1
-    animate-fade-in
-  "
+                        tabs tabs-boxed
+                        bg-base-200
+                        p-2
+                        mb-6 md:mb-8
+                        shadow-lg
+                        rounded-2xl
+                        overflow-x-auto
+                        flex-nowrap
+                        gap-1
+                        animate-fade-in
+                    "
                     style={{ animationDelay: "200ms" }}
                 >
                     {tabs.map((tab) => {

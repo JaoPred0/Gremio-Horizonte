@@ -23,9 +23,9 @@ import { XHorizonte } from "@/apps/XHorizonte";
 import { Jogos } from "@/apps/Jogos";
 import { Estudos } from "@/pages/Estudos";
 import { Notificacao } from "@/pages/Notificacao";
-import { Streak } from "@/components/estudos/Streak";
-import Conquistas from "@/components/estudos/Conquistas";
-import { Rank } from "@/pages/Rank";
+import { Rank } from "@/components/estudos/page/Rank";
+import { Streak } from "./components/estudos/page/Streak";
+import Conquistas from "./components/estudos/page/Conquistas";
 
 export default function App() {
 
@@ -71,6 +71,7 @@ export default function App() {
           <Route path="/estudos/streak" element={<AppLayout> <Streak /> </AppLayout>} />
           <Route path="/estudos/conquistas" element={<AppLayout> <Conquistas /> </AppLayout>} />
           <Route path="/estudos/rank" element={<AppLayout> <Rank /> </AppLayout>} />
+          <Route path="/estudos/if/horarios-da-turma" element={<AppLayout> <Rank /> </AppLayout>} />
 
           {/* ===== Notificação ===== */}
           <Route path="/notifications" element={<AppLayout> <Notificacao /> </AppLayout>} />
