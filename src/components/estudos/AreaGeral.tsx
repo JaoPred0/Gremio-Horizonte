@@ -19,9 +19,9 @@ export const AreaGeral = () => {
             link: '/estudos/if/horarios-da-turma',
             color: 'bg-primary',
         },
-        { title: 'Calendário Acadêmico', desc: 'Acompanhe datas importantes e eventos do semestre', link: '#', color: 'bg-secondary' },
-        { title: 'Biblioteca Digital', desc: 'Acesso a mais de 10.000 títulos digitais', link: '#', color: 'bg-accent' },
-        { title: 'Projetos de Pesquisa', desc: 'Conheça os projetos em desenvolvimento', link: '#', color: 'bg-info' }
+        // { title: 'Calendário Acadêmico', desc: 'Acompanhe datas importantes e eventos do semestre', link: '#', color: 'bg-secondary' },
+        // { title: 'Biblioteca Digital', desc: 'Acesso a mais de 10.000 títulos digitais', link: '#', color: 'bg-accent' },
+        // { title: 'Projetos de Pesquisa', desc: 'Conheça os projetos em desenvolvimento', link: '#', color: 'bg-info' }
     ]
 
     const vestProCards = [

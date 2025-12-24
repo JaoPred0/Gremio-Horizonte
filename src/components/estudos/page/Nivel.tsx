@@ -1,4 +1,4 @@
-import { Trophy, Flame, Zap } from 'lucide-react';
+import { Trophy, Zap } from 'lucide-react';
 import React, { useState, useEffect } from 'react';
 import { db, auth } from "@/lib/firebase";
 import { doc, getDoc } from "firebase/firestore";

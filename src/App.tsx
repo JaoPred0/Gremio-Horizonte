@@ -26,6 +26,7 @@ import { Notificacao } from "@/pages/Notificacao";
 import { Rank } from "@/components/estudos/page/Rank";
 import { Streak } from "./components/estudos/page/Streak";
 import Conquistas from "./components/estudos/page/Conquistas";
+import { HorarioTurma } from "./components/estudos/page/HorarioTurma";
 
 export default function App() {
 
@@ -71,7 +72,7 @@ export default function App() {
           <Route path="/estudos/streak" element={<AppLayout> <Streak /> </AppLayout>} />
           <Route path="/estudos/conquistas" element={<AppLayout> <Conquistas /> </AppLayout>} />
           <Route path="/estudos/rank" element={<AppLayout> <Rank /> </AppLayout>} />
-          <Route path="/estudos/if/horarios-da-turma" element={<AppLayout> <Rank /> </AppLayout>} />
+          <Route path="/estudos/if/horarios-da-turma" element={<AppLayout> <HorarioTurma /> </AppLayout>} />
 
           {/* ===== Notificação ===== */}
           <Route path="/notifications" element={<AppLayout> <Notificacao /> </AppLayout>} />
