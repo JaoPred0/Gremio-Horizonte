@@ -162,7 +162,7 @@ export const Streak = () => {
     setShowResult(true);
 
     if (correct) {
-      updateXP(100);
+      updateXP(10);
 
       setTimeout(() => {
         const newCompleted = [...completedExercises, currentExercise];

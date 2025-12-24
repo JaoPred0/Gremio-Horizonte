@@ -1,5 +1,6 @@
 const CUSTOM_EMAIL_NAMES: Record<string, string> = {
   [import.meta.env.VITE_ROLES_DIRETOR_COMUNICACAO_IMPRENSA]: "Lyan",
+  "jhonpitere163@gmail.com": "Alemão do 7",
 };
 
 export function formatUserName(email?: string): string {

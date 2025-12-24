@@ -1,17 +1,14 @@
 import React from "react"
 import {
-    Star,
-    Target,
     TrendingUp,
-    Medal,
     Trophy,
-    FileBracesCornerIcon
 } from "lucide-react"
 import { Link } from "react-router-dom"
 import StreakCardContent from "./StreakCardContent"
 import { Nivel } from "./Nivel"
 import AnimatedPage from "../AnimatedPage"
 import { useConquistas } from './Conquistas';
+import { RankStat } from "./RankStat"
 
 
 
@@ -54,17 +51,13 @@ export const HeaderEstudos = () => {
                         </div>
                     </Link>
 
-                    <Link to="/build" className="stat bg-base-200 shadow rounded-xl hover:shadow-xl hover:scale-[1.02] transition">
-                        <div className="stat-figure text-green-500">
-                            <TrendingUp size={28} />
-                        </div>
-                        <div className="stat-value">404</div>
-                    </Link>
+                    <RankStat />
 
                     <Link to="/build" className="stat bg-base-200 shadow rounded-xl hover:shadow-xl hover:scale-[1.02] transition">
                         <div className="stat-figure text-green-500">
                             <TrendingUp size={28} />
                         </div>
+
                         <div className="stat-value">404</div>
                     </Link>
 

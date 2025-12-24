@@ -46,7 +46,7 @@ const StreakCardContent = () => {
         <div className="stat-figure text-base-content/30">
           <Flame size={28} className="opacity-50" />
         </div>
-        <div className="stat-title">Streak</div>
+        <div className="stat-title">Foguinho</div>
         <div className="stat-value">
           <span className="loading loading-spinner loading-sm"></span>
         </div>
@@ -82,7 +82,7 @@ const StreakCardContent = () => {
         )}
       </div>
 
-      <div className="stat-title text-xs sm:text-sm">Streak</div>
+      <div className="stat-title text-xs sm:text-sm">Foguinho</div>
       
       <div className={`stat-value text-2xl sm:text-3xl md:text-4xl ${isActive ? 'text-orange-500' : 'text-base-content/50'}`}>
         {streakData.currentStreak}

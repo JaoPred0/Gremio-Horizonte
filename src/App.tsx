@@ -1,9 +1,12 @@
+import { useEffect } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { onAuthStateChanged } from "firebase/auth";
+import { auth } from "@/lib/firebase";
+import { ensureUserDoc } from "@/lib/ensureUserDoc";
+
 import SplashScreen from "@/components/SplashScreen";
 import ProtectedRoute from "@/routes/ProtectedRoute";
-
 import AppLayout from "@/layout/AppLayout";
-
 import { Login } from "@/pages/Login";
 import { Register } from "@/pages/Register";
 import VerifyEmail from "@/pages/VerifyEmail";
@@ -16,14 +19,26 @@ import NotPage from "@/pages/NotPage";
 import Build from "@/pages/Build";
 import ChangePassword from "@/pages/ChangePassword";
 import Apps from "@/pages/Apps";
-import {XHorizonte} from "@/apps/XHorizonte";
+import { XHorizonte } from "@/apps/XHorizonte";
 import { Jogos } from "@/apps/Jogos";
 import { Estudos } from "@/pages/Estudos";
 import { Notificacao } from "@/pages/Notificacao";
 import { Streak } from "@/components/estudos/Streak";
-import  Conquistas  from "@/components/estudos/Conquistas";
+import Conquistas from "@/components/estudos/Conquistas";
+import { Rank } from "@/pages/Rank";
 
 export default function App() {
+
+  useEffect(() => {
+    const unsub = onAuthStateChanged(auth, async (user) => {
+      if (user) {
+        await ensureUserDoc(user);
+      }
+    });
+
+    return () => unsub();
+  }, []);
+  
   return (
     <BrowserRouter>
       <Routes>
@@ -55,6 +70,7 @@ export default function App() {
           <Route path="/estudos" element={<AppLayout> <Estudos /> </AppLayout>} />
           <Route path="/estudos/streak" element={<AppLayout> <Streak /> </AppLayout>} />
           <Route path="/estudos/conquistas" element={<AppLayout> <Conquistas /> </AppLayout>} />
+          <Route path="/estudos/rank" element={<AppLayout> <Rank /> </AppLayout>} />
 
           {/* ===== Notificação ===== */}
           <Route path="/notifications" element={<AppLayout> <Notificacao /> </AppLayout>} />
