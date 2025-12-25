@@ -20,10 +20,8 @@ export const HeaderEstudos = () => {
         <AnimatedPage>
             <div className="w-full space-y-6">
 
-                {/* CARD PRINCIPAL */}
                 <Nivel />
 
-                {/* METAS E RANKING */}
 
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
 
