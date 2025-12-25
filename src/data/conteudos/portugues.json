@@ -1,0 +1,42 @@
+[
+  {
+    "bloco": "Interpretação de Texto",
+    "itens": [
+      { "id": "interp1", "label": "Leitura e compreensão básica" },
+      { "id": "interp2", "label": "Inferência e interpretação" },
+      { "id": "interp3", "label": "Figuras de linguagem" },
+      { "id": "interp4", "label": "Estratégias de leitura" },
+      { "id": "interp5", "label": "Gêneros textuais" }
+    ]
+  },
+  {
+    "bloco": "Gramática",
+    "itens": [
+      { "id": "gram1", "label": "Classes de palavras" },
+      { "id": "gram2", "label": "Termos da oração" },
+      { "id": "gram3", "label": "Regência verbal e nominal" },
+      { "id": "gram4", "label": "Concordância verbal" },
+      { "id": "gram5", "label": "Pontuação" }
+    ]
+  },
+  {
+    "bloco": "Literatura",
+    "itens": [
+      { "id": "lit1", "label": "Escolas literárias" },
+      { "id": "lit2", "label": "Modernismo" },
+      { "id": "lit3", "label": "Romantismo" },
+      { "id": "lit4", "label": "Realismo" },
+      { "id": "lit5", "label": "Análise de obras" }
+    ]
+  },
+  {
+    "bloco": "Redação",
+    "itens": [
+      { "id": "red1", "label": "Estrutura do texto" },
+      { "id": "red2", "label": "Coesão e coerência" },
+      { "id": "red3", "label": "Argumentação" },
+      { "id": "red4", "label": "Conclusão / Intervenção" },
+      { "id": "red5", "label": "Erros comuns" }
+    ]
+  }
+]

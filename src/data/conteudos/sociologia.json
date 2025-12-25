@@ -1,0 +1,52 @@
+[
+  {
+    "bloco": "Introdução à Sociologia",
+    "itens": [
+      { "id": "soc1", "label": "O que é Sociologia" },
+      { "id": "soc2", "label": "Sociedade, cultura e socialização" },
+      { "id": "soc3", "label": "Indivíduo e coletividade" },
+      { "id": "soc4", "label": "Identidade e papéis sociais" },
+      { "id": "soc5", "label": "Instituições sociais" }
+    ]
+  },
+  {
+    "bloco": "Clássicos da Sociologia",
+    "itens": [
+      { "id": "soc6", "label": "Karl Marx — Materialismo histórico" },
+      { "id": "soc7", "label": "Émile Durkheim — Fatos sociais" },
+      { "id": "soc8", "label": "Max Weber — Ação social" },
+      { "id": "soc9", "label": "Anomia e coesão social" },
+      { "id": "soc10", "label": "Racionalização e burocracia" }
+    ]
+  },
+  {
+    "bloco": "Estrutura Social",
+    "itens": [
+      { "id": "soc11", "label": "Classes sociais e desigualdade" },
+      { "id": "soc12", "label": "Mobilidade social" },
+      { "id": "soc13", "label": "Trabalho e economia" },
+      { "id": "soc14", "label": "Poder e dominação" },
+      { "id": "soc15", "label": "Estado e cidadania" }
+    ]
+  },
+  {
+    "bloco": "Cultura e Comunicação",
+    "itens": [
+      { "id": "soc16", "label": "Cultura popular e erudita" },
+      { "id": "soc17", "label": "Indústria cultural" },
+      { "id": "soc18", "label": "Mídia e comportamento social" },
+      { "id": "soc19", "label": "Tecnologia e sociedade" },
+      { "id": "soc20", "label": "Globalização cultural" }
+    ]
+  },
+  {
+    "bloco": "Temas Contemporâneos",
+    "itens": [
+      { "id": "soc21", "label": "Urbanização e problemas sociais" },
+      { "id": "soc22", "label": "Conflitos sociais" },
+      { "id": "soc23", "label": "Movimentos sociais" },
+      { "id": "soc24", "label": "Diversidade e minorias" },
+      { "id": "soc25", "label": "Violência e desigualdade social" }
+    ]
+  }
+]

@@ -3,7 +3,7 @@ import { Trophy, Star, Calculator, PenTool, Globe, Atom, Code, Palette, Sparkles
 import { db, auth } from "@/lib/firebase";
 import { doc, getDoc, setDoc, updateDoc, increment } from "firebase/firestore";
 import { onAuthStateChanged } from "firebase/auth";
-import AnimatedPage from '../../AnimatedPage';
+import AnimatedPage from '../../../AnimatedPage';
 
 // Hook personalizado para usar conquistas em outros componentes
 export const useConquistas = () => {

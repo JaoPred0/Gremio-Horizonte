@@ -1,0 +1,22 @@
+[
+  {
+    "bloco": "Citologia e Genética",
+    "itens": [
+      { "id": "bio1", "label": "Estrutura e funções da célula" },
+      { "id": "bio2", "label": "Organelas celulares" },
+      { "id": "bio3", "label": "Divisão celular (mitose e meiose)" },
+      { "id": "bio4", "label": "DNA, RNA e síntese proteica" },
+      { "id": "bio5", "label": "Leis da genética e hereditariedade" }
+    ]
+  },
+  {
+    "bloco": "Ecologia e Sistemas",
+    "itens": [
+      { "id": "bio6",  "label": "Ecossistemas e cadeias alimentares" },
+      { "id": "bio7",  "label": "Ciclos biogeoquímicos" },
+      { "id": "bio8",  "label": "Reinos dos seres vivos" },
+      { "id": "bio9",  "label": "Sistema nervoso e hormonal" },
+      { "id": "bio10", "label": "Sistema respiratório e circulatório" }
+    ]
+  }
+]

@@ -23,11 +23,22 @@ import { XHorizonte } from "@/apps/XHorizonte";
 import { Jogos } from "@/apps/Jogos";
 import { Estudos } from "@/pages/Estudos";
 import { Notificacao } from "@/pages/Notificacao";
-import { Rank } from "@/components/estudos/page/Rank";
-import { Streak } from "./components/estudos/page/Streak";
-import Conquistas from "./components/estudos/page/Conquistas";
-import { HorarioTurma } from "./components/estudos/page/HorarioTurma";
-import { CalendarioAcademico } from "@/components/estudos/page/CalendarioAcademico";
+import { Rank } from "@/components/estudos/pages/if/Rank";
+import { Streak } from "./components/estudos/pages/if/Streak";
+import Conquistas from "./components/estudos/pages/if/Conquistas";
+import { HorarioTurma } from "./components/estudos/pages/if/HorarioTurma";
+import { CalendarioAcademico } from "@/components/estudos/pages/if/CalendarioAcademico";
+import Materias from "@/components/estudos/pages/vestpro/Materias";
+import Portugues from "@/components/estudos/pages/vestpro/conteudos/Portugues";
+import Matematica from "@/components/estudos/pages/vestpro/conteudos/Matematica";
+import Fisica from "@/components/estudos/pages/vestpro/conteudos/Biologia";
+import Quimica from "@/components/estudos/pages/vestpro/conteudos/Quimica";
+import Biologia from "@/components/estudos/pages/vestpro/conteudos/Biologia";
+import Historia from "@/components/estudos/pages/vestpro/conteudos/Historia";
+import Geografia from "@/components/estudos/pages/vestpro/conteudos/Geografia";
+import Filosofia from "@/components/estudos/pages/vestpro/conteudos/Filosofia";
+import Sociologia from "@/components/estudos/pages/vestpro/conteudos/Sociologia";
+import { Simulados } from "@/components/estudos/pages/vestpro/Simulados";
 
 export default function App() {
 
@@ -75,6 +86,18 @@ export default function App() {
           <Route path="/estudos/rank" element={<AppLayout> <Rank /> </AppLayout>} />
           <Route path="/estudos/if/horarios-da-turma" element={<AppLayout> <HorarioTurma /> </AppLayout>} />
           <Route path="/estudos/if/calendario-academico" element={<AppLayout> <CalendarioAcademico /> </AppLayout>} />
+          <Route path="/estudos/vestpro/materias" element={<AppLayout> <Materias /> </AppLayout>} />
+          <Route path="/estudos/vestpro/simulados" element={<AppLayout> <Simulados /> </AppLayout>} />
+          {/* ===== Materia Page ===== */}
+          <Route path="/estudos/vestpro/materias/portugues" element={<AppLayout> <Portugues /> </AppLayout>} />
+          <Route path="/estudos/vestpro/materias/matematica" element={<AppLayout> <Matematica /> </AppLayout>} />
+          <Route path="/estudos/vestpro/materias/fisica" element={<AppLayout> <Fisica /> </AppLayout>} />
+          <Route path="/estudos/vestpro/materias/quimica" element={<AppLayout> <Quimica /> </AppLayout>} />
+          <Route path="/estudos/vestpro/materias/biologia" element={<AppLayout> <Biologia /> </AppLayout>} />
+          <Route path="/estudos/vestpro/materias/historia" element={<AppLayout> <Historia /> </AppLayout>} />
+          <Route path="/estudos/vestpro/materias/geografia" element={<AppLayout> <Geografia /> </AppLayout>} />
+          <Route path="/estudos/vestpro/materias/filosofia" element={<AppLayout> <Filosofia /> </AppLayout>} />
+          <Route path="/estudos/vestpro/materias/sociologia" element={<AppLayout> <Sociologia /> </AppLayout>} />
 
           {/* ===== Notificação ===== */}
           <Route path="/notifications" element={<AppLayout> <Notificacao /> </AppLayout>} />

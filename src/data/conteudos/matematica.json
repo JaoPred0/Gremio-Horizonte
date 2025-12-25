@@ -1,0 +1,1592 @@
+[
+  {
+    "bloco": "Matemática Básica",
+    "itens": [
+      {
+        "id": "mb1",
+        "label": "Adição e subtração",
+        "descrição": "Operações fundamentais envolvendo a soma e a diferença de números, incluindo inteiros, decimais e frações. Conceitos de ordem, sinal e propriedades comutativa e associativa."
+      },
+      {
+        "id": "mb2",
+        "label": "Multiplicação e divisão",
+        "descrição": "Operações de multiplicação e divisão de números inteiros, decimais e frações. Compreensão de conceitos como fator, produto, quociente, inverso e propriedades distributiva, associativa e comutativa."
+      },
+      {
+        "id": "mb3",
+        "label": "Expressões numéricas",
+        "descrição": "Análise e simplificação de expressões que envolvem várias operações. Uso de parênteses, colchetes e regras de prioridade das operações."
+      },
+      {
+        "id": "mb4",
+        "label": "Frações",
+        "descrição": "Conceito de fração como representação de partes de um todo. Simplificação, equivalência e operações de adição, subtração, multiplicação e divisão."
+      },
+      {
+        "id": "mb5",
+        "label": "Decimais",
+        "descrição": "Representação decimal de números fracionários e operações envolvendo números decimais, incluindo arredondamento e aproximação."
+      },
+      {
+        "id": "mb6",
+        "label": "Potenciação",
+        "descrição": "Conceito de potência como multiplicação repetida. Propriedades das potências, potências de base negativa, zero e um, e aplicação em problemas cotidianos."
+      },
+      {
+        "id": "mb7",
+        "label": "Radiciação",
+        "descrição": "Operação inversa da potenciação. Cálculo de raízes quadradas e cúbicas, propriedades de radicais e simplificação de expressões."
+      },
+      {
+        "id": "mb8",
+        "label": "Racionalização de denominadores",
+        "descrição": "Técnicas para eliminar raízes do denominador de frações, facilitando cálculos e simplificações de expressões algébricas."
+      },
+      {
+        "id": "mb9",
+        "label": "Produtos notáveis",
+        "descrição": "Fórmulas de expansão de expressões como quadrado da soma, quadrado da diferença e produto da soma pela diferença, facilitando fatorações e simplificações."
+      },
+      {
+        "id": "mb10",
+        "label": "Fatoração de expressões algébricas",
+        "descrição": "Identificação de fatores comuns, fatoração por agrupamento, trinomiais e produtos notáveis. Simplificação de expressões algébricas complexas."
+      },
+      {
+        "id": "mb11",
+        "label": "Sistema de numeração decimal",
+        "descrição": "Entendimento do valor posicional dos algarismos, leitura e escrita de números em diferentes ordens de grandeza."
+      },
+      {
+        "id": "mb12",
+        "label": "Notação científica",
+        "descrição": "Representação de números muito grandes ou muito pequenos em potência de dez, facilitando cálculos e compreensão de escalas."
+      },
+      {
+        "id": "mb13",
+        "label": "Sistema métrico decimal",
+        "descrição": "Unidades de medida de comprimento, massa, volume e tempo. Conversões entre unidades e aplicação prática em problemas cotidianos."
+      },
+      {
+        "id": "mb14",
+        "label": "Equações do primeiro grau",
+        "descrição": "Resolução de equações lineares com uma incógnita. Uso de propriedades de igualdade e técnicas de simplificação."
+      },
+      {
+        "id": "mb15",
+        "label": "Sistemas de equações do primeiro grau",
+        "descrição": "Resolução de sistemas lineares com duas incógnitas, usando substituição, adição e comparação. Aplicações em problemas reais."
+      },
+      {
+        "id": "mb16",
+        "label": "Equações biquadradas",
+        "descrição": "Equações polinomiais de quarta ordem reduzidas a quadráticas, técnicas de substituição e resolução."
+      },
+      {
+        "id": "mb17",
+        "label": "Divisibilidade",
+        "descrição": "Critérios de divisibilidade por números específicos, identificação de múltiplos e fatores, e aplicação em problemas de fatoração e números primos."
+      },
+      {
+        "id": "mb18",
+        "label": "Números primos",
+        "descrição": "Definição de números primos, teste de primalidade, importância na aritmética e fatoração de números."
+      },
+      {
+        "id": "mb19",
+        "label": "Mínimo múltiplo comum (MMC)",
+        "descrição": "Cálculo do menor múltiplo comum entre dois ou mais números, uso em operações com frações e problemas de sincronização de eventos."
+      },
+      {
+        "id": "mb20",
+        "label": "Máximo divisor comum (MDC)",
+        "descrição": "Cálculo do maior divisor comum entre dois ou mais números, aplicação em simplificação de frações e problemas de partição."
+      },
+      {
+        "id": "mb21",
+        "label": "Razão e proporção",
+        "descrição": "Comparação entre grandezas, construção de proporções e aplicação em problemas de escalas, misturas e mapas."
+      },
+      {
+        "id": "mb22",
+        "label": "Regra de três simples",
+        "descrição": "Método para calcular valores proporcionais em situações diretas ou inversamente proporcionais."
+      },
+      {
+        "id": "mb23",
+        "label": "Regra de três composta",
+        "descrição": "Extensão da regra de três simples para situações que envolvem múltiplas proporções simultaneamente."
+      },
+      {
+        "id": "mb24",
+        "label": "Porcentagem",
+        "descrição": "Cálculo de aumentos, descontos, acréscimos e comparações percentuais em problemas do cotidiano."
+      },
+      {
+        "id": "mb25",
+        "label": "Juros simples",
+        "descrição": "Cálculo de juros lineares aplicados sobre capital inicial, incluindo fórmulas e interpretação de resultados."
+      },
+      {
+        "id": "mb26",
+        "label": "Juros compostos",
+        "descrição": "Cálculo de juros aplicados sobre capital acumulado, fórmula do montante, taxa e tempo."
+      },
+      {
+        "id": "mb27",
+        "label": "Equações irracionais",
+        "descrição": "Resolução de equações que envolvem radicais, técnicas de isolamento e elevação ao quadrado para simplificação."
+      }
+    ]
+  },
+  {
+    "bloco": "Conjuntos",
+    "itens": [
+      {
+        "id": "cj1",
+        "label": "Definição de conjuntos",
+        "descrição": "Conjunto é uma coleção bem definida de elementos distintos. Pode ser finito ou infinito, e cada elemento pertence ou não ao conjunto, sem ambiguidades."
+      },
+      {
+        "id": "cj2",
+        "label": "Representação de conjuntos",
+        "descrição": "Formas de descrever conjuntos: por extensão, listando todos os elementos; ou por compreensão, descrevendo uma propriedade comum a todos os elementos."
+      },
+      {
+        "id": "cj3",
+        "label": "Tipos de conjuntos",
+        "descrição": "Conjuntos finitos, infinitos, vazios, unitários, iguais, diferentes, subconjuntos, universais e complementares. Entendimento das diferenças e aplicações de cada tipo."
+      },
+      {
+        "id": "cj4",
+        "label": "Operações com conjuntos",
+        "descrição": "União, interseção, diferença e complemento de conjuntos. Uso de diagramas de Venn para visualizar operações e relações entre conjuntos."
+      },
+      {
+        "id": "cj5",
+        "label": "Subconjuntos e inclusão",
+        "descrição": "Definição de subconjunto e subconjunto próprio. Regras para verificar se um conjunto está contido em outro e propriedades de inclusão."
+      },
+      {
+        "id": "cj6",
+        "label": "Conjunto universo e complemento",
+        "descrição": "Conceito de conjunto universo que contém todos os elementos de interesse e a definição de complemento de um conjunto em relação ao universo."
+      },
+      {
+        "id": "cj7",
+        "label": "Diagramas de Venn",
+        "descrição": "Representação gráfica de conjuntos e suas relações. Facilita a visualização de interseções, uniões e complementos de conjuntos."
+      },
+      {
+        "id": "cj8",
+        "label": "Produto cartesiano",
+        "descrição": "Combinação de todos os pares possíveis entre elementos de dois conjuntos. Base para estudo de relações e funções entre conjuntos."
+      },
+      {
+        "id": "cj9",
+        "label": "Cardinalidade de conjuntos",
+        "descrição": "Número de elementos em um conjunto. Importante para contagem, comparação de tamanhos de conjuntos e problemas combinatórios básicos."
+      }
+    ]
+  },
+  {
+    "bloco": "Progressões",
+    "itens": [
+      {
+        "id": "pg1",
+        "label": "Definição de progressões",
+        "descrição": "Sequência de números dispostos segundo uma determinada regra. Cada termo depende de uma relação fixa com os anteriores, podendo ser aditiva ou multiplicativa."
+      },
+      {
+        "id": "pg2",
+        "label": "Progressão Aritmética (PA)",
+        "descrição": "Sequência em que a diferença entre termos consecutivos é constante. Definição de razão e fórmula geral do termo n-ésimo. Aplicações em situações de acréscimos ou reduções constantes."
+      },
+      {
+        "id": "pg3",
+        "label": "Soma dos termos da PA",
+        "descrição": "Cálculo da soma dos termos de uma progressão aritmética utilizando a fórmula que envolve o primeiro e o último termo ou o primeiro termo, a razão e o número de termos."
+      },
+      {
+        "id": "pg4",
+        "label": "Progressão Geométrica (PG)",
+        "descrição": "Sequência em que cada termo, a partir do segundo, é obtido multiplicando o anterior por uma constante chamada razão. Utilizada em situações de crescimento ou decrescimento proporcional."
+      },
+      {
+        "id": "pg5",
+        "label": "Soma dos termos da PG",
+        "descrição": "Fórmulas para a soma de termos de uma progressão geométrica finita e infinita (quando a razão está entre -1 e 1). Aplicações em finanças, juros compostos e problemas de crescimento exponencial."
+      },
+      {
+        "id": "pg6",
+        "label": "Relações entre termos",
+        "descrição": "Determinação de termos intermediários em PAs e PGs. Utilização de fórmulas para descobrir termos específicos a partir de posição, razão e primeiro termo."
+      },
+      {
+        "id": "pg7",
+        "label": "Aplicações práticas",
+        "descrição": "Uso de progressões em problemas de matemática financeira, economia, física e planejamento de etapas ou ciclos que seguem uma regra de crescimento ou decrescimento regular."
+      }
+    ]
+  },
+  {
+    "bloco": "Análise Combinatória",
+    "itens": [
+      {
+        "id": "ac1",
+        "label": "Princípio Fundamental da Contagem",
+        "descrição": "Regra que permite determinar o número total de resultados possíveis em uma sequência de escolhas independentes, multiplicando o número de opções de cada etapa."
+      },
+      {
+        "id": "ac2",
+        "label": "Arranjos",
+        "descrição": "Formações ordenadas de elementos escolhidos de um conjunto. Importante para situações em que a ordem dos elementos importa. Fórmulas dependem do número de elementos escolhidos e do total disponível."
+      },
+      {
+        "id": "ac3",
+        "label": "Permutações",
+        "descrição": "Organização de todos os elementos de um conjunto em diferentes ordens. Distinção entre permutações simples (todos os elementos distintos) e permutações com elementos repetidos."
+      },
+      {
+        "id": "ac4",
+        "label": "Combinações",
+        "descrição": "Seleções de elementos de um conjunto sem considerar a ordem. Importante para situações em que apenas a escolha importa, não a posição."
+      },
+      {
+        "id": "ac5",
+        "label": "Relações entre Arranjos, Permutações e Combinações",
+        "descrição": "Como converter problemas de um tipo para outro e identificar quando utilizar cada conceito. Diferença fundamental entre ordenação e escolha simples."
+      },
+      {
+        "id": "ac6",
+        "label": "Fatoriais e Notação",
+        "descrição": "Uso do fatorial para calcular o número de permutações e arranjos. Introdução à notação e propriedades básicas do fatorial."
+      },
+      {
+        "id": "ac7",
+        "label": "Aplicações práticas",
+        "descrição": "Problemas de contagem em situações reais, como distribuição de senhas, organização de filas, escolha de comitês e cálculos de probabilidades."
+      }
+    ]
+  },
+  {
+    "bloco": "Geometria Plana",
+    "itens": [
+      {
+        "id": "gp1",
+        "label": "Pontos, Retas e Planos",
+        "descrição": "Conceitos fundamentais de ponto, reta e plano. Definição de posições relativas entre pontos e linhas, paralelismo, perpendicularidade e interseções."
+      },
+      {
+        "id": "gp2",
+        "label": "Ângulos",
+        "descrição": "Tipos de ângulos, como agudo, reto, obtuso e raso. Propriedades de ângulos adjacentes, opostos pelo vértice e soma dos ângulos em figuras planas."
+      },
+      {
+        "id": "gp3",
+        "label": "Triângulos",
+        "descrição": "Classificação quanto aos lados e ângulos. Propriedades importantes como soma dos ângulos internos, desigualdade triangular, teorema de Pitágoras e altura, mediana e bissetriz."
+      },
+      {
+        "id": "gp4",
+        "label": "Quadriláteros e Polígonos",
+        "descrição": "Tipos de quadriláteros e suas propriedades, como paralelogramos, retângulos, losangos e trapézios. Propriedades gerais de polígonos, soma dos ângulos internos e externos."
+      },
+      {
+        "id": "gp5",
+        "label": "Círculo e Circunferência",
+        "descrição": "Elementos de um círculo, como centro, raio, diâmetro, corda, arco, secante e tangente. Relações métricas, ângulos inscritos e centrais, e propriedades de segmentos dentro do círculo."
+      },
+      {
+        "id": "gp6",
+        "label": "Perímetro e Área",
+        "descrição": "Cálculo do perímetro de figuras planas e áreas de triângulos, quadriláteros, polígonos regulares e círculos. Uso de fórmulas específicas e relações geométricas."
+      },
+      {
+        "id": "gp7",
+        "label": "Semelhança e Congruência de Figuras",
+        "descrição": "Critérios de congruência e semelhança em triângulos e outros polígonos. Proporcionalidade de lados, relações entre ângulos e aplicações para problemas geométricos."
+      },
+      {
+        "id": "gp8",
+        "label": "Transformações Geométricas",
+        "descrição": "Movimentos de figuras no plano, incluindo translação, rotação, reflexão e homotetia. Uso para compreender propriedades invariantes e relações entre figuras."
+      }
+    ]
+  },
+  {
+    "bloco": "Geometria de Posição",
+    "itens": [
+      {
+        "id": "gp1",
+        "label": "Pontos e Linhas no Plano",
+        "descrição": "Estudo da posição relativa de pontos e linhas em um plano. Conceitos de alinhamento, interseção, paralelismo e perpendicularidade."
+      },
+      {
+        "id": "gp2",
+        "label": "Reta e Segmento de Reta",
+        "descrição": "Definição e propriedades de retas e segmentos de reta. Como medir distâncias entre pontos, identificar pontos médios e aplicar relações métricas."
+      },
+      {
+        "id": "gp3",
+        "label": "Ângulos Formados por Retas",
+        "descrição": "Relações de ângulos quando retas se cruzam, incluindo ângulos opostos pelo vértice, adjacentes, complementares e suplementares."
+      },
+      {
+        "id": "gp4",
+        "label": "Polígonos e Posições Relativas",
+        "descrição": "Estudo de polígonos no plano e suas propriedades métricas. Posicionamento de vértices, diagonais e relações de paralelismo e simetria."
+      },
+      {
+        "id": "gp5",
+        "label": "Círculo e Posições de Pontos e Retas",
+        "descrição": "Posição relativa de pontos, retas e cordas em relação a uma circunferência. Conceitos de tangente, secante e relação entre raios, cordas e ângulos."
+      },
+      {
+        "id": "gp6",
+        "label": "Distâncias e Perpendiculares",
+        "descrição": "Cálculo de distâncias entre pontos, de ponto a reta e entre retas paralelas. Uso de perpendiculares para determinar posições e relações métricas."
+      },
+      {
+        "id": "gp7",
+        "label": "Pontos Notáveis em Triângulos",
+        "descrição": "Estudo de incentro, circuncentro, baricentro e ortocentro. Posição relativa desses pontos e propriedades associadas a alturas, medianas e bissetrizes."
+      },
+      {
+        "id": "gp8",
+        "label": "Relações Angulares",
+        "descrição": "Análise de relações entre ângulos em figuras planas, como triângulos e polígonos. Uso de ângulos para determinar posições relativas e propriedades geométricas."
+      }
+    ]
+  },
+  {
+    "bloco": "Geometria Espacial",
+    "itens": [
+      {
+        "id": "ge1",
+        "label": "Poliedros",
+        "descrição": "Estudo de sólidos formados por faces planas. Identificação de vértices, arestas e faces. Classificação entre prismas, pirâmides e outros tipos de poliedros."
+      },
+      {
+        "id": "ge2",
+        "label": "Cilindros, Cones e Esferas",
+        "descrição": "Características de sólidos de revolução. Definição de raio, altura, geratriz, base e superfície lateral. Análise das propriedades geométricas e medidas associadas."
+      },
+      {
+        "id": "ge3",
+        "label": "Planos e Retas no Espaço",
+        "descrição": "Relação entre planos e retas em três dimensões. Condições de paralelismo, perpendicularidade e interseção. Representação gráfica de posições relativas."
+      },
+      {
+        "id": "ge4",
+        "label": "Distâncias e Perpendiculares no Espaço",
+        "descrição": "Cálculo de distâncias entre pontos, de ponto a reta e de ponto a plano. Uso de segmentos perpendiculares para determinar medidas no espaço."
+      },
+      {
+        "id": "ge5",
+        "label": "Seções Planas de Sólidos",
+        "descrição": "Determinação das figuras formadas ao cortar sólidos com planos. Análise de seções em prismas, pirâmides, cilindros e cones."
+      },
+      {
+        "id": "ge6",
+        "label": "Relações de Volume e Área",
+        "descrição": "Cálculo de área total, área lateral e volume de sólidos geométricos. Uso de fórmulas específicas e comparação entre diferentes tipos de sólidos."
+      },
+      {
+        "id": "ge7",
+        "label": "Posições Relativas de Sólidos",
+        "descrição": "Análise da posição relativa entre dois sólidos, incluindo interseções, tangências e afastamentos. Compreensão da disposição espacial e relações métricas."
+      },
+      {
+        "id": "ge8",
+        "label": "Transformações e Projeções",
+        "descrição": "Representação de sólidos no plano através de projeções ortogonais e perspectivas. Entendimento de como a posição e orientação no espaço afeta a visualização."
+      },
+      {
+        "id": "ge9",
+        "label": "Sólidos Regulares",
+        "descrição": "Estudo de sólidos com faces congruentes e simetria definida, incluindo cubos, tetraedros e octaedros. Observação de propriedades geométricas e relações internas."
+      },
+      {
+        "id": "ge10",
+        "label": "Sólidos Irregulares",
+        "descrição": "Análise de sólidos sem regularidade, abordando formas assimétricas, cálculos aproximados de volumes e áreas, e estratégias de decomposição em sólidos conhecidos."
+      },
+      {
+        "id": "ge11",
+        "label": "Relações Angulares no Espaço",
+        "descrição": "Estudo de ângulos entre retas, planos e entre reta e plano. Aplicações de ângulos diédricos e triângulos formados em sólidos."
+      },
+      {
+        "id": "ge12",
+        "label": "Seções Transversais Complexas",
+        "descrição": "Determinação de seções não triviais que formam polígonos complexos. Interpretação geométrica e aplicação em problemas de visualização espacial."
+      },
+      {
+        "id": "ge13",
+        "label": "Cálculo de Diagonais",
+        "descrição": "Identificação e cálculo de diagonais de poliedros, incluindo diagonais de faces e diagonais espaciais, e sua relação com arestas e vértices."
+      },
+      {
+        "id": "ge14",
+        "label": "Teorema de Cavalieri",
+        "descrição": "Aplicação do teorema para comparar volumes de sólidos com alturas iguais e seções transversais de áreas equivalentes, facilitando o cálculo de volumes complexos."
+      },
+      {
+        "id": "ge15",
+        "label": "Sólidos Compostos",
+        "descrição": "Estudo de sólidos formados pela combinação de diferentes tipos, cálculo de volume total e área total, decompondo em partes conhecidas."
+      },
+      {
+        "id": "ge16",
+        "label": "Relações Métricas no Espaço",
+        "descrição": "Uso de teoremas e relações métricas para calcular distâncias, ângulos e áreas em sólidos espaciais. Aplicações em problemas tridimensionais."
+      },
+      {
+        "id": "ge17",
+        "label": "Simetrias de Sólidos",
+        "descrição": "Identificação de eixos de simetria, planos de simetria e centros de simetria em sólidos geométricos. Importância na classificação e propriedades geométricas."
+      },
+      {
+        "id": "ge18",
+        "label": "Geometria Analítica Espacial",
+        "descrição": "Representação de pontos, retas e planos no espaço usando coordenadas. Cálculo de distâncias, ângulos e interseções utilizando álgebra vetorial."
+      },
+      {
+        "id": "ge19",
+        "label": "Transformações Isométricas",
+        "descrição": "Estudo de translações, rotações e reflexões de sólidos no espaço. Mantém medidas e formas, ajudando na visualização e comparação de sólidos."
+      },
+      {
+        "id": "ge20",
+        "label": "Aplicações Práticas da Geometria Espacial",
+        "descrição": "Uso em engenharia, arquitetura, design e modelagem 3D. Relevância do estudo para problemas reais envolvendo volumes, áreas e disposições espaciais."
+      }
+    ]
+  },
+  {
+    "bloco": "Estatística e Interpretação de Gráficos",
+    "itens": [
+      {
+        "id": "st1",
+        "label": "Introdução à Estatística",
+        "descrição": "Conceito de estatística, importância de coletar, organizar e interpretar dados para a tomada de decisões."
+      },
+      {
+        "id": "st2",
+        "label": "População e Amostra",
+        "descrição": "Diferença entre população e amostra, e a necessidade de trabalhar com amostras representativas."
+      },
+      {
+        "id": "st3",
+        "label": "Tipos de dados",
+        "descrição": "Dados qualitativos e quantitativos, discretos e contínuos, nominais e ordinais."
+      },
+      {
+        "id": "st4",
+        "label": "Organização de dados",
+        "descrição": "Tabelas de frequência simples e acumuladas, classificação de dados em categorias e organização visual."
+      },
+      {
+        "id": "st5",
+        "label": "Gráficos de barras e colunas",
+        "descrição": "Representação de dados categóricos e quantitativos usando barras verticais ou horizontais, e interpretação de alturas e comprimentos."
+      },
+      {
+        "id": "st6",
+        "label": "Gráficos de setores (pizza)",
+        "descrição": "Distribuição percentual dos dados em um círculo dividido em fatias, permitindo fácil visualização das proporções relativas."
+      },
+      {
+        "id": "st7",
+        "label": "Gráficos de linha",
+        "descrição": "Representação de séries temporais ou dados contínuos ao longo do tempo, destacando tendências e variações."
+      },
+      {
+        "id": "st8",
+        "label": "Histogramas",
+        "descrição": "Representação de frequência de dados agrupados em intervalos, útil para identificar distribuição e padrões em grandes conjuntos de dados."
+      },
+      {
+        "id": "st9",
+        "label": "Polígonos de frequência",
+        "descrição": "Linha conectando os pontos médios dos intervalos de um histograma, facilitando a visualização de tendências na distribuição."
+      },
+      {
+        "id": "st10",
+        "label": "Medidas de tendência central",
+        "descrição": "Média, mediana e moda como ferramentas para resumir e representar conjuntos de dados."
+      },
+      {
+        "id": "st11",
+        "label": "Medidas de dispersão",
+        "descrição": "Amplitude, variância e desvio padrão, mostrando o quanto os dados se afastam da média."
+      },
+      {
+        "id": "st12",
+        "label": "Coeficiente de variação",
+        "descrição": "Medida relativa de dispersão que permite comparar variabilidade entre diferentes conjuntos de dados."
+      },
+      {
+        "id": "st13",
+        "label": "Quartis, decis e percentis",
+        "descrição": "Divisão de dados em partes iguais para analisar posição relativa e distribuição dos valores."
+      },
+      {
+        "id": "st14",
+        "label": "Boxplot (diagrama de caixa)",
+        "descrição": "Representação gráfica de quartis, mediana, valores máximos, mínimos e outliers para entender dispersão e simetria."
+      },
+      {
+        "id": "st15",
+        "label": "Distribuições acumuladas",
+        "descrição": "Distribuições que somam frequências de cada categoria até aquele ponto, facilitando comparações e análises de tendências."
+      },
+      {
+        "id": "st16",
+        "label": "Correlação entre variáveis",
+        "descrição": "Relação entre duas variáveis, identificação de tendências lineares e não-lineares, e interpretação de coeficientes de correlação."
+      },
+      {
+        "id": "st17",
+        "label": "Interpretação crítica de gráficos",
+        "descrição": "Habilidade de identificar manipulações, exageros ou conclusões precipitadas em gráficos e tabelas."
+      },
+      {
+        "id": "st18",
+        "label": "Séries temporais",
+        "descrição": "Dados organizados ao longo do tempo, análise de tendências, sazonalidades e padrões periódicos."
+      },
+      {
+        "id": "st19",
+        "label": "Probabilidade básica",
+        "descrição": "Conceito de chance de ocorrência de eventos, interpretação de frequências relativas e probabilidade teórica."
+      },
+      {
+        "id": "st20",
+        "label": "Tabelas cruzadas",
+        "descrição": "Relacionamento de duas ou mais variáveis em uma tabela para identificar padrões e comparações."
+      },
+      {
+        "id": "st21",
+        "label": "Percentual e proporção",
+        "descrição": "Transformação de dados em percentuais e proporções para facilitar interpretação e comparação entre grupos."
+      },
+      {
+        "id": "st22",
+        "label": "Análise de outliers",
+        "descrição": "Identificação de valores atípicos, seu impacto nas medidas estatísticas e decisões de tratamento ou exclusão."
+      },
+      {
+        "id": "st23",
+        "label": "Estatística descritiva vs inferencial",
+        "descrição": "Diferença entre descrever dados de uma amostra/população e fazer previsões ou generalizações baseadas em amostras."
+      },
+      {
+        "id": "st24",
+        "label": "Aplicações práticas",
+        "descrição": "Uso da estatística em pesquisas, economia, saúde, ciências sociais e naturais, destacando a importância de interpretar corretamente os dados."
+      }
+    ]
+  },
+  {
+    "bloco": "Função Afim",
+    "itens": [
+      {
+        "id": "fa1",
+        "label": "Definição de função afim",
+        "descrição": "Função polinomial de primeiro grau, expressa por uma equação linear que relaciona cada valor do domínio a exatamente um valor do contradomínio."
+      },
+      {
+        "id": "fa2",
+        "label": "Coeficientes da função afim",
+        "descrição": "Identificação dos coeficientes a e b na equação geral. 'a' representa a inclinação da reta e define se a função é crescente ou decrescente; 'b' representa a interseção da função com o eixo y."
+      },
+      {
+        "id": "fa3",
+        "label": "Gráfico da função afim",
+        "descrição": "Representação da função como uma reta no plano cartesiano. O gráfico mostra crescimento ou decrescimento constante e é completamente determinado pelos coeficientes."
+      },
+      {
+        "id": "fa4",
+        "label": "Crescimento e decrescimento",
+        "descrição": "Análise do comportamento da função baseada no sinal do coeficiente angular. Se 'a' é positivo, a função é crescente; se 'a' é negativo, é decrescente."
+      },
+      {
+        "id": "fa5",
+        "label": "Interseção com os eixos",
+        "descrição": "Determinação do ponto de interseção com o eixo y através do coeficiente b, e com o eixo x quando o valor da função é zero, fornecendo a raiz da função."
+      },
+      {
+        "id": "fa6",
+        "label": "Inclinação e coeficiente angular",
+        "descrição": "Estudo da inclinação da reta e interpretação do coeficiente angular como a taxa de variação da função, mostrando quanto a função cresce ou decresce para cada unidade de aumento no domínio."
+      },
+      {
+        "id": "fa7",
+        "label": "Representação geométrica",
+        "descrição": "Visualização da função como uma reta no plano, observando a posição, inclinação e interceptos, facilitando a análise de soluções e comportamento da função."
+      },
+      {
+        "id": "fa8",
+        "label": "Função crescente, decrescente e constante",
+        "descrição": "Classificação das funções afins com base no coeficiente angular: positiva para crescente, negativa para decrescente e zero para constante, com impactos diretos no gráfico."
+      },
+      {
+        "id": "fa9",
+        "label": "Transformações e deslocamentos",
+        "descrição": "Alterações no gráfico quando os coeficientes são modificados, incluindo deslocamentos verticais (mudança de b) e variação na inclinação (mudança de a)."
+      },
+      {
+        "id": "fa10",
+        "label": "Relação com equações do 1º grau",
+        "descrição": "Função afim como generalização de equações lineares, mostrando que cada equação do 1º grau pode ser representada como uma função afim, relacionando algebra e gráfico."
+      },
+      {
+        "id": "fa11",
+        "label": "Interpretação prática",
+        "descrição": "Aplicações da função afim em situações reais, como cálculo de custos, velocidade constante, proporcionalidade direta, crescimento linear e análises de variação em problemas do cotidiano."
+      },
+      {
+        "id": "fa12",
+        "label": "Sinal da função",
+        "descrição": "Determinação de intervalos onde a função assume valores positivos ou negativos, usando análise do coeficiente angular e da raiz da função."
+      },
+      {
+        "id": "fa13",
+        "label": "Função inversa",
+        "descrição": "Estudo da função inversa de uma função afim, que também é uma função afim, permitindo compreensão de relações reversas entre variáveis."
+      },
+      {
+        "id": "fa14",
+        "label": "Relação com outras funções",
+        "descrição": "Comparação com funções quadráticas, constantes e exponenciais, destacando diferenças de crescimento, concavidade (ou ausência dela) e comportamento do gráfico."
+      }
+    ]
+  },
+  {
+    "bloco": "Função Quadrática",
+    "itens": [
+      {
+        "id": "fq1",
+        "label": "Definição de função quadrática",
+        "descrição": "Função polinomial de segundo grau, expressa por uma equação geral, relacionando cada valor do domínio a exatamente um valor do contradomínio."
+      },
+      {
+        "id": "fq2",
+        "label": "Coeficientes da função",
+        "descrição": "Identificação dos coeficientes a, b e c na equação geral. 'a' determina a concavidade, 'b' influencia a inclinação da parábola e 'c' representa o ponto de interseção com o eixo y."
+      },
+      {
+        "id": "fq3",
+        "label": "Gráfico da função quadrática",
+        "descrição": "Representação da função como uma parábola, podendo ser côncava para cima ou para baixo, mostrando crescimento e decrescimento da função."
+      },
+      {
+        "id": "fq4",
+        "label": "Vértice da parábola",
+        "descrição": "Ponto que representa o máximo ou mínimo da função, dependendo da concavidade, encontrado através da fórmula da coordenada x do vértice ou completando o quadrado."
+      },
+      {
+        "id": "fq5",
+        "label": "Eixo de simetria",
+        "descrição": "Reta vertical que passa pelo vértice da parábola, dividindo-a em duas partes simétricas, importante para análise de gráfico e localização de raízes."
+      },
+      {
+        "id": "fq6",
+        "label": "Raízes da função quadrática",
+        "descrição": "Valores da variável que tornam a função igual a zero, podendo ser reais ou complexas."
+      },
+      {
+        "id": "fq7",
+        "label": "Discriminante",
+        "descrição": "Expressão que determina a natureza das raízes da função quadrática: reais distintas, reais iguais ou complexas."
+      },
+      {
+        "id": "fq8",
+        "label": "Concavidade e comportamento",
+        "descrição": "Determinação da direção da parábola e análise de crescimento e decrescimento em intervalos específicos."
+      },
+      {
+        "id": "fq9",
+        "label": "Transformações e deslocamentos",
+        "descrição": "Alterações no gráfico ao modificar os coeficientes, incluindo translação vertical, horizontal e mudança de concavidade."
+      },
+      {
+        "id": "fq10",
+        "label": "Completar o quadrado",
+        "descrição": "Técnica para reescrever a função quadrática em forma canônica, facilitando a identificação do vértice e análise do gráfico."
+      },
+      {
+        "id": "fq11",
+        "label": "Forma canônica",
+        "descrição": "Expressão da função quadrática destacando o vértice, usada para estudo de máximos e mínimos e para simplificar o cálculo de raízes."
+      },
+      {
+        "id": "fq12",
+        "label": "Forma fatorada",
+        "descrição": "Expressão da função quadrática como produto de fatores lineares, útil para identificar raízes de forma direta e analisar o gráfico."
+      },
+      {
+        "id": "fq13",
+        "label": "Sinal da função quadrática",
+        "descrição": "Estudo de onde a função assume valores positivos, negativos ou zero, permitindo interpretação do gráfico e resolução de inequações quadráticas."
+      },
+      {
+        "id": "fq14",
+        "label": "Máximo e mínimo",
+        "descrição": "Determinação do valor máximo ou mínimo da função com base no vértice e concavidade, essencial para otimização e problemas aplicados."
+      },
+      {
+        "id": "fq15",
+        "label": "Aplicações práticas",
+        "descrição": "Uso da função quadrática em problemas de movimento, economia, trajetórias, otimização, análise de crescimento e decrescimento em situações reais."
+      },
+      {
+        "id": "fq16",
+        "label": "Inequações quadráticas",
+        "descrição": "Estudo de desigualdades envolvendo funções quadráticas, usando análise de sinais e gráfico da parábola para determinar intervalos de solução."
+      },
+      {
+        "id": "fq17",
+        "label": "Interseção com os eixos",
+        "descrição": "Localização dos pontos de interseção da parábola com os eixos coordenados, importante para visualização e interpretação do gráfico."
+      },
+      {
+        "id": "fq18",
+        "label": "Simetria e propriedades geométricas",
+        "descrição": "Relação entre simetria do gráfico, vértice e eixo de simetria, observando padrões geométricos da parábola."
+      },
+      {
+        "id": "fq19",
+        "label": "Comportamento extremo da função",
+        "descrição": "Análise de limites e comportamento da função quadrática para valores muito grandes ou muito pequenos da variável."
+      },
+      {
+        "id": "fq20",
+        "label": "Relação com outras funções",
+        "descrição": "Comparação entre funções quadráticas e funções lineares, exponenciais ou constantes, destacando diferenças de crescimento e concavidade."
+      }
+    ]
+  },
+  {
+    "bloco": "Função Exponencial",
+    "itens": [
+      {
+        "id": "fe1",
+        "label": "Definição de função exponencial",
+        "descrição": "Função em que a variável aparece no expoente, associando cada valor do domínio a uma potência de uma base positiva diferente de um. Fundamental para modelar crescimento ou decrescimento rápido."
+      },
+      {
+        "id": "fe2",
+        "label": "Base da função",
+        "descrição": "Análise da base da função exponencial. Se maior que 1, a função cresce; se entre 0 e 1, a função decresce. A base define a velocidade de crescimento ou decrescimento da função."
+      },
+      {
+        "id": "fe3",
+        "label": "Domínio e contradomínio",
+        "descrição": "Estudo do conjunto de valores de entrada (domínio, geralmente todos os números reais) e de saída (contradomínio, sempre valores positivos), caracterizando o comportamento da função."
+      },
+      {
+        "id": "fe4",
+        "label": "Gráfico da função exponencial",
+        "descrição": "Representação no plano cartesiano mostrando crescimento ou decrescimento contínuo e assíntota horizontal. O gráfico nunca toca o eixo x e sempre permanece acima de zero."
+      },
+      {
+        "id": "fe5",
+        "label": "Crescimento e decrescimento",
+        "descrição": "Interpretação do comportamento da função com base na base: crescente quando a base é maior que 1 e decrescente quando a base está entre 0 e 1, aplicando conceitos de crescimento exponencial e decaimento."
+      },
+      {
+        "id": "fe6",
+        "label": "Assíntota horizontal",
+        "descrição": "Linha que o gráfico se aproxima mas nunca toca, geralmente o eixo x, indicando limites do comportamento da função para valores extremos da variável."
+      },
+      {
+        "id": "fe7",
+        "label": "Transformações e deslocamentos",
+        "descrição": "Como alterações nos coeficientes da função afetam o gráfico, incluindo deslocamentos verticais e horizontais, reflexões e alterações na taxa de crescimento."
+      },
+      {
+        "id": "fe8",
+        "label": "Propriedades básicas",
+        "descrição": "Regras de potenciação aplicadas à função exponencial, incluindo produto de potências, divisão e potências de potências, que facilitam manipulações algébricas."
+      },
+      {
+        "id": "fe9",
+        "label": "Função inversa",
+        "descrição": "Introdução à função logarítmica como inversa da função exponencial, permitindo resolução de equações onde a variável está no expoente."
+      },
+      {
+        "id": "fe10",
+        "label": "Aplicações práticas",
+        "descrição": "Uso em crescimento populacional, juros compostos, decaimento radioativo, aprendizagem e fenômenos naturais, mostrando a importância da função exponencial em diferentes contextos."
+      },
+      {
+        "id": "fe11",
+        "label": "Comparação com funções lineares e quadráticas",
+        "descrição": "Análise do comportamento de crescimento mais rápido da função exponencial em relação a funções lineares ou quadráticas, destacando diferenças no gráfico e nas aplicações."
+      },
+      {
+        "id": "fe12",
+        "label": "Sinal da função",
+        "descrição": "Estudo dos valores que a função assume, sempre positivos, mostrando que a função nunca cruza o eixo x."
+      },
+      {
+        "id": "fe13",
+        "label": "Taxa de variação",
+        "descrição": "Entendimento de como a função aumenta ou diminui em proporção ao valor atual, característica fundamental do crescimento e decaimento exponencial."
+      }
+    ]
+  },
+  {
+    "bloco": "Logaritmos",
+    "itens": [
+      {
+        "id": "lg1",
+        "label": "Definição de logaritmo",
+        "descrição": "O logaritmo de um número é o expoente ao qual se deve elevar a base para obter esse número. Permite resolver equações em que a variável está no expoente."
+      },
+      {
+        "id": "lg2",
+        "label": "Base do logaritmo",
+        "descrição": "Análise da base do logaritmo, que deve ser positiva e diferente de 1. A base determina o comportamento da função, crescente ou decrescente."
+      },
+      {
+        "id": "lg3",
+        "label": "Domínio e contradomínio",
+        "descrição": "O domínio do logaritmo é formado por números positivos, enquanto o contradomínio abrange todos os números reais. Fundamental para entender onde a função está definida."
+      },
+      {
+        "id": "lg4",
+        "label": "Função inversa da exponencial",
+        "descrição": "O logaritmo é a função inversa da função exponencial, permitindo reverter operações exponenciais e resolver equações em que a variável está no expoente."
+      },
+      {
+        "id": "lg5",
+        "label": "Propriedades básicas",
+        "descrição": "Regras de logaritmos, incluindo produto, quociente e potência, que permitem simplificar expressões e resolver equações logarítmicas de forma sistemática."
+      },
+      {
+        "id": "lg6",
+        "label": "Logaritmo natural",
+        "descrição": "Logaritmo com base 'e', representado por ln, importante em cálculo e modelagem de crescimento contínuo. Usado para simplificação de cálculos envolvendo exponenciais naturais."
+      },
+      {
+        "id": "lg7",
+        "label": "Logaritmo decimal",
+        "descrição": "Logaritmo com base 10, representado por log, amplamente usado em ciências, engenharia e escalas logarítmicas como decibéis e pH."
+      },
+      {
+        "id": "lg8",
+        "label": "Transformações e deslocamentos",
+        "descrição": "Como alterações na função logarítmica afetam o gráfico, incluindo deslocamentos horizontais e verticais, reflexões e mudanças na taxa de crescimento."
+      },
+      {
+        "id": "lg9",
+        "label": "Gráfico da função logarítmica",
+        "descrição": "Representação no plano cartesiano mostrando crescimento ou decrescimento lento, interceptando o eixo x em 1, com assíntota vertical no eixo y=0."
+      },
+      {
+        "id": "lg10",
+        "label": "Comparação com funções exponenciais",
+        "descrição": "Análise do comportamento da função logarítmica como inversa da exponencial, destacando diferenças em crescimento, domínio e contradomínio."
+      },
+      {
+        "id": "lg11",
+        "label": "Aplicações práticas",
+        "descrição": "Uso em escalas logarítmicas (decibéis, Richter), crescimento populacional contínuo, juros compostos e ciências naturais, mostrando relevância em diversas áreas."
+      },
+      {
+        "id": "lg12",
+        "label": "Equações logarítmicas",
+        "descrição": "Como resolver equações envolvendo logaritmos usando propriedades básicas e a relação inversa com exponenciais."
+      },
+      {
+        "id": "lg13",
+        "label": "Mudança de base",
+        "descrição": "Técnica para reescrever logaritmos em uma base diferente, permitindo cálculos e comparações entre diferentes bases."
+      }
+    ]
+  },
+  {
+    "bloco": "Probabilidade",
+    "itens": [
+      {
+        "id": "pr1",
+        "label": "Conceito de probabilidade",
+        "descrição": "Probabilidade é a medida da chance de ocorrência de um evento. Varia entre 0 (evento impossível) e 1 (evento certo). Fundamenta a análise de fenômenos aleatórios."
+      },
+      {
+        "id": "pr2",
+        "label": "Experimentos aleatórios",
+        "descrição": "Situações em que o resultado não pode ser previsto com certeza, como lançar uma moeda ou dado. Permite estudar todas as possíveis ocorrências e suas probabilidades."
+      },
+      {
+        "id": "pr3",
+        "label": "Espaço amostral",
+        "descrição": "Conjunto de todos os resultados possíveis de um experimento aleatório. Base para calcular a probabilidade de eventos específicos."
+      },
+      {
+        "id": "pr4",
+        "label": "Eventos",
+        "descrição": "Subconjuntos do espaço amostral que representam ocorrências de interesse. Podem ser simples (um único resultado) ou compostos (mais de um resultado)."
+      },
+      {
+        "id": "pr5",
+        "label": "Probabilidade de eventos",
+        "descrição": "Cálculo da chance de um evento ocorrer dividindo o número de resultados favoráveis pelo total de resultados possíveis no espaço amostral."
+      },
+      {
+        "id": "pr6",
+        "label": "Eventos complementares",
+        "descrição": "Dois eventos são complementares quando a ocorrência de um implica que o outro não ocorre. A soma de suas probabilidades é igual a 1."
+      },
+      {
+        "id": "pr7",
+        "label": "Eventos independentes e dependentes",
+        "descrição": "Eventos independentes não influenciam a ocorrência um do outro, enquanto eventos dependentes têm probabilidades condicionadas à ocorrência prévia de outro evento."
+      },
+      {
+        "id": "pr8",
+        "label": "Probabilidade condicional",
+        "descrição": "Probabilidade de um evento ocorrer dado que outro evento já ocorreu. Utilizada para analisar relações entre eventos interdependentes."
+      },
+      {
+        "id": "pr9",
+        "label": "Regra da multiplicação",
+        "descrição": "Para eventos independentes, a probabilidade conjunta é o produto das probabilidades individuais. Para eventos dependentes, considera-se a probabilidade condicional."
+      },
+      {
+        "id": "pr10",
+        "label": "Regra da adição",
+        "descrição": "Para eventos mutuamente exclusivos, a probabilidade de ocorrência de um ou outro é a soma das probabilidades individuais. Para eventos não exclusivos, subtrai-se a interseção."
+      },
+      {
+        "id": "pr11",
+        "label": "Probabilidade total",
+        "descrição": "Método para calcular a probabilidade de um evento considerando todos os caminhos possíveis que levam a ele, somando probabilidades de eventos mutuamente exclusivos."
+      },
+      {
+        "id": "pr12",
+        "label": "Teorema de Bayes",
+        "descrição": "Permite atualizar a probabilidade de um evento baseado em informações adicionais. Fundamental para probabilidades condicionais em contextos complexos."
+      },
+      {
+        "id": "pr13",
+        "label": "Distribuição de probabilidades",
+        "descrição": "Organização das probabilidades de todos os resultados possíveis de um experimento, podendo ser discreta ou contínua, para descrever o comportamento do fenômeno."
+      },
+      {
+        "id": "pr14",
+        "label": "Esperança matemática",
+        "descrição": "Valor médio esperado de um experimento aleatório. Calculado ponderando cada resultado pelo valor da probabilidade associada."
+      }
+    ]
+  },
+  {
+    "bloco": "Binômio de Newton",
+    "itens": [
+      {
+        "id": "bn1",
+        "label": "Conceito do binômio",
+        "descrição": "Um binômio é a soma de dois termos. O estudo do binômio de Newton analisa a expansão de potências de binômios, mostrando como obter cada termo sem precisar multiplicar manualmente várias vezes."
+      },
+      {
+        "id": "bn2",
+        "label": "Fórmula do binômio de Newton",
+        "descrição": "Permite escrever a potência de um binômio como soma de termos com coeficientes específicos chamados coeficientes binomiais, que indicam a quantidade de maneiras de escolher elementos em combinações."
+      },
+      {
+        "id": "bn3",
+        "label": "Coeficientes binomiais",
+        "descrição": "Números que aparecem na expansão do binômio e podem ser obtidos usando a fórmula combinatória ou através do Triângulo de Pascal. Representam a quantidade de combinações possíveis de certos elementos."
+      },
+      {
+        "id": "bn4",
+        "label": "Triângulo de Pascal",
+        "descrição": "Representação gráfica dos coeficientes binomiais, onde cada linha corresponde a uma potência do binômio. Permite identificar rapidamente os coeficientes de cada termo na expansão."
+      },
+      {
+        "id": "bn5",
+        "label": "Expansão de binômios",
+        "descrição": "Processo de escrever um binômio elevado a uma potência como soma de termos. Cada termo é produto de um coeficiente binomial, uma potência do primeiro termo e uma potência do segundo termo."
+      },
+      {
+        "id": "bn6",
+        "label": "Termo geral",
+        "descrição": "Fórmula que permite calcular diretamente qualquer termo da expansão de um binômio sem precisar escrever todos os anteriores, usando coeficientes binomiais e potências apropriadas."
+      },
+      {
+        "id": "bn7",
+        "label": "Propriedades do binômio",
+        "descrição": "Inclui simetria dos coeficientes, soma dos coeficientes, soma alternada de coeficientes e outros padrões que ajudam a simplificar cálculos e análises de expansões binomiais."
+      },
+      {
+        "id": "bn8",
+        "label": "Aplicações do binômio",
+        "descrição": "Utilizado em combinatória, cálculo de probabilidades, álgebra, aproximações, séries e problemas que envolvem somas e produtos de termos de forma sistemática."
+      }
+    ]
+  },
+  {
+    "bloco": "Trigonometria",
+    "itens": [
+      {
+        "id": "tr1",
+        "label": "Conceito de trigonometria",
+        "descrição": "Estudo das relações entre os ângulos e os lados de triângulos. Introdução à trigonometria no triângulo retângulo e em qualquer triângulo, destacando a importância em medições, física e engenharia."
+      },
+      {
+        "id": "tr2",
+        "label": "Razões trigonométricas no triângulo retângulo",
+        "descrição": "Definição das funções seno, cosseno e tangente como razões entre lados de um triângulo retângulo. Explicação da relação entre os ângulos e os comprimentos dos lados."
+      },
+      {
+        "id": "tr3",
+        "label": "Funções trigonométricas",
+        "descrição": "Introdução às funções seno, cosseno, tangente, cotangente, secante e cossecante. Explicação de seus domínios, imagens e comportamento em diferentes quadrantes."
+      },
+      {
+        "id": "tr4",
+        "label": "Identidades trigonométricas",
+        "descrição": "Relações fundamentais entre as funções trigonométricas, como seno ao quadrado mais cosseno ao quadrado igual a 1, e fórmulas de adição, subtração e duplicação de ângulos."
+      },
+      {
+        "id": "tr5",
+        "label": "Lei dos senos",
+        "descrição": "Relação entre os lados e os ângulos de qualquer triângulo, permitindo resolver triângulos oblíquos e calcular lados ou ângulos desconhecidos."
+      },
+      {
+        "id": "tr6",
+        "label": "Lei dos cossenos",
+        "descrição": "Fórmula que relaciona os lados de qualquer triângulo com o cosseno de um de seus ângulos, útil para resolver triângulos não retângulos."
+      },
+      {
+        "id": "tr7",
+        "label": "Resolução de triângulos",
+        "descrição": "Aplicação das leis dos senos e cossenos para determinar todos os lados e ângulos de um triângulo dado alguns elementos conhecidos."
+      },
+      {
+        "id": "tr8",
+        "label": "Funções trigonométricas no círculo unitário",
+        "descrição": "Representação das funções trigonométricas como coordenadas de pontos em um círculo de raio unitário. Interpretação geométrica dos ângulos e periodicidade das funções."
+      },
+      {
+        "id": "tr9",
+        "label": "Gráficos de funções trigonométricas",
+        "descrição": "Representação visual das funções seno, cosseno e tangente ao longo do eixo, destacando amplitude, período, fase e deslocamento vertical."
+      },
+      {
+        "id": "tr10",
+        "label": "Transformações de funções trigonométricas",
+        "descrição": "Alterações em amplitude, período e deslocamento das funções trigonométricas e análise de como isso afeta o gráfico."
+      },
+      {
+        "id": "tr11",
+        "label": "Equações trigonométricas",
+        "descrição": "Resolução de equações envolvendo funções trigonométricas básicas, aplicando identidades, fatorações e propriedades periódicas das funções."
+      },
+      {
+        "id": "tr12",
+        "label": "Aplicações da trigonometria",
+        "descrição": "Uso em problemas de altura e distância, navegação, física, engenharia e modelagem de fenômenos periódicos. Relação direta entre teoria e situações práticas do cotidiano."
+      }
+    ]
+  },
+  {
+    "bloco": "Matrizes",
+    "itens": [
+      {
+        "id": "mt1",
+        "label": "Conceito de matrizes",
+        "descrição": "Definição de matriz como uma tabela retangular de números dispostos em linhas e colunas. Explicação sobre elementos, ordem da matriz e notação."
+      },
+      {
+        "id": "mt2",
+        "label": "Tipos de matrizes",
+        "descrição": "Classificação das matrizes em quadradas, retangulares, diagonais, identidade, nula, linha, coluna e simétrica, com características e exemplos de cada tipo."
+      },
+      {
+        "id": "mt3",
+        "label": "Operações com matrizes",
+        "descrição": "Explicação detalhada da adição, subtração e multiplicação de matrizes. Regras de compatibilidade de ordem para realizar operações corretamente."
+      },
+      {
+        "id": "mt4",
+        "label": "Multiplicação por escalar",
+        "descrição": "Como multiplicar uma matriz por um número, multiplicando cada elemento pelo escalar. Aplicações e propriedades dessa operação."
+      },
+      {
+        "id": "mt5",
+        "label": "Matriz transposta",
+        "descrição": "Definição da matriz transposta, obtida trocando linhas por colunas. Propriedades e aplicações, como simetria e operações com matrizes quadradas."
+      },
+      {
+        "id": "mt6",
+        "label": "Determinante de uma matriz",
+        "descrição": "Cálculo do determinante de matrizes quadradas, interpretação geométrica como área ou volume, e propriedades importantes como multiplicação e troca de linhas."
+      },
+      {
+        "id": "mt7",
+        "label": "Matriz inversa",
+        "descrição": "Definição da matriz inversa de uma matriz quadrada, condições de existência, cálculo através de adjunta e determinante, e sua aplicação na resolução de sistemas lineares."
+      },
+      {
+        "id": "mt8",
+        "label": "Sistema linear e matrizes",
+        "descrição": "Como representar sistemas de equações lineares usando matrizes e vetores. Introdução ao método da matriz inversa e interpretação geométrica."
+      },
+      {
+        "id": "mt9",
+        "label": "Propriedades das operações com matrizes",
+        "descrição": "Regras como associatividade, distributividade, existência de elemento neutro e não comutatividade da multiplicação. Importância para álgebra linear e aplicações."
+      },
+      {
+        "id": "mt10",
+        "label": "Aplicações de matrizes",
+        "descrição": "Uso de matrizes em resolução de sistemas lineares, transformações geométricas, gráficos, computação, economia e física, destacando sua utilidade em modelagem e simulação."
+      }
+    ]
+  },
+  {
+    "bloco": "Determinantes",
+    "itens": [
+      {
+        "id": "dt1",
+        "label": "Conceito de determinante",
+        "descrição": "Definição de determinante como um número associado a uma matriz quadrada, representando propriedades da matriz e oferecendo informações sobre sistemas lineares."
+      },
+      {
+        "id": "dt2",
+        "label": "Determinantes de matrizes 2x2",
+        "descrição": "Cálculo do determinante de uma matriz 2 por 2 usando a regra do produto cruzado dos elementos. Interpretação geométrica como área de um paralelogramo formado pelos vetores da matriz."
+      },
+      {
+        "id": "dt3",
+        "label": "Determinantes de matrizes 3x3",
+        "descrição": "Cálculo do determinante de uma matriz 3 por 3 utilizando a regra de Sarrus ou expansão por cofatores. Aplicações em geometria e sistemas lineares."
+      },
+      {
+        "id": "dt4",
+        "label": "Propriedades dos determinantes",
+        "descrição": "Regras importantes como efeito da troca de linhas, multiplicação por escalar, determinante da matriz transposta, determinante do produto de matrizes e relação com matriz inversa."
+      },
+      {
+        "id": "dt5",
+        "label": "Determinante e solução de sistemas lineares",
+        "descrição": "Uso do determinante para verificar a existência de soluções em sistemas lineares (teorema de Cramer), determinando se o sistema possui solução única, infinitas soluções ou nenhuma."
+      },
+      {
+        "id": "dt6",
+        "label": "Expansão por cofatores",
+        "descrição": "Método de calcular determinantes de matrizes maiores que 3x3, expandindo por linhas ou colunas e utilizando determinantes menores. Importância da escolha da linha ou coluna para simplificação."
+      },
+      {
+        "id": "dt7",
+        "label": "Determinante de matriz triangular",
+        "descrição": "Propriedade de que o determinante de uma matriz triangular (superior ou inferior) é o produto dos elementos da diagonal principal, simplificando cálculos."
+      },
+      {
+        "id": "dt8",
+        "label": "Aplicações práticas",
+        "descrição": "Uso de determinantes em geometria (área, volume), análise de sistemas lineares, transformações lineares, inversão de matrizes e problemas de engenharia e física."
+      }
+    ]
+  },
+  {
+    "bloco": "Sistemas Lineares",
+    "itens": [
+      {
+        "id": "sl1",
+        "label": "Conceito de sistema linear",
+        "descrição": "Definição de sistema linear como um conjunto de equações lineares envolvendo várias incógnitas. Entendimento das soluções possíveis: única, infinita ou inexistente."
+      },
+      {
+        "id": "sl2",
+        "label": "Sistemas 2x2",
+        "descrição": "Resolução de sistemas com duas equações e duas incógnitas usando métodos gráficos, substituição, adição/subtração e comparação de coeficientes."
+      },
+      {
+        "id": "sl3",
+        "label": "Sistemas 3x3",
+        "descrição": "Resolução de sistemas com três equações e três incógnitas utilizando eliminação de Gauss, substituição e combinação linear de equações."
+      },
+      {
+        "id": "sl4",
+        "label": "Método de escalonamento",
+        "descrição": "Transformação do sistema em forma triangular através de operações elementares sobre as linhas, facilitando a resolução por substituição regressiva."
+      },
+      {
+        "id": "sl5",
+        "label": "Método da matriz inversa",
+        "descrição": "Resolução de sistemas lineares utilizando matrizes e suas inversas, aplicando a fórmula x = A⁻¹b quando a matriz dos coeficientes é invertível."
+      },
+      {
+        "id": "sl6",
+        "label": "Teorema de Cramer",
+        "descrição": "Uso de determinantes para resolver sistemas lineares com o mesmo número de equações e incógnitas, obtendo cada incógnita como razão entre determinantes específicos."
+      },
+      {
+        "id": "sl7",
+        "label": "Sistemas compatíveis e incompatíveis",
+        "descrição": "Classificação de sistemas em compatíveis (possui solução) e incompatíveis (não possui solução). Distinção entre sistemas com solução única e infinitas soluções."
+      },
+      {
+        "id": "sl8",
+        "label": "Aplicações práticas",
+        "descrição": "Utilização de sistemas lineares para resolver problemas de economia, física, engenharia, programação linear, misturas e qualquer situação que envolva múltiplas variáveis relacionadas."
+      }
+    ]
+  },
+  {
+    "bloco": "Geometria Analítica",
+    "itens": [
+      {
+        "id": "ga1",
+        "label": "Plano cartesiano",
+        "descrição": "Definição do plano cartesiano como sistema de coordenadas bidimensional. Introdução aos eixos x e y, origem e quadrantes, com representação de pontos e localização de posições."
+      },
+      {
+        "id": "ga2",
+        "label": "Distância entre dois pontos",
+        "descrição": "Fórmula e raciocínio para calcular a distância entre dois pontos no plano cartesiano usando o teorema de Pitágoras."
+      },
+      {
+        "id": "ga3",
+        "label": "Ponto médio de um segmento",
+        "descrição": "Cálculo do ponto médio de um segmento de reta, determinando o ponto que divide o segmento em duas partes iguais."
+      },
+      {
+        "id": "ga4",
+        "label": "Equação da reta",
+        "descrição": "Formas da equação da reta: geral, reduzida (y = mx + b) e segmentária. Significado do coeficiente angular, coeficiente linear e interceptos."
+      },
+      {
+        "id": "ga5",
+        "label": "Posição relativa entre retas",
+        "descrição": "Classificação das retas quanto à posição: concorrentes, paralelas e coincidentes, com critérios usando coeficiente angular."
+      },
+      {
+        "id": "ga6",
+        "label": "Ângulo entre retas",
+        "descrição": "Cálculo do ângulo formado entre duas retas utilizando os coeficientes angulares e a tangente do ângulo."
+      },
+      {
+        "id": "ga7",
+        "label": "Equação da circunferência",
+        "descrição": "Definição da circunferência no plano cartesiano, equação geral e reduzida, centro e raio. Relação com equações quadráticas de duas variáveis."
+      },
+      {
+        "id": "ga8",
+        "label": "Elipse",
+        "descrição": "Representação da elipse no plano, equação principal, eixos maiores e menores, centro, vértices e focos."
+      },
+      {
+        "id": "ga9",
+        "label": "Hipérbole",
+        "descrição": "Equação e representação da hipérbole, assimptotas, vértices e focos, e interpretação geométrica."
+      },
+      {
+        "id": "ga10",
+        "label": "Parábola",
+        "descrição": "Equação da parábola, vértice, foco, diretriz e simetria. Representação gráfica e interpretação geométrica dos elementos."
+      },
+      {
+        "id": "ga11",
+        "label": "Distância ponto-reta",
+        "descrição": "Cálculo da distância entre um ponto e uma reta no plano cartesiano usando a fórmula derivada da equação geral da reta."
+      },
+      {
+        "id": "ga12",
+        "label": "Distância ponto-círculo",
+        "descrição": "Determinação da distância de um ponto ao centro da circunferência e análise da posição relativa entre ponto e círculo (interno, sobre ou externo)."
+      },
+      {
+        "id": "ga13",
+        "label": "Geometria vetorial",
+        "descrição": "Introdução a vetores no plano, operações de soma, subtração, produto escalar e aplicação na determinação de ângulos e projeções."
+      },
+      {
+        "id": "ga14",
+        "label": "Interseção de figuras",
+        "descrição": "Métodos para determinar pontos de interseção entre retas, circunferências e outras curvas, usando sistemas de equações."
+      },
+      {
+        "id": "ga15",
+        "label": "Aplicações práticas",
+        "descrição": "Uso da geometria analítica em física, engenharia, arquitetura e programação gráfica, resolvendo problemas de posição, distância e trajetória."
+      }
+    ]
+  },
+  {
+    "bloco": "Cônicas",
+    "itens": [
+      {
+        "id": "c1",
+        "label": "Definição de cônicas",
+        "descrição": "Introdução às curvas obtidas pela interseção de um plano com um cone duplo. Classificação das cônicas em círculo, elipse, parábola e hipérbole, dependendo da inclinação do plano."
+      },
+      {
+        "id": "c2",
+        "label": "Circunferência",
+        "descrição": "Equação da circunferência no plano cartesiano, identificação do centro e raio. Propriedades geométricas e relação com coordenadas."
+      },
+      {
+        "id": "c3",
+        "label": "Elipse",
+        "descrição": "Equação principal da elipse, eixos maior e menor, vértices e focos. Análise de excentricidade e interpretação geométrica da curva."
+      },
+      {
+        "id": "c4",
+        "label": "Hipérbole",
+        "descrição": "Equação da hipérbole, assimptotas, vértices e focos. Características da abertura horizontal ou vertical e estudo do eixo real e eixo imaginário."
+      },
+      {
+        "id": "c5",
+        "label": "Parábola",
+        "descrição": "Equação da parábola, vértice, foco e diretriz. Representação gráfica, simetria e concavidade. Relação entre distância do ponto ao foco e à diretriz."
+      },
+      {
+        "id": "c6",
+        "label": "Equações gerais e reduzidas",
+        "descrição": "Transformação das equações gerais das cônicas em formas reduzidas para facilitar a análise geométrica e cálculo de elementos principais."
+      },
+      {
+        "id": "c7",
+        "label": "Excentricidade",
+        "descrição": "Definição e cálculo da excentricidade para elipses e hipérboles, mostrando a relação entre a forma da curva e a posição dos focos."
+      },
+      {
+        "id": "c8",
+        "label": "Posição relativa de pontos e cônicas",
+        "descrição": "Determinação da posição de um ponto em relação à cônica: dentro, sobre ou fora, usando substituição nas equações das curvas."
+      },
+      {
+        "id": "c9",
+        "label": "Tangente a cônicas",
+        "descrição": "Condições e equações para determinar retas tangentes a cônicas em um ponto específico, e propriedades das tangentes em relação a focos e vértices."
+      },
+      {
+        "id": "c10",
+        "label": "Interseção de cônicas",
+        "descrição": "Métodos para calcular pontos de interseção entre duas cônicas ou entre cônica e reta, aplicando sistemas de equações e análise gráfica."
+      },
+      {
+        "id": "c11",
+        "label": "Aplicações práticas",
+        "descrição": "Uso das cônicas em engenharia, física e astronomia, incluindo trajetórias orbitais, reflexão em parábolas e propriedades de espelhos e lentes."
+      }
+    ]
+  },
+  {
+    "bloco": "Módulo",
+    "itens": [
+      {
+        "id": "mod1",
+        "label": "Definição de módulo",
+        "descrição": "Conceito de módulo como a distância de um número até a origem na reta numérica. Apresentação do módulo como uma medida sempre não negativa."
+      },
+      {
+        "id": "mod2",
+        "label": "Propriedades do módulo",
+        "descrição": "Propriedades básicas como módulo de produto, módulo de quociente, módulo de soma e diferença, além da igualdade de módulos."
+      },
+      {
+        "id": "mod3",
+        "label": "Módulo de números inteiros e racionais",
+        "descrição": "Como calcular o módulo de números positivos, negativos e fracionários. Interpretação geométrica da distância na reta numérica."
+      },
+      {
+        "id": "mod4",
+        "label": "Módulo de números reais",
+        "descrição": "Extensão do conceito de módulo para todos os números reais, incluindo decimais e irracionais. Uso em comparações e desigualdades."
+      },
+      {
+        "id": "mod5",
+        "label": "Propriedades avançadas",
+        "descrição": "Desigualdades envolvendo módulo, como a desigualdade triangular, e aplicações em análise de distâncias e diferenças entre números."
+      },
+      {
+        "id": "mod6",
+        "label": "Módulo em expressões algébricas",
+        "descrição": "Simplificação e manipulação de expressões que contêm módulos, separando casos positivos e negativos para resolver equações e inequações."
+      },
+      {
+        "id": "mod7",
+        "label": "Relação com números complexos",
+        "descrição": "Introdução ao módulo de números complexos como a distância até a origem no plano complexo, mostrando semelhança com o módulo de números reais."
+      },
+      {
+        "id": "mod8",
+        "label": "Aplicações práticas",
+        "descrição": "Uso do módulo em situações como cálculo de distância, medidas absolutas de grandezas físicas, e em problemas de análise de dados e geometria."
+      }
+    ]
+  },
+  {
+    "bloco": "Equações Algébricas",
+    "itens": [
+      {
+        "id": "eq1",
+        "label": "Definição de equação algébrica",
+        "descrição": "Uma equação que envolve incógnitas elevadas a potências inteiras e coeficientes numéricos. Explicação de como a equação representa uma igualdade entre expressões algébricas."
+      },
+      {
+        "id": "eq2",
+        "label": "Equações do 1º grau",
+        "descrição": "Equações lineares que podem ser escritas na forma padrão. Métodos de resolução, interpretação do coeficiente angular e solução única."
+      },
+      {
+        "id": "eq3",
+        "label": "Equações do 2º grau",
+        "descrição": "Equações quadráticas e suas soluções através da fórmula de Bhaskara, fatoração e completamento do quadrado. Discussão sobre o discriminante e a natureza das raízes."
+      },
+      {
+        "id": "eq4",
+        "label": "Equações de grau superior",
+        "descrição": "Equações cúbicas, quárticas e de grau maior. Introdução a métodos de fatoração, substituições e técnicas gerais de solução, incluindo a busca por raízes racionais."
+      },
+      {
+        "id": "eq5",
+        "label": "Equações polinomiais",
+        "descrição": "Relação entre raízes e coeficientes, teorema fundamental da álgebra, multiplicidade de raízes e comportamento de polinômios na resolução de equações."
+      },
+      {
+        "id": "eq6",
+        "label": "Equações racionais",
+        "descrição": "Equações que envolvem frações algébricas. Estratégias para simplificação, eliminação de denominadores e cuidado com condições de existência."
+      },
+      {
+        "id": "eq7",
+        "label": "Equações irracionais",
+        "descrição": "Equações que contêm radicais. Técnicas de isolamento do radical e elevação ao quadrado para simplificar a equação, incluindo verificação de soluções."
+      },
+      {
+        "id": "eq8",
+        "label": "Equações exponenciais",
+        "descrição": "Equações onde a incógnita está no expoente. Métodos de resolução utilizando logaritmos, propriedades de potências e análise da base da exponencial."
+      },
+      {
+        "id": "eq9",
+        "label": "Equações logarítmicas",
+        "descrição": "Equações em que a incógnita aparece dentro de logaritmos. Uso de propriedades logarítmicas para simplificação e transformação em equações lineares ou exponenciais."
+      },
+      {
+        "id": "eq10",
+        "label": "Sistemas de equações algébricas",
+        "descrição": "Resolução de sistemas lineares e não-lineares, métodos de substituição, adição, escalonamento e análise da consistência das soluções."
+      },
+      {
+        "id": "eq11",
+        "label": "Equações com valor absoluto",
+        "descrição": "Equações que envolvem o módulo. Estratégias de separação de casos para valores positivos e negativos, garantindo a solução correta de cada cenário."
+      },
+      {
+        "id": "eq12",
+        "label": "Aplicações práticas",
+        "descrição": "Uso de equações algébricas na modelagem de problemas do cotidiano, física, economia e engenharia, mostrando como traduzir situações em equações para encontrar soluções."
+      }
+    ]
+  },
+  {
+    "bloco": "Números Complexos",
+    "itens": [
+      {
+        "id": "nc1",
+        "label": "Introdução aos números complexos",
+        "descrição": "Conceito de números que possuem uma parte real e uma parte imaginária. Explicação do porquê surgem e sua necessidade para resolver equações que não têm soluções no conjunto dos números reais. Aplicações básicas em física, engenharia e outras áreas."
+      },
+      {
+        "id": "nc2",
+        "label": "Operações com números complexos",
+        "descrição": "Como somar, subtrair, multiplicar e dividir números complexos. Combinação separada das partes reais e imaginárias. Observação de padrões especiais na multiplicação e técnicas para simplificar divisões."
+      },
+      {
+        "id": "nc3",
+        "label": "Potências do número imaginário",
+        "descrição": "Ciclo que se repete ao elevar a parte imaginária a potências sucessivas. Como identificar rapidamente resultados sem cálculos extensos. Padrões que ajudam a compreender propriedades fundamentais do número imaginário."
+      },
+      {
+        "id": "nc4",
+        "label": "Forma trigonométrica ou polar",
+        "descrição": "Representação alternativa de números complexos baseada em distância do ponto até a origem e ângulo com a parte real. Facilita multiplicação e divisão, além de permitir visualização geométrica no plano complexo. Conversão entre a forma original e a forma trigonométrica."
+      },
+      {
+        "id": "nc5",
+        "label": "Representação no plano complexo",
+        "descrição": "Visualização dos números complexos em um plano cartesiano modificado, onde o eixo horizontal representa a parte real e o eixo vertical representa a parte imaginária. Entendimento da magnitude e direção de um número complexo."
+      },
+      {
+        "id": "nc6",
+        "label": "Conjugado e módulo",
+        "descrição": "Definição do conjugado de um número complexo como a inversão do sinal da parte imaginária. Introdução ao módulo como medida de distância do número complexo até a origem, e propriedades importantes para operações e transformações."
+      },
+      {
+        "id": "nc7",
+        "label": "Relação com equações quadráticas",
+        "descrição": "Explicação de como números complexos permitem a solução de equações que não possuem raízes reais, garantindo que todas as equações quadráticas tenham solução no conjunto dos complexos."
+      },
+      {
+        "id": "nc8",
+        "label": "Transformações e rotações",
+        "descrição": "Como multiplicar ou dividir números complexos pode ser interpretado como rotações e mudanças de escala no plano. Relação direta entre operações algébricas e efeitos geométricos."
+      },
+      {
+        "id": "nc9",
+        "label": "Aplicações práticas",
+        "descrição": "Uso de números complexos em áreas como corrente elétrica alternada, análise de ondas, geometria, e representação de fenômenos periódicos. Relevância do conceito na ciência e engenharia."
+      }
+    ]
+  },
+  {
+    "bloco": "Polinômios",
+    "itens": [
+      {
+        "id": "pol1",
+        "label": "Introdução aos polinômios",
+        "descrição": "Definição de polinômio como expressão algébrica formada por soma de termos, cada um composto de coeficiente e variável elevada a um expoente natural. Importância dos polinômios na matemática e suas aplicações."
+      },
+      {
+        "id": "pol2",
+        "label": "Classificação dos polinômios",
+        "descrição": "Tipos de polinômios conforme grau (linear, quadrático, cúbico, etc.) e número de termos (monômio, binômio, trinômio, polinômio completo). Compreensão da estrutura e significado do grau e coeficientes."
+      },
+      {
+        "id": "pol3",
+        "label": "Operações com polinômios",
+        "descrição": "Como realizar adição, subtração, multiplicação e divisão de polinômios. Combinação de termos semelhantes e simplificação de expressões algébricas. Introdução à divisão exata e ao resto."
+      },
+      {
+        "id": "pol4",
+        "label": "Fatoração de polinômios",
+        "descrição": "Métodos de decomposição de polinômios em fatores, incluindo fator comum, diferença de quadrados, trinômio do quadrado perfeito e agrupamento de termos. Uso da fatoração para simplificar expressões e resolver equações."
+      },
+      {
+        "id": "pol5",
+        "label": "Raízes ou zeros de polinômios",
+        "descrição": "Definição de raiz como valor que torna o polinômio igual a zero. Relação entre raízes e fatoração. Importância das raízes para análise de funções e solução de equações polinomiais."
+      },
+      {
+        "id": "pol6",
+        "label": "Teorema do resto e da fatoração",
+        "descrição": "Explicação de como o resto de uma divisão por um polinômio de grau 1 indica se um valor é raiz. Uso do teorema para verificar soluções e fatorar polinômios de forma prática."
+      },
+      {
+        "id": "pol7",
+        "label": "Polinômios e funções",
+        "descrição": "Relação entre polinômios e funções polinomiais. Análise de gráfico, comportamento para valores grandes da variável, monotonia e crescimento. Como as raízes e fatores influenciam a forma do gráfico."
+      },
+      {
+        "id": "pol8",
+        "label": "Equações polinomiais",
+        "descrição": "Resolução de equações polinomiais de diversos graus, entendendo a importância do grau, do coeficiente principal e das técnicas de fatoração e substituição. Introdução à multiplicidade de raízes e à forma fatorada da equação."
+      },
+      {
+        "id": "pol9",
+        "label": "Polinômios e números complexos",
+        "descrição": "Relação entre polinômios e números complexos, mostrando que todas as equações polinomiais têm solução no conjunto dos números complexos, conforme o teorema fundamental da álgebra."
+      }
+    ]
+  }
+]

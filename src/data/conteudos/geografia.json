@@ -1,0 +1,12 @@
+[
+  {
+    "bloco": "Geografia Geral",
+    "itens": [
+      { "id": "geo1", "label": "Relevo e estrutura da Terra" },
+      { "id": "geo2", "label": "Climas e massas de ar" },
+      { "id": "geo3", "label": "Vegetações e biomas" },
+      { "id": "geo4", "label": "Dinâmica populacional" },
+      { "id": "geo5", "label": "Globalização e economia mundial" }
+    ]
+  }
+]

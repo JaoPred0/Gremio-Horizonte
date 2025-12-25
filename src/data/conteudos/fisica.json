@@ -1,0 +1,32 @@
+[
+  {
+    "bloco": "Cinemática",
+    "itens": [
+      { "id": "fis1", "label": "Movimento uniforme (MU)" },
+      { "id": "fis2", "label": "Movimento uniformemente variado (MUV)" },
+      { "id": "fis3", "label": "Funções horárias do movimento" },
+      { "id": "fis4", "label": "Gráficos de posição, velocidade e aceleração" },
+      { "id": "fis5", "label": "Queda livre e lançamento vertical" }
+    ]
+  },
+  {
+    "bloco": "Dinâmica e Forças",
+    "itens": [
+      { "id": "fis6",  "label": "Leis de Newton" },
+      { "id": "fis7",  "label": "Forças de atrito, normal e peso" },
+      { "id": "fis8",  "label": "Força centrípeta e movimentos circulares" },
+      { "id": "fis9",  "label": "Quantidade de movimento" },
+      { "id": "fis10", "label": "Impulso e colisões" }
+    ]
+  },
+  {
+    "bloco": "Energia, Termodinâmica e Ondulatória",
+    "itens": [
+      { "id": "fis11", "label": "Energia cinética e potencial" },
+      { "id": "fis12", "label": "Trabalho e potência" },
+      { "id": "fis13", "label": "Leis da Termodinâmica" },
+      { "id": "fis14", "label": "Calor e temperatura" },
+      { "id": "fis15", "label": "Ondas e fenômenos ondulatórios" }
+    ]
+  }
+]

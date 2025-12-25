@@ -1,0 +1,52 @@
+[
+  {
+    "bloco": "Estrutura da Matéria",
+    "itens": [
+      { "id": "qui1", "label": "Modelos atômicos" },
+      { "id": "qui2", "label": "Tabela periódica e propriedades" },
+      { "id": "qui3", "label": "Ligações químicas" },
+      { "id": "qui4", "label": "Geometria molecular" },
+      { "id": "qui5", "label": "Forças intermoleculares" }
+    ]
+  },
+  {
+    "bloco": "Estequiometria e Soluções",
+    "itens": [
+      { "id": "qui6",  "label": "Lei das proporções" },
+      { "id": "qui7",  "label": "Reagente limitante e rendimento" },
+      { "id": "qui8",  "label": "Concentração de soluções" },
+      { "id": "qui9",  "label": "Diluição" },
+      { "id": "qui10", "label": "Misturas e separação de componentes" }
+    ]
+  },
+  {
+    "bloco": "Reações Químicas",
+    "itens": [
+      { "id": "qui11", "label": "Tipos de reações químicas" },
+      { "id": "qui12", "label": "Balanceamento de equações" },
+      { "id": "qui13", "label": "Reações ácido-base" },
+      { "id": "qui14", "label": "Reações de oxirredução" },
+      { "id": "qui15", "label": "Pilhas e eletrólise" }
+    ]
+  },
+  {
+    "bloco": "Química Orgânica",
+    "itens": [
+      { "id": "qui16", "label": "Funções orgânicas" },
+      { "id": "qui17", "label": "Isomeria" },
+      { "id": "qui18", "label": "Hidrocarbonetos" },
+      { "id": "qui19", "label": "Reações orgânicas" },
+      { "id": "qui20", "label": "Polímeros" }
+    ]
+  },
+  {
+    "bloco": "Físico-Química",
+    "itens": [
+      { "id": "qui21", "label": "Termoquímica" },
+      { "id": "qui22", "label": "Cinética química" },
+      { "id": "qui23", "label": "Equilíbrio químico" },
+      { "id": "qui24", "label": "pH e pOH" },
+      { "id": "qui25", "label": "Soluções tampão" }
+    ]
+  }
+]

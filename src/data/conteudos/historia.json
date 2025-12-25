@@ -1,0 +1,52 @@
+[
+  {
+    "bloco": "História Geral - Antiguidade",
+    "itens": [
+      { "id": "hist1", "label": "Civilizações Mesopotâmicas" },
+      { "id": "hist2", "label": "Egito Antigo e sociedade teocrática" },
+      { "id": "hist3", "label": "Grécia Antiga e democracia" },
+      { "id": "hist4", "label": "Roma Antiga e Império Romano" },
+      { "id": "hist5", "label": "Cultura e religião na Antiguidade" }
+    ]
+  },
+  {
+    "bloco": "Idade Média",
+    "itens": [
+      { "id": "hist6", "label": "Feudalismo e sociedade medieval" },
+      { "id": "hist7", "label": "Igreja Católica e poder religioso" },
+      { "id": "hist8", "label": "Império Bizantino" },
+      { "id": "hist9", "label": "Islamismo e expansão árabe" },
+      { "id": "hist10", "label": "Cruzadas e transformações europeias" }
+    ]
+  },
+  {
+    "bloco": "Idade Moderna",
+    "itens": [
+      { "id": "hist11", "label": "Renascimento Cultural" },
+      { "id": "hist12", "label": "Reforma e Contrarreforma" },
+      { "id": "hist13", "label": "Grandes Navegações" },
+      { "id": "hist14", "label": "Mercantilismo" },
+      { "id": "hist15", "label": "Absolutismo europeu" }
+    ]
+  },
+  {
+    "bloco": "Idade Contemporânea",
+    "itens": [
+      { "id": "hist16", "label": "Revolução Francesa" },
+      { "id": "hist17", "label": "Revolução Industrial" },
+      { "id": "hist18", "label": "Imperialismo e colonialismo" },
+      { "id": "hist19", "label": "Primeira Guerra Mundial" },
+      { "id": "hist20", "label": "Segunda Guerra Mundial" }
+    ]
+  },
+  {
+    "bloco": "História do Brasil",
+    "itens": [
+      { "id": "hist21", "label": "Brasil Colônia e exploração portuguesa" },
+      { "id": "hist22", "label": "Independência do Brasil" },
+      { "id": "hist23", "label": "Período Imperial" },
+      { "id": "hist24", "label": "República Velha e Era Vargas" },
+      { "id": "hist25", "label": "Ditadura Militar e Redemocratização" }
+    ]
+  }
+]

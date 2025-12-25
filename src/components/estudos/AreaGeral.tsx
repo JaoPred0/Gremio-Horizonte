@@ -3,7 +3,7 @@ import { BookOpen, Award, Gamepad, ShoppingCart, TrendingUp, Users, Star, ArrowR
 import { Link } from 'react-router-dom'
 
 export const AreaGeral = () => {
-    const [activeTab, setActiveTab] = useState('IF')
+    const [activeTab, setActiveTab] = useState('VestPro+')
 
     const tabs = [
         { id: 'IF', label: 'IF', icon: BookOpen },
@@ -20,15 +20,33 @@ export const AreaGeral = () => {
             color: 'bg-primary',
         },
         { title: 'Calendário Acadêmico', desc: 'Acompanhe datas importantes e eventos do semestre', link: '/estudos/if/calendario-academico', color: 'bg-secondary' },
-        // { title: 'Biblioteca Digital', desc: 'Acesso a mais de 10.000 títulos digitais', link: '#', color: 'bg-accent' },
-        // { title: 'Projetos de Pesquisa', desc: 'Conheça os projetos em desenvolvimento', link: '#', color: 'bg-info' }
     ]
 
     const vestProCards = [
-        { title: 'Simulados ENEM', desc: 'Prepare-se com simulados completos e atualizados', link: '#', color: 'bg-success', badge: 'Novo' },
-        { title: 'Ranking Nacional', desc: 'Compare seu desempenho com outros estudantes', link: '#', color: 'bg-warning', badge: 'Popular' },
-        { title: 'Mentoria Individual', desc: 'Agende sessões com professores especializados', link: '#', color: 'bg-error' },
-        { title: 'Plano de Estudos IA', desc: 'Sistema inteligente para otimizar seus estudos', link: '#', color: 'bg-primary', badge: 'Premium' }
+        {
+            title: 'Matérias',
+            desc: 'Acompanhe seu progresso em cada disciplina do vestibular',
+            link: '/estudos/vestpro/materias',
+            color: 'bg-secondary'
+        },
+        {
+            title: 'Simulados',
+            desc: 'Prepare-se com simulados completos',
+            link: '/estudos/vestpro/simulados',
+            color: 'bg-success'
+        },
+        // {
+        //     title: 'Desempenho',
+        //     desc: 'Veja sua evolução e identifique pontos fortes e fracos',
+        //     link: '#',
+        //     color: 'bg-info'
+        // },
+        // {
+        //     title: 'Materiais de Estudo',
+        //     desc: 'Acesse PDFs, resumos e conteúdos organizados',
+        //     link: '#',
+        //     color: 'bg-neutral'
+        // },
     ]
 
     const baseNerdCards = [
@@ -111,16 +129,16 @@ export const AreaGeral = () => {
                                 key={tab.id}
                                 onClick={() => setActiveTab(tab.id)}
                                 className={`
-          tab
-          transition-all duration-300
-          flex flex-col md:flex-row
-          items-center justify-center
-          gap-0.5 md:gap-2
-          px-3 py-2 md:px-4
-          min-w-[64px] md:min-w-0
-          whitespace-nowrap
-          ${activeTab === tab.id ? "tab-active" : ""}
-        `}
+                                    tab
+                                    transition-all duration-300
+                                    flex flex-col md:flex-row
+                                    items-center justify-center
+                                    gap-0.5 md:gap-2
+                                    px-3 py-2 md:px-4
+                                    min-w-[64px] md:min-w-0
+                                    whitespace-nowrap
+                                    ${activeTab === tab.id ? "tab-active" : ""}
+                                    `}
                             >
                                 <Icon className="w-5 h-5 md:w-5 md:h-5" />
                                 <span className="text-[11px] md:text-sm font-medium leading-none">

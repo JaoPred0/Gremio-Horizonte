@@ -1,0 +1,17 @@
+[
+  {
+    "bloco": "Filosofia Geral",
+    "itens": [
+      { "id": "filo1", "label": "Origem da Filosofia e pensamento racional" },
+      { "id": "filo2", "label": "Pré-socráticos" },
+      { "id": "filo3", "label": "Sócrates, Platão e Aristóteles" },
+      { "id": "filo4", "label": "Helenismo e estoicismo" },
+      { "id": "filo5", "label": "Filosofia Medieval" },
+      { "id": "filo6", "label": "Renascimento e racionalismo" },
+      { "id": "filo7", "label": "Empirismo e Iluminismo" },
+      { "id": "filo8", "label": "Filosofia Contemporânea" },
+      { "id": "filo9", "label": "Ética e moral" },
+      { "id": "filo10", "label": "Política, justiça e sociedade" }
+    ]
+  }
+]

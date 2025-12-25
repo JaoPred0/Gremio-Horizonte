@@ -5,9 +5,9 @@ import {
 } from "lucide-react"
 import { Link } from "react-router-dom"
 import StreakCardContent from "./StreakCardContent"
-import { Nivel } from "@/components/estudos/page/Nivel"
+import { Nivel } from "@/components/estudos/pages/if/Nivel"
 import AnimatedPage from "../AnimatedPage"
-import { useConquistas } from '@/components/estudos/page/Conquistas';
+import { useConquistas } from '@/components/estudos/pages/if/Conquistas';
 import { RankStat } from "./RankStat"
 
 
