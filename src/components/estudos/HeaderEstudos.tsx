@@ -1,17 +1,11 @@
-import React from "react"
-import {
-    TrendingUp,
-    Trophy,
-} from "lucide-react"
-import { Link } from "react-router-dom"
-import StreakCardContent from "./StreakCardContent"
-import { Nivel } from "@/components/estudos/pages/if/Nivel"
-import AnimatedPage from "../AnimatedPage"
+import React from "react";
+import { Trophy } from "lucide-react";
+import { Link } from "react-router-dom";
+import StreakCardContent from "./StreakCardContent";
+import { Nivel } from "@/components/estudos/pages/if/Nivel";
+import AnimatedPage from "../AnimatedPage";
 import { useConquistas } from '@/components/estudos/pages/if/Conquistas';
-import { RankStat } from "./RankStat"
-
-
-
+import { RankStat } from "./RankStat";
 
 export const HeaderEstudos = () => {
     const { conquistas, loading } = useConquistas();
@@ -19,12 +13,12 @@ export const HeaderEstudos = () => {
     return (
         <AnimatedPage>
             <div className="w-full space-y-6">
-
+                {/* Nível do usuário */}
                 <Nivel />
 
-
+                {/* Grid de estatísticas */}
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-
+                    {/* Streak */}
                     <Link
                         to="/estudos/streak"
                         className="stat bg-base-200 shadow rounded-xl hover:shadow-xl hover:scale-[1.02] transition relative overflow-hidden"
@@ -32,7 +26,11 @@ export const HeaderEstudos = () => {
                         <StreakCardContent />
                     </Link>
 
-                    <Link to="/estudos/conquistas" className="stat bg-base-200 shadow rounded-xl hover:shadow-xl hover:scale-[1.02] transition">
+                    {/* Conquistas */}
+                    <Link 
+                        to="/estudos/conquistas" 
+                        className="stat bg-base-200 shadow rounded-xl hover:shadow-xl hover:scale-[1.02] transition"
+                    >
                         <div className="stat-figure text-primary">
                             <Trophy className="w-10 h-10" />
                         </div>
@@ -49,18 +47,11 @@ export const HeaderEstudos = () => {
                         </div>
                     </Link>
 
+                    {/* Rank (rotativo) */}
                     <RankStat />
-
-                    <Link to="/build" className="stat bg-base-200 shadow rounded-xl hover:shadow-xl hover:scale-[1.02] transition">
-                        <div className="stat-figure text-green-500">
-                            <TrendingUp size={28} />
-                        </div>
-
-                        <div className="stat-value">404</div>
-                    </Link>
 
                 </div>
             </div>
         </AnimatedPage>
-    )
-}
+    );
+};

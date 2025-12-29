@@ -6,8 +6,7 @@ import { db, auth } from "@/lib/firebase";
 import { doc, getDoc, setDoc } from "firebase/firestore";
 import { onAuthStateChanged } from "firebase/auth";
 import { useNavigate } from "react-router-dom";
-import exercises from "../../data/exercises";
-import { type Exercise } from "@/components/estudos/type/exercise";
+// import exercises from "../../data/exercises";
 import AnimatedPage from "../../../AnimatedPage";
 
 interface UserStreak {

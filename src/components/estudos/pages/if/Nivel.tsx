@@ -8,7 +8,8 @@ import AnimatedPage from '../../../AnimatedPage';
 
 interface UserXP {
     uid: string;
-    xp: number;
+    xp?: number;
+    totalXp?: number; // ✅ ADICIONADO
     level: number;
 }
 
@@ -24,6 +25,7 @@ export const Nivel = () => {
     const [userXP, setUserXP] = useState<UserXP>({
         uid: "",
         xp: 0,
+        totalXp: 0,
         level: 1
     });
     const [streakData, setStreakData] = useState<UserStreak>({
@@ -48,12 +50,27 @@ export const Nivel = () => {
 
     const loadUserData = async (uid: string) => {
         try {
-            // Carregar XP
+            // ✅ Carregar XP com suporte para totalXp
             const xpRef = doc(db, "user_xp", uid);
             const xpSnap = await getDoc(xpRef);
 
             if (xpSnap.exists()) {
-                setUserXP(xpSnap.data() as UserXP);
+                const data = xpSnap.data();
+                console.log('📊 Dados do user_xp:', data);
+                
+                // ✅ Suporta tanto 'totalXp' quanto 'xp'
+                const totalXP = data.totalXp || data.xp || 0;
+                
+                setUserXP({
+                    uid: data.uid || uid,
+                    xp: totalXP,
+                    totalXp: totalXP,
+                    level: data.level || 1
+                });
+                
+                console.log('✅ XP carregado:', totalXP);
+            } else {
+                console.log('⚠️ Documento user_xp não existe');
             }
 
             // Carregar Streak
@@ -64,7 +81,7 @@ export const Nivel = () => {
                 setStreakData(streakSnap.data() as UserStreak);
             }
         } catch (error) {
-            console.error('Erro ao carregar dados:', error);
+            console.error('❌ Erro ao carregar dados:', error);
         } finally {
             setLoading(false);
         }
@@ -74,6 +91,7 @@ export const Nivel = () => {
     const getXpForNextLevel = (level: number) => {
         return LEVEL_XP[level] ?? LEVEL_XP[10]; // fallback para nível alto
     };
+    
     const getTotalXpUntilLevel = (level: number) => {
         let total = 0;
         for (let i = 1; i < level; i++) {
@@ -85,7 +103,7 @@ export const Nivel = () => {
     // Calcula XP atual dentro do nível
     const getCurrentLevelXP = () => {
         const previousLevelsXP = getTotalXpUntilLevel(userXP.level);
-        return userXP.xp - previousLevelsXP;
+        return (userXP.totalXp || userXP.xp || 0) - previousLevelsXP;
     };
 
     const calculateLevelFromXP = (xp: number) => {
@@ -104,8 +122,9 @@ export const Nivel = () => {
         };
     };
 
-    const { level, xpInCurrentLevel, xpForNextLevel } =
-        calculateLevelFromXP(userXP.xp);
+    // ✅ Usar totalXp ou xp
+    const totalXP = userXP.totalXp || userXP.xp || 0;
+    const { level, xpInCurrentLevel, xpForNextLevel } = calculateLevelFromXP(totalXP);
 
     const progress = Math.min(
         (xpInCurrentLevel / xpForNextLevel) * 100,
@@ -118,7 +137,6 @@ export const Nivel = () => {
         const currentXP = getCurrentLevelXP();
         return Math.min((currentXP / xpNeeded) * 100, 100);
     };
-
 
     if (loading) {
         return (
@@ -152,10 +170,8 @@ export const Nivel = () => {
         <AnimatedPage>
             <div className="card bg-base-200 shadow-xl">
                 <div className="card-body">
-
                     {/* TOPO */}
                     <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
-
                         {/* TÍTULO */}
                         <div>
                             <h1 className="text-3xl font-bold">📚 Estudos</h1>
@@ -171,7 +187,7 @@ export const Nivel = () => {
                                 </div>
 
                                 <p className="text-xs opacity-60 mt-1">
-                                    XP total: {userXP.xp.toLocaleString('pt-BR')}
+                                    XP total: {totalXP.toLocaleString('pt-BR')}
                                 </p>
                             </div>
                         </div>
@@ -187,7 +203,6 @@ export const Nivel = () => {
                             <span className="font-bold">
                                 {xpInCurrentLevel} / {xpForNextLevel} XP
                             </span>
-
                         </div>
                         <progress
                             className="progress progress-primary w-full"

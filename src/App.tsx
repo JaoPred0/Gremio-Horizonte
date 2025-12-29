@@ -38,7 +38,11 @@ import Historia from "@/components/estudos/pages/vestpro/conteudos/Historia";
 import Geografia from "@/components/estudos/pages/vestpro/conteudos/Geografia";
 import Filosofia from "@/components/estudos/pages/vestpro/conteudos/Filosofia";
 import Sociologia from "@/components/estudos/pages/vestpro/conteudos/Sociologia";
-import { Simulados } from "@/components/estudos/pages/vestpro/Simulados";
+import Simulados from "@/components/estudos/pages/vestpro/Simulados";
+import SimuladoProva from "./components/estudos/pages/vestpro/SimuladoProva";
+import SimuladoConclusao from "./components/estudos/pages/vestpro/SimuladoConclusao";
+import SimuladoHistorico from "./components/estudos/pages/vestpro/SimuladoHistorico";
+import Simulado from "@/components/estudos/pages/vestpro/Simulados";
 
 export default function App() {
 
@@ -51,7 +55,7 @@ export default function App() {
 
     return () => unsub();
   }, []);
-  
+
   return (
     <BrowserRouter>
       <Routes>
@@ -98,7 +102,10 @@ export default function App() {
           <Route path="/estudos/vestpro/materias/geografia" element={<AppLayout> <Geografia /> </AppLayout>} />
           <Route path="/estudos/vestpro/materias/filosofia" element={<AppLayout> <Filosofia /> </AppLayout>} />
           <Route path="/estudos/vestpro/materias/sociologia" element={<AppLayout> <Sociologia /> </AppLayout>} />
-
+          <Route path="/simulado" element={<AppLayout> <Simulado /> </AppLayout>} />
+          <Route path="/simulado/prova" element={<AppLayout><SimuladoProva /></AppLayout>} />
+          <Route path="/simulado/conclusao" element={<AppLayout> <SimuladoConclusao /> </AppLayout>} />
+          <Route path="/simulado/historico" element={<AppLayout> <SimuladoHistorico /> </AppLayout>} />
           {/* ===== Notificação ===== */}
           <Route path="/notifications" element={<AppLayout> <Notificacao /> </AppLayout>} />
 

@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Trophy, Zap, Flame, Award, Target, Crown, Medal, TrendingUp, User } from 'lucide-react';
+import { Trophy, Zap, Flame, Award, Crown, Medal, TrendingUp, User, CheckCircle } from 'lucide-react';
 import { db, auth } from "@/lib/firebase";
 import { collection, getDocs } from "firebase/firestore";
 import { onAuthStateChanged } from "firebase/auth";
@@ -18,7 +18,7 @@ interface UserRanking {
   level: number;
   streak: number;
   conquistas: number;
-  exercicios: number;
+  questoesAcertadas: number;
   pontuacaoTotal: number;
 }
 
@@ -41,18 +41,18 @@ const calculateLevel = (totalXP: number): number => {
 export const Rank = () => {
   const [currentUser, setCurrentUser] = useState<string | null>(null);
   const [loading, setLoading] = useState(true);
-  const [activeTab, setActiveTab] = useState<'xp' | 'streak' | 'conquistas' | 'exercicios' | 'geral'>('geral');
+  const [activeTab, setActiveTab] = useState<'xp' | 'streak' | 'conquistas' | 'questoesAcertadas' | 'geral'>('geral');
   const [rankings, setRankings] = useState<{
     xp: UserRanking[];
     streak: UserRanking[];
     conquistas: UserRanking[];
-    exercicios: UserRanking[];
+    questoesAcertadas: UserRanking[];
     geral: UserRanking[];
   }>({
     xp: [],
     streak: [],
     conquistas: [],
-    exercicios: [],
+    questoesAcertadas: [],
     geral: []
   });
 
@@ -70,8 +70,6 @@ export const Rank = () => {
     return () => unsubscribe();
   }, []);
 
-  const getUserName = (user: any) => formatUserNameWithCustom(user?.email);
-
   const loadRankings = async () => {
     try {
       setLoading(true);
@@ -82,11 +80,14 @@ export const Rank = () => {
       const streaksSnapshot = await getDocs(collection(db, "user_streaks"));
       const conquistasSnapshot = await getDocs(collection(db, "user_conquistas"));
 
-      // Criar mapas para acesso rápido
+      // Criar mapa de XP e questões
       const xpMap = new Map();
       xpSnapshot.forEach(doc => {
         const data = doc.data();
-        xpMap.set(doc.id, { xp: data.xp || 0 });
+        xpMap.set(doc.id, {
+          xp: data.totalXp || 0,
+          questoesAcertadas: data.questoesAcertadas || 0
+        });
       });
 
       const streaksMap = new Map();
@@ -107,15 +108,15 @@ export const Rank = () => {
         const userData = doc.data();
         const uid = doc.id;
 
-        const xpData = xpMap.get(uid) || { xp: 0 };
+        const xpData = xpMap.get(uid) || { xp: 0, questoesAcertadas: 0 };
         const totalXP = xpData.xp;
+        const questoesAcertadas = xpData.questoesAcertadas;
         const level = calculateLevel(totalXP);
         const streak = streaksMap.get(uid) || 0;
         const conquistas = conquistasMap.get(uid) || 0;
-        const exercicios = 0; // TODO: Adicionar quando implementar exercícios
 
-        // Calcular pontuação total: XP + Sequência + (Conquistas × 10) + Exercícios
-        const pontuacaoTotal = totalXP + streak + (conquistas * 10) + exercicios;
+        // Calcular pontuação total: XP + Sequência + (Conquistas × 10) + (Questões × 2)
+        const pontuacaoTotal = totalXP + streak + (conquistas * 10) + (questoesAcertadas * 2);
 
         users.push({
           uid,
@@ -126,7 +127,7 @@ export const Rank = () => {
           level,
           streak,
           conquistas,
-          exercicios,
+          questoesAcertadas,
           pontuacaoTotal
         });
       });
@@ -136,7 +137,7 @@ export const Rank = () => {
         xp: [...users].sort((a, b) => b.xp - a.xp),
         streak: [...users].sort((a, b) => b.streak - a.streak),
         conquistas: [...users].sort((a, b) => b.conquistas - a.conquistas),
-        exercicios: [...users].sort((a, b) => b.exercicios - a.exercicios),
+        questoesAcertadas: [...users].sort((a, b) => b.questoesAcertadas - a.questoesAcertadas),
         geral: [...users].sort((a, b) => b.pontuacaoTotal - a.pontuacaoTotal)
       });
 
@@ -170,7 +171,7 @@ export const Rank = () => {
       case 'xp': return <Zap className="w-4 h-4 sm:w-5 sm:h-5" />;
       case 'streak': return <Flame className="w-4 h-4 sm:w-5 sm:h-5" />;
       case 'conquistas': return <Trophy className="w-4 h-4 sm:w-5 sm:h-5" />;
-      case 'exercicios': return <Target className="w-4 h-4 sm:w-5 sm:h-5" />;
+      case 'questoesAcertadas': return <CheckCircle className="w-4 h-4 sm:w-5 sm:h-5" />;
       case 'geral': return <Award className="w-4 h-4 sm:w-5 sm:h-5" />;
       default: return null;
     }
@@ -181,7 +182,7 @@ export const Rank = () => {
       case 'xp': return `${user.xp.toLocaleString()} XP`;
       case 'streak': return `${user.streak} dias`;
       case 'conquistas': return `${user.conquistas}/24`;
-      case 'exercicios': return `${user.exercicios} exercícios`;
+      case 'questoesAcertadas': return `${user.questoesAcertadas} acertos`;
       case 'geral': return `${user.pontuacaoTotal.toLocaleString()} pts`;
       default: return '';
     }
@@ -236,14 +237,7 @@ export const Rank = () => {
               <div className="flex items-center justify-between flex-wrap gap-4">
                 <div className="flex items-center gap-3 sm:gap-4">
                   <div className="avatar placeholder">
-                    <div className="
-    bg-primary text-primary-content
-    rounded-xl
-    w-12 sm:w-16
-    flex items-center justify-center
-    shadow-lg
-    ring-2 ring-primary/30
-  ">
+                    <div className="bg-primary text-primary-content rounded-xl w-12 sm:w-16 flex items-center justify-center shadow-lg ring-2 ring-primary/30">
                       <Trophy className="w-7 h-7 sm:w-10 sm:h-10 drop-shadow-sm" />
                     </div>
                   </div>
@@ -264,7 +258,7 @@ export const Rank = () => {
             </div>
           </div>
 
-          {/* Tabs - Melhorado para mobile */}
+          {/* Tabs */}
           <div className="bg-base-200 shadow-xl mb-4 sm:mb-6 p-2 rounded-box">
             <div className="grid grid-cols-5 gap-1 sm:gap-2">
               <button
@@ -296,16 +290,16 @@ export const Rank = () => {
                 <span className="text-xs mt-1">Conquistas</span>
               </button>
               <button
-                className={`btn btn-sm ${activeTab === 'exercicios' ? 'btn-primary' : 'btn-ghost'} flex-col h-auto py-2`}
-                onClick={() => setActiveTab('exercicios')}
+                className={`btn btn-sm ${activeTab === 'questoesAcertadas' ? 'btn-primary' : 'btn-ghost'} flex-col h-auto py-2`}
+                onClick={() => setActiveTab('questoesAcertadas')}
               >
-                {getTabIcon('exercicios')}
-                <span className="text-xs mt-1">Exerc.</span>
+                {getTabIcon('questoesAcertadas')}
+                <span className="text-xs mt-1">Questões</span>
               </button>
             </div>
           </div>
 
-          {/* Top 3 Pódio - Responsivo */}
+          {/* Top 3 Pódio */}
           {currentRanking.length >= 3 && (
             <div className="grid grid-cols-3 gap-2 sm:gap-4 mb-4 sm:mb-6">
               {currentRanking.slice(0, 3).map((user, index) => {
@@ -347,7 +341,7 @@ export const Rank = () => {
             </div>
           )}
 
-          {/* Lista de Rankings - Melhorado para mobile */}
+          {/* Lista de Rankings */}
           <div className="card bg-base-200 shadow-xl">
             <div className="card-body p-0">
               <div className="overflow-x-auto">
@@ -424,7 +418,7 @@ export const Rank = () => {
               <div>
                 <h3 className="font-bold text-sm sm:text-base">Como funciona a pontuação geral?</h3>
                 <div className="text-xs sm:text-sm">
-                  A pontuação geral é calculada somando: XP + Sequência + (Conquistas × 10) + Exercícios
+                  XP + Sequência + (Conquistas × 10) + (Questões Acertadas × 2)
                 </div>
               </div>
             </div>
